@@ -1,0 +1,21 @@
+14:45:54 **** Auto Build of configuration Debug for project test_software_v1 ****
+make all 
+'Building file: ../src/main.cc'
+'Invoking: MicroBlaze g++ compiler'
+mb-g++ -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../test_software_v1_bsp/DMF_processor/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.cc"
+'Finished building: ../src/main.cc'
+' '
+'Building target: test_software_v1.elf'
+'Invoking: MicroBlaze g++ linker'
+mb-g++ -Wl,-T -Wl,../src/lscript.ld -L../../test_software_v1_bsp/DMF_processor/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "test_software_v1.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+'Finished building target: test_software_v1.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size test_software_v1.elf  |tee "test_software_v1.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   2360	    320	   3104	   5784	   1698	test_software_v1.elf
+'Finished building: test_software_v1.elf.size'
+' '
+
+14:45:55 Build Finished (took 1s.292ms)
+

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<item value="Local" key="DMF_Translation_wrapper_hw_platform_0-target"/>
+	<item value="DMF_Translation_wrapper.bit" key="DMF_Translation_wrapper_hw_platform_0-bitFile"/>
+	<item value="Auto Detect" key="DMF_Translation_wrapper_hw_platform_0-device"/>
+	<item value="DMF_Translation_wrapper_hw_platform_0" key="programfpga.hwplatform"/>
+	<item value="bootloop" key="DMF_Translation_wrapper_hw_platform_0-DMF_processor-initElf"/>
+	<item value="DMF_Translation_wrapper.mmi" key="DMF_Translation_wrapper_hw_platform_0-bmmFile"/>
+	<item value="false" key="DMF_Translation_wrapper_hw_platform_0-partial_bit"/>
+</section>

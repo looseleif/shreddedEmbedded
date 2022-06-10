@@ -1,0 +1,29 @@
+17:53:12 **** Auto Build of configuration Debug for project commSoftware ****
+make all 
+'Building file: ../src/communicate.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/communicate.o" -I../../commSoftware_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/communicate.d" -MT"src/communicate.o" -o "src/communicate.o" "../src/communicate.c"
+../src/communicate.c:37:1: error: unknown type name 'u24'; did you mean 'u64'?
+ u24 dataBuffer = 0b1001000000000001;
+ ^~~
+ u64
+../src/communicate.c: In function 'IicEepromExample':
+../src/communicate.c:124:11: error: too few arguments to function 'EepromReadData'
+  Status = EepromReadData();
+           ^~~~~~~~~~~~~~
+../src/communicate.c:43:5: note: declared here
+ int EepromReadData(u8 *BufferPtr, u16 ByteCount);
+     ^~~~~~~~~~~~~~
+../src/communicate.c:69:6: warning: unused variable 'Index' [-Wunused-variable]
+  u32 Index;
+      ^~~~~
+../src/communicate.c: In function 'EepromWriteData':
+../src/communicate.c:190:9: error: 'WriteBuffer' undeclared (first use in this function); did you mean 'dataBuffer'?
+         WriteBuffer,
+         ^~~~~~~~~~~
+         dataBuffer
+../src/communicate.c:190:9: note: each undeclared identifier is reported only once for each function it appears in
+make: *** [src/subdir.mk:26: src/communicate.o] Error 1
+
+17:53:12 Build Finished (took 294ms)
+

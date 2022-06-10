@@ -1,0 +1,22 @@
+#-----------------------------------------------------------
+# Vivado v2019.1 (64-bit)
+# SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+# IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+# Start of session at: Sun Sep 12 13:06:29 2021
+# Process ID: 38940
+# Current directory: C:/Users/chase/OneDrive/Documents/GitHub/vivadoRepo/glue
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent37412 C:\Users\chase\OneDrive\Documents\GitHub\vivadoRepo\glue\glue.xpr
+# Log file: C:/Users/chase/OneDrive/Documents/GitHub/vivadoRepo/glue/vivado.log
+# Journal file: C:/Users/chase/OneDrive/Documents/GitHub/vivadoRepo/glue\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/chase/OneDrive/Documents/GitHub/vivadoRepo/glue/glue.xpr
+update_compile_order -fileset sources_1
+reset_run synth_1
+reset_run DMF_Translation_mig_7series_0_1_synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+wait_on_run impl_1
+file copy -force C:/Users/chase/OneDrive/Documents/GitHub/vivadoRepo/glue/glue.runs/impl_1/DMF_Translation_wrapper.sysdef C:/Users/chase/OneDrive/Documents/GitHub/vivadoRepo/glue/glue.sdk/DMF_Translation_wrapper.hdf
+
+launch_sdk -workspace C:/Users/chase/OneDrive/Documents/GitHub/vivadoRepo/glue/glue.sdk -hwspec C:/Users/chase/OneDrive/Documents/GitHub/vivadoRepo/glue/glue.sdk/DMF_Translation_wrapper.hdf
+launch_sdk -workspace C:/Users/chase/OneDrive/Documents/GitHub/vivadoRepo/glue/glue.sdk -hwspec C:/Users/chase/OneDrive/Documents/GitHub/vivadoRepo/glue/glue.sdk/DMF_Translation_wrapper.hdf

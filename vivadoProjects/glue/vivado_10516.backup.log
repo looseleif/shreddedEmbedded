@@ -1,0 +1,35 @@
+#-----------------------------------------------------------
+# Vivado v2019.1 (64-bit)
+# SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+# IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+# Start of session at: Sun Sep 12 14:44:37 2021
+# Process ID: 10516
+# Current directory: C:/Users/FemtoFluidics/Documents/GitHub/vivadoRepository1/glue
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent11068 C:\Users\FemtoFluidics\Documents\GitHub\vivadoRepository1\glue\glue.xpr
+# Log file: C:/Users/FemtoFluidics/Documents/GitHub/vivadoRepository1/glue/vivado.log
+# Journal file: C:/Users/FemtoFluidics/Documents/GitHub/vivadoRepository1/glue\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/FemtoFluidics/Documents/GitHub/vivadoRepository1/glue/glue.xpr
+INFO: [Project 1-313] Project file moved from 'C:/Users/chase/OneDrive/Documents/GitHub/vivadoRepo/glue' since last save.
+Scanning sources...
+Finished scanning sources
+WARNING: [filemgmt 56-2] IP Repository Path: Could not find the directory 'C:/Users/FemtoFluidics/Documents/GitHub/vivadoRepository1/ip_repo/logicDMF_1.0', nor could it be found using path 'C:/Users/chase/OneDrive/Documents/GitHub/vivadoRepo/ip_repo/logicDMF_1.0'.
+WARNING: [filemgmt 56-2] IPUserFilesDir: Could not find the directory 'C:/Users/FemtoFluidics/Documents/GitHub/vivadoRepository1/glue/glue.ip_user_files', nor could it be found using path 'C:/Users/chase/OneDrive/Documents/GitHub/vivadoRepo/glue/glue.ip_user_files'.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+WARNING: [IP_Flow 19-2248] Failed to load user IP repository 'c:/Users/FemtoFluidics/Documents/GitHub/vivadoRepository1/ip_repo/logicDMF_1.0'; Can't find the specified path.
+If this directory should no longer be in your list of user repositories, go to the IP Settings dialog and remove it.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2019.1/data/ip'.
+WARNING: [BD 41-1661] One or more IPs have been locked in the design 'DMF_Translation.bd'. Please run report_ip_status for more details and recommendations on how to fix this issue.
+List of locked IPs:
+DMF_Translation_logicDMF_0_0
+
+open_project: Time (s): cpu = 00:00:17 ; elapsed = 00:00:12 . Memory (MB): peak = 933.055 ; gain = 269.160
+update_compile_order -fileset sources_1
+INFO: [Vivado 12-4158] Exported Hardware file is out of date. Exported hardware information may be inconsistent with respect to the current state of the design. It is recommended that you re-export the design and launch SDK otherwise SDK is launched with out of date hardware system file.
+launch_sdk -workspace C:/Users/FemtoFluidics/Documents/GitHub/vivadoRepository1/glue/glue.sdk -hwspec C:/Users/FemtoFluidics/Documents/GitHub/vivadoRepository1/glue/glue.sdk/DMF_Translation_wrapper.hdf
+INFO: [Vivado 12-393] Launching SDK...
+INFO: [Vivado 12-417] Running xsdk -workspace C:/Users/FemtoFluidics/Documents/GitHub/vivadoRepository1/glue/glue.sdk -hwspec C:/Users/FemtoFluidics/Documents/GitHub/vivadoRepository1/glue/glue.sdk/DMF_Translation_wrapper.hdf
+INFO: [Vivado 12-3157] SDK launch initiated. Please check console for any further messages.
+exit
+INFO: [Common 17-206] Exiting Vivado at Sun Sep 12 16:31:59 2021...

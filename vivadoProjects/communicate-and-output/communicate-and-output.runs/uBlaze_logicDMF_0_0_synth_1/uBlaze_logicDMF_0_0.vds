@@ -1,0 +1,398 @@
+#-----------------------------------------------------------
+# Vivado v2019.1 (64-bit)
+# SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+# IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+# Start of session at: Sun Sep 26 14:29:50 2021
+# Process ID: 3200
+# Current directory: C:/Users/FemtoFluidics/Documents/GitHub/vivadoRepository1/communicate-and-output/communicate-and-output.runs/uBlaze_logicDMF_0_0_synth_1
+# Command line: vivado.exe -log uBlaze_logicDMF_0_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source uBlaze_logicDMF_0_0.tcl
+# Log file: C:/Users/FemtoFluidics/Documents/GitHub/vivadoRepository1/communicate-and-output/communicate-and-output.runs/uBlaze_logicDMF_0_0_synth_1/uBlaze_logicDMF_0_0.vds
+# Journal file: C:/Users/FemtoFluidics/Documents/GitHub/vivadoRepository1/communicate-and-output/communicate-and-output.runs/uBlaze_logicDMF_0_0_synth_1\vivado.jou
+#-----------------------------------------------------------
+source uBlaze_logicDMF_0_0.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/FemtoFluidics/Documents/GitHub/vivadoRepository1/ip_repo_git'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2019.1/data/ip'.
+WARNING: [IP_Flow 19-4995] The host OS only allows 260 characters in a normal path. The IP cache path is more than 80 characters. If you experience issues with IP caching, please consider changing the IP cache to a location with a shorter path. Alternately consider using the OS subst command to map part of the path to a drive letter. 
+Current IP cache path is c:/Users/FemtoFluidics/Documents/GitHub/vivadoRepository1/communicate-and-output/communicate-and-output.cache/ip 
+Command: synth_design -top uBlaze_logicDMF_0_0 -part xc7a35ticsg324-1L -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35ti'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35ti'
+INFO: [Device 21-403] Loading part xc7a35ticsg324-1L
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 15748 
+WARNING: [Synth 8-2611] redeclaration of ansi port slv_reg0 is not allowed [c:/Users/FemtoFluidics/Documents/GitHub/vivadoRepository1/communicate-and-output/communicate-and-output.srcs/sources_1/bd/uBlaze/ipshared/b14f/hdl/logicDMF_v1_0_Data_Slave.v:111]
+WARNING: [Synth 8-2611] redeclaration of ansi port slv_reg1 is not allowed [c:/Users/FemtoFluidics/Documents/GitHub/vivadoRepository1/communicate-and-output/communicate-and-output.srcs/sources_1/bd/uBlaze/ipshared/b14f/hdl/logicDMF_v1_0_Data_Slave.v:112]
+WARNING: [Synth 8-2611] redeclaration of ansi port slv_reg0 is not allowed [c:/Users/FemtoFluidics/Documents/GitHub/vivadoRepository1/communicate-and-output/communicate-and-output.srcs/sources_1/bd/uBlaze/ipshared/b14f/hdl/logicDMF_v1_0_Hypervisor_Slave.v:114]
+WARNING: [Synth 8-2611] redeclaration of ansi port slv_reg1 is not allowed [c:/Users/FemtoFluidics/Documents/GitHub/vivadoRepository1/communicate-and-output/communicate-and-output.srcs/sources_1/bd/uBlaze/ipshared/b14f/hdl/logicDMF_v1_0_Hypervisor_Slave.v:115]
+WARNING: [Synth 8-2611] redeclaration of ansi port slv_reg2 is not allowed [c:/Users/FemtoFluidics/Documents/GitHub/vivadoRepository1/communicate-and-output/communicate-and-output.srcs/sources_1/bd/uBlaze/ipshared/b14f/hdl/logicDMF_v1_0_Hypervisor_Slave.v:116]
+WARNING: [Synth 8-2611] redeclaration of ansi port slv_reg3 is not allowed [c:/Users/FemtoFluidics/Documents/GitHub/vivadoRepository1/communicate-and-output/communicate-and-output.srcs/sources_1/bd/uBlaze/ipshared/b14f/hdl/logicDMF_v1_0_Hypervisor_Slave.v:117]
+WARNING: [Synth 8-2611] redeclaration of ansi port slv_reg4 is not allowed [c:/Users/FemtoFluidics/Documents/GitHub/vivadoRepository1/communicate-and-output/communicate-and-output.srcs/sources_1/bd/uBlaze/ipshared/b14f/hdl/logicDMF_v1_0_Hypervisor_Slave.v:118]
+WARNING: [Synth 8-992] ID_addr1_i is already implicitly declared earlier [c:/Users/FemtoFluidics/Documents/GitHub/vivadoRepository1/communicate-and-output/communicate-and-output.srcs/sources_1/bd/uBlaze/ipshared/b14f/hdl/logicDMF_v1_0.v:143]
+WARNING: [Synth 8-992] ID_addr2_i is already implicitly declared earlier [c:/Users/FemtoFluidics/Documents/GitHub/vivadoRepository1/communicate-and-output/communicate-and-output.srcs/sources_1/bd/uBlaze/ipshared/b14f/hdl/logicDMF_v1_0.v:144]
+WARNING: [Synth 8-992] ID_addr3_i is already implicitly declared earlier [c:/Users/FemtoFluidics/Documents/GitHub/vivadoRepository1/communicate-and-output/communicate-and-output.srcs/sources_1/bd/uBlaze/ipshared/b14f/hdl/logicDMF_v1_0.v:145]
+WARNING: [Synth 8-992] ID_addr4_i is already implicitly declared earlier [c:/Users/FemtoFluidics/Documents/GitHub/vivadoRepository1/communicate-and-output/communicate-and-output.srcs/sources_1/bd/uBlaze/ipshared/b14f/hdl/logicDMF_v1_0.v:146]
+WARNING: [Synth 8-992] Guest_ID_32 is already implicitly declared earlier [c:/Users/FemtoFluidics/Documents/GitHub/vivadoRepository1/communicate-and-output/communicate-and-output.srcs/sources_1/bd/uBlaze/ipshared/b14f/hdl/logicDMF_v1_0.v:148]
+WARNING: [Synth 8-992] Data1 is already implicitly declared earlier [c:/Users/FemtoFluidics/Documents/GitHub/vivadoRepository1/communicate-and-output/communicate-and-output.srcs/sources_1/bd/uBlaze/ipshared/b14f/hdl/logicDMF_v1_0.v:150]
+WARNING: [Synth 8-992] Data2 is already implicitly declared earlier [c:/Users/FemtoFluidics/Documents/GitHub/vivadoRepository1/communicate-and-output/communicate-and-output.srcs/sources_1/bd/uBlaze/ipshared/b14f/hdl/logicDMF_v1_0.v:151]
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 827.188 ; gain = 183.316
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'uBlaze_logicDMF_0_0' [c:/Users/FemtoFluidics/Documents/GitHub/vivadoRepository1/communicate-and-output/communicate-and-output.srcs/sources_1/bd/uBlaze/ip/uBlaze_logicDMF_0_0/synth/uBlaze_logicDMF_0_0.v:57]
+INFO: [Synth 8-6157] synthesizing module 'logicDMF_v1_0' [c:/Users/FemtoFluidics/Documents/GitHub/vivadoRepository1/communicate-and-output/communicate-and-output.srcs/sources_1/bd/uBlaze/ipshared/b14f/hdl/logicDMF_v1_0.v:4]
+	Parameter C_Hypervisor_Slave_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_Hypervisor_Slave_ADDR_WIDTH bound to: 5 - type: integer 
+	Parameter C_Data_Slave_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_Data_Slave_ADDR_WIDTH bound to: 4 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'logicDMF_v1_0_Hypervisor_Slave' [c:/Users/FemtoFluidics/Documents/GitHub/vivadoRepository1/communicate-and-output/communicate-and-output.srcs/sources_1/bd/uBlaze/ipshared/b14f/hdl/logicDMF_v1_0_Hypervisor_Slave.v:4]
+	Parameter C_S_AXI_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_S_AXI_ADDR_WIDTH bound to: 5 - type: integer 
+	Parameter ADDR_LSB bound to: 2 - type: integer 
+	Parameter OPT_MEM_ADDR_BITS bound to: 2 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'logicDMF_v1_0_Hypervisor_Slave' (1#1) [c:/Users/FemtoFluidics/Documents/GitHub/vivadoRepository1/communicate-and-output/communicate-and-output.srcs/sources_1/bd/uBlaze/ipshared/b14f/hdl/logicDMF_v1_0_Hypervisor_Slave.v:4]
+INFO: [Synth 8-6157] synthesizing module 'logicDMF_v1_0_Data_Slave' [c:/Users/FemtoFluidics/Documents/GitHub/vivadoRepository1/communicate-and-output/communicate-and-output.srcs/sources_1/bd/uBlaze/ipshared/b14f/hdl/logicDMF_v1_0_Data_Slave.v:4]
+	Parameter C_S_AXI_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_S_AXI_ADDR_WIDTH bound to: 4 - type: integer 
+	Parameter ADDR_LSB bound to: 2 - type: integer 
+	Parameter OPT_MEM_ADDR_BITS bound to: 1 - type: integer 
+INFO: [Synth 8-226] default block is never used [c:/Users/FemtoFluidics/Documents/GitHub/vivadoRepository1/communicate-and-output/communicate-and-output.srcs/sources_1/bd/uBlaze/ipshared/b14f/hdl/logicDMF_v1_0_Data_Slave.v:235]
+INFO: [Synth 8-226] default block is never used [c:/Users/FemtoFluidics/Documents/GitHub/vivadoRepository1/communicate-and-output/communicate-and-output.srcs/sources_1/bd/uBlaze/ipshared/b14f/hdl/logicDMF_v1_0_Data_Slave.v:376]
+INFO: [Synth 8-6155] done synthesizing module 'logicDMF_v1_0_Data_Slave' (2#1) [c:/Users/FemtoFluidics/Documents/GitHub/vivadoRepository1/communicate-and-output/communicate-and-output.srcs/sources_1/bd/uBlaze/ipshared/b14f/hdl/logicDMF_v1_0_Data_Slave.v:4]
+INFO: [Synth 8-6157] synthesizing module 'Prototipo_IPC' [c:/Users/FemtoFluidics/Documents/GitHub/vivadoRepository1/communicate-and-output/communicate-and-output.srcs/sources_1/bd/uBlaze/ipshared/b14f/hdl/logicDMF_v1_0.v:215]
+INFO: [Synth 8-6157] synthesizing module 'Signal_Manager' [c:/Users/FemtoFluidics/Documents/GitHub/vivadoRepository1/communicate-and-output/communicate-and-output.srcs/sources_1/bd/uBlaze/ipshared/b14f/hdl/logicDMF_v1_0.v:185]
+WARNING: [Synth 8-567] referenced signal 'Guest_Signal_r4' should be on the sensitivity list [c:/Users/FemtoFluidics/Documents/GitHub/vivadoRepository1/communicate-and-output/communicate-and-output.srcs/sources_1/bd/uBlaze/ipshared/b14f/hdl/logicDMF_v1_0.v:208]
+INFO: [Synth 8-6155] done synthesizing module 'Signal_Manager' (3#1) [c:/Users/FemtoFluidics/Documents/GitHub/vivadoRepository1/communicate-and-output/communicate-and-output.srcs/sources_1/bd/uBlaze/ipshared/b14f/hdl/logicDMF_v1_0.v:185]
+WARNING: [Synth 8-567] referenced signal 'ID_addr1_r32' should be on the sensitivity list [c:/Users/FemtoFluidics/Documents/GitHub/vivadoRepository1/communicate-and-output/communicate-and-output.srcs/sources_1/bd/uBlaze/ipshared/b14f/hdl/logicDMF_v1_0.v:294]
+WARNING: [Synth 8-567] referenced signal 'ID_addr2_r32' should be on the sensitivity list [c:/Users/FemtoFluidics/Documents/GitHub/vivadoRepository1/communicate-and-output/communicate-and-output.srcs/sources_1/bd/uBlaze/ipshared/b14f/hdl/logicDMF_v1_0.v:294]
+WARNING: [Synth 8-567] referenced signal 'ID_addr3_r32' should be on the sensitivity list [c:/Users/FemtoFluidics/Documents/GitHub/vivadoRepository1/communicate-and-output/communicate-and-output.srcs/sources_1/bd/uBlaze/ipshared/b14f/hdl/logicDMF_v1_0.v:294]
+WARNING: [Synth 8-567] referenced signal 'ID_addr4_r32' should be on the sensitivity list [c:/Users/FemtoFluidics/Documents/GitHub/vivadoRepository1/communicate-and-output/communicate-and-output.srcs/sources_1/bd/uBlaze/ipshared/b14f/hdl/logicDMF_v1_0.v:294]
+INFO: [Synth 8-6155] done synthesizing module 'Prototipo_IPC' (4#1) [c:/Users/FemtoFluidics/Documents/GitHub/vivadoRepository1/communicate-and-output/communicate-and-output.srcs/sources_1/bd/uBlaze/ipshared/b14f/hdl/logicDMF_v1_0.v:215]
+INFO: [Synth 8-6155] done synthesizing module 'logicDMF_v1_0' (5#1) [c:/Users/FemtoFluidics/Documents/GitHub/vivadoRepository1/communicate-and-output/communicate-and-output.srcs/sources_1/bd/uBlaze/ipshared/b14f/hdl/logicDMF_v1_0.v:4]
+INFO: [Synth 8-6155] done synthesizing module 'uBlaze_logicDMF_0_0' (6#1) [c:/Users/FemtoFluidics/Documents/GitHub/vivadoRepository1/communicate-and-output/communicate-and-output.srcs/sources_1/bd/uBlaze/ip/uBlaze_logicDMF_0_0/synth/uBlaze_logicDMF_0_0.v:57]
+WARNING: [Synth 8-3331] design logicDMF_v1_0_Data_Slave has unconnected port S_AXI_AWPROT[2]
+WARNING: [Synth 8-3331] design logicDMF_v1_0_Data_Slave has unconnected port S_AXI_AWPROT[1]
+WARNING: [Synth 8-3331] design logicDMF_v1_0_Data_Slave has unconnected port S_AXI_AWPROT[0]
+WARNING: [Synth 8-3331] design logicDMF_v1_0_Data_Slave has unconnected port S_AXI_ARPROT[2]
+WARNING: [Synth 8-3331] design logicDMF_v1_0_Data_Slave has unconnected port S_AXI_ARPROT[1]
+WARNING: [Synth 8-3331] design logicDMF_v1_0_Data_Slave has unconnected port S_AXI_ARPROT[0]
+WARNING: [Synth 8-3331] design logicDMF_v1_0_Hypervisor_Slave has unconnected port S_AXI_AWPROT[2]
+WARNING: [Synth 8-3331] design logicDMF_v1_0_Hypervisor_Slave has unconnected port S_AXI_AWPROT[1]
+WARNING: [Synth 8-3331] design logicDMF_v1_0_Hypervisor_Slave has unconnected port S_AXI_AWPROT[0]
+WARNING: [Synth 8-3331] design logicDMF_v1_0_Hypervisor_Slave has unconnected port S_AXI_ARPROT[2]
+WARNING: [Synth 8-3331] design logicDMF_v1_0_Hypervisor_Slave has unconnected port S_AXI_ARPROT[1]
+WARNING: [Synth 8-3331] design logicDMF_v1_0_Hypervisor_Slave has unconnected port S_AXI_ARPROT[0]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 869.195 ; gain = 225.324
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 869.195 ; gain = 225.324
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 869.195 ; gain = 225.324
+---------------------------------------------------------------------------------
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 969.055 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+WARNING: [Constraints 18-5210] No constraints selected for write.
+Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.058 . Memory (MB): peak = 971.145 ; gain = 2.090
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 971.145 ; gain = 327.273
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a35ticsg324-1L
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 971.145 ; gain = 327.273
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 971.145 ; gain = 327.273
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 971.145 ; gain = 327.273
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 11    
+	                5 Bit    Registers := 2     
+	                4 Bit    Registers := 3     
+	                2 Bit    Registers := 4     
+	                1 Bit    Registers := 12    
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 9     
+	   6 Input     32 Bit        Muxes := 5     
+	   4 Input     32 Bit        Muxes := 5     
+	   5 Input     32 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 3     
+	   2 Input      1 Bit        Muxes := 10    
+	   4 Input      1 Bit        Muxes := 2     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module logicDMF_v1_0_Hypervisor_Slave 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 6     
+	                5 Bit    Registers := 2     
+	                2 Bit    Registers := 2     
+	                1 Bit    Registers := 6     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 5     
+	   6 Input     32 Bit        Muxes := 5     
+	   2 Input      1 Bit        Muxes := 5     
+Module logicDMF_v1_0_Data_Slave 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 5     
+	                4 Bit    Registers := 2     
+	                2 Bit    Registers := 2     
+	                1 Bit    Registers := 6     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 4     
+	   4 Input     32 Bit        Muxes := 5     
+	   2 Input      1 Bit        Muxes := 5     
+Module Signal_Manager 
+Detailed RTL Component Info : 
++---Registers : 
+	                4 Bit    Registers := 1     
++---Muxes : 
+	   2 Input      4 Bit        Muxes := 3     
+Module Prototipo_IPC 
+Detailed RTL Component Info : 
++---Muxes : 
+	   5 Input     32 Bit        Muxes := 1     
+	   4 Input      1 Bit        Muxes := 2     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 90 (col length:60)
+BRAMs: 100 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+Warning: Parallel synthesis criteria is not met 
+WARNING: [Synth 8-3331] design logicDMF_v1_0_Data_Slave has unconnected port S_AXI_AWPROT[2]
+WARNING: [Synth 8-3331] design logicDMF_v1_0_Data_Slave has unconnected port S_AXI_AWPROT[1]
+WARNING: [Synth 8-3331] design logicDMF_v1_0_Data_Slave has unconnected port S_AXI_AWPROT[0]
+WARNING: [Synth 8-3331] design logicDMF_v1_0_Data_Slave has unconnected port S_AXI_ARPROT[2]
+WARNING: [Synth 8-3331] design logicDMF_v1_0_Data_Slave has unconnected port S_AXI_ARPROT[1]
+WARNING: [Synth 8-3331] design logicDMF_v1_0_Data_Slave has unconnected port S_AXI_ARPROT[0]
+WARNING: [Synth 8-3331] design logicDMF_v1_0_Hypervisor_Slave has unconnected port S_AXI_AWPROT[2]
+WARNING: [Synth 8-3331] design logicDMF_v1_0_Hypervisor_Slave has unconnected port S_AXI_AWPROT[1]
+WARNING: [Synth 8-3331] design logicDMF_v1_0_Hypervisor_Slave has unconnected port S_AXI_AWPROT[0]
+WARNING: [Synth 8-3331] design logicDMF_v1_0_Hypervisor_Slave has unconnected port S_AXI_ARPROT[2]
+WARNING: [Synth 8-3331] design logicDMF_v1_0_Hypervisor_Slave has unconnected port S_AXI_ARPROT[1]
+WARNING: [Synth 8-3331] design logicDMF_v1_0_Hypervisor_Slave has unconnected port S_AXI_ARPROT[0]
+INFO: [Synth 8-3886] merging instance 'inst/logicDMF_v1_0_Hypervisor_Slave_inst/axi_rresp_reg[0]' (FDRE) to 'inst/logicDMF_v1_0_Hypervisor_Slave_inst/axi_rresp_reg[1]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/logicDMF_v1_0_Hypervisor_Slave_inst/axi_rresp_reg[1] )
+INFO: [Synth 8-3886] merging instance 'inst/logicDMF_v1_0_Hypervisor_Slave_inst/axi_bresp_reg[0]' (FDRE) to 'inst/logicDMF_v1_0_Hypervisor_Slave_inst/axi_bresp_reg[1]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/logicDMF_v1_0_Hypervisor_Slave_inst/axi_bresp_reg[1] )
+INFO: [Synth 8-3886] merging instance 'inst/logicDMF_v1_0_Data_Slave_inst/axi_rresp_reg[0]' (FDRE) to 'inst/logicDMF_v1_0_Data_Slave_inst/axi_rresp_reg[1]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/logicDMF_v1_0_Data_Slave_inst/axi_rresp_reg[1] )
+INFO: [Synth 8-3886] merging instance 'inst/logicDMF_v1_0_Data_Slave_inst/axi_bresp_reg[0]' (FDRE) to 'inst/logicDMF_v1_0_Data_Slave_inst/axi_bresp_reg[1]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/logicDMF_v1_0_Data_Slave_inst/axi_bresp_reg[1] )
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 971.145 ; gain = 327.273
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 976.449 ; gain = 332.578
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 976.824 ; gain = 332.953
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:17 ; elapsed = 00:00:17 . Memory (MB): peak = 989.168 ; gain = 345.297
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 1004.023 ; gain = 360.152
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 1004.023 ; gain = 360.152
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 1004.023 ; gain = 360.152
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 1004.023 ; gain = 360.152
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 1004.023 ; gain = 360.152
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 1004.023 ; gain = 360.152
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-----+------+
+|      |Cell |Count |
++------+-----+------+
+|1     |LUT1 |     2|
+|2     |LUT2 |     2|
+|3     |LUT3 |     2|
+|4     |LUT4 |    29|
+|5     |LUT5 |    52|
+|6     |LUT6 |    75|
+|7     |FDRE |   372|
+|8     |FDSE |     2|
++------+-----+------+
+
+Report Instance Areas: 
++------+----------------------------------------+-------------------------------+------+
+|      |Instance                                |Module                         |Cells |
++------+----------------------------------------+-------------------------------+------+
+|1     |top                                     |                               |   536|
+|2     |  inst                                  |logicDMF_v1_0                  |   536|
+|3     |    logicDMF_v1_0_Data_Slave_inst       |logicDMF_v1_0_Data_Slave       |   231|
+|4     |    logicDMF_v1_0_Hypervisor_Slave_inst |logicDMF_v1_0_Hypervisor_Slave |   305|
++------+----------------------------------------+-------------------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 1004.023 ; gain = 360.152
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 12 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:12 ; elapsed = 00:00:17 . Memory (MB): peak = 1004.023 ; gain = 258.203
+Synthesis Optimization Complete : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 1004.023 ; gain = 360.152
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1021.559 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Common 17-83] Releasing license: Synthesis
+34 Infos, 45 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:23 ; elapsed = 00:00:25 . Memory (MB): peak = 1021.559 ; gain = 616.422
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1021.559 ; gain = 0.000
+WARNING: [Constraints 18-5210] No constraints selected for write.
+Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
+INFO: [Common 17-1381] The checkpoint 'C:/Users/FemtoFluidics/Documents/GitHub/vivadoRepository1/communicate-and-output/communicate-and-output.runs/uBlaze_logicDMF_0_0_synth_1/uBlaze_logicDMF_0_0.dcp' has been generated.
+WARNING: [Common 17-576] 'use_project_ipc' is deprecated. This option is deprecated and no longer used.
+INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP uBlaze_logicDMF_0_0, cache-ID = 14c0920066239d62
+INFO: [Coretcl 2-1174] Renamed 3 cell refs.
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1021.559 ; gain = 0.000
+WARNING: [Constraints 18-5210] No constraints selected for write.
+Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
+INFO: [Common 17-1381] The checkpoint 'C:/Users/FemtoFluidics/Documents/GitHub/vivadoRepository1/communicate-and-output/communicate-and-output.runs/uBlaze_logicDMF_0_0_synth_1/uBlaze_logicDMF_0_0.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file uBlaze_logicDMF_0_0_utilization_synth.rpt -pb uBlaze_logicDMF_0_0_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Sun Sep 26 14:30:20 2021...

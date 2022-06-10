@@ -1,0 +1,777 @@
+14:56:58 **** Build of project commSoftware_bsp ****
+make -k all 
+"Running Make include in microblaze_0/libsrc/bram_v4_3/src"
+make -C microblaze_0/libsrc/bram_v4_3/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make include in microblaze_0/libsrc/cpu_v2_9/src"
+make -C microblaze_0/libsrc/cpu_v2_9/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make include in microblaze_0/libsrc/gpio_v4_4/src"
+make -C microblaze_0/libsrc/gpio_v4_4/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make include in microblaze_0/libsrc/iic_v3_5/src"
+make -C microblaze_0/libsrc/iic_v3_5/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make include in microblaze_0/libsrc/intc_v3_9/src"
+make -C microblaze_0/libsrc/intc_v3_9/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make include in microblaze_0/libsrc/logicDMF_v1_0/src"
+make -C microblaze_0/libsrc/logicDMF_v1_0/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make include in microblaze_0/libsrc/standalone_v7_0/src"
+make -C microblaze_0/libsrc/standalone_v7_0/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make include in microblaze_0/libsrc/uartlite_v3_2/src"
+make -C microblaze_0/libsrc/uartlite_v3_2/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make libs in microblaze_0/libsrc/bram_v4_3/src"
+make -C microblaze_0/libsrc/bram_v4_3/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling bram"
+mb-ar: creating ../../../lib/libxil.a
+"Running Make libs in microblaze_0/libsrc/cpu_v2_9/src"
+make -C microblaze_0/libsrc/cpu_v2_9/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling cpu"
+"Running Make libs in microblaze_0/libsrc/gpio_v4_4/src"
+make -C microblaze_0/libsrc/gpio_v4_4/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling gpio"
+"Running Make libs in microblaze_0/libsrc/iic_v3_5/src"
+make -C microblaze_0/libsrc/iic_v3_5/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling iic"
+"Running Make libs in microblaze_0/libsrc/intc_v3_9/src"
+make -C microblaze_0/libsrc/intc_v3_9/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling intc"
+"Running Make libs in microblaze_0/libsrc/logicDMF_v1_0/src"
+make -C microblaze_0/libsrc/logicDMF_v1_0/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling logicDMF..."
+logicDMF_selftest.c: In function 'LOGICDMF_Reg_SelfTest':
+logicDMF_selftest.c:52:57: warning: comparison of integer expressions of different signedness: 'u32' {aka 'long unsigned int'} and 'int' [-Wsign-compare]
+    if ( LOGICDMF_mReadReg (baseaddr, read_loop_index*4) != (read_loop_index+1)*READ_WRITE_MUL_FACTOR){
+                                                         ^~
+logicDMF_selftest.c:36:6: warning: unused variable 'Index' [-Wunused-variable]
+  int Index;
+      ^~~~~
+"Running Make libs in microblaze_0/libsrc/standalone_v7_0/src"
+make -C microblaze_0/libsrc/standalone_v7_0/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling standalone";
+microblaze_sleep.c:77:9: note: #pragma message: For the sleep routines, assembly instructions are used
+ #pragma message ("For the sleep routines, assembly instructions are used")
+         ^~~~~~~
+"Running Make libs in microblaze_0/libsrc/uartlite_v3_2/src"
+make -C microblaze_0/libsrc/uartlite_v3_2/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling uartlite"
+'Finished building libraries'
+14:57:06 **** Auto Build of project commSoftware_bsp ****
+make -k all 
+"Running Make include in microblaze_0/libsrc/bram_v4_3/src"
+make -C microblaze_0/libsrc/bram_v4_3/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make include in microblaze_0/libsrc/cpu_v2_9/src"
+make -C microblaze_0/libsrc/cpu_v2_9/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make include in microblaze_0/libsrc/gpio_v4_4/src"
+make -C microblaze_0/libsrc/gpio_v4_4/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make include in microblaze_0/libsrc/iic_v3_5/src"
+make -C microblaze_0/libsrc/iic_v3_5/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make include in microblaze_0/libsrc/intc_v3_9/src"
+make -C microblaze_0/libsrc/intc_v3_9/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make include in microblaze_0/libsrc/logicDMF_v1_0/src"
+make -C microblaze_0/libsrc/logicDMF_v1_0/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make include in microblaze_0/libsrc/standalone_v7_0/src"
+make -C microblaze_0/libsrc/standalone_v7_0/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make include in microblaze_0/libsrc/uartlite_v3_2/src"
+make -C microblaze_0/libsrc/uartlite_v3_2/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make libs in microblaze_0/libsrc/bram_v4_3/src"
+make -C microblaze_0/libsrc/bram_v4_3/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling bram"
+"Running Make libs in microblaze_0/libsrc/cpu_v2_9/src"
+make -C microblaze_0/libsrc/cpu_v2_9/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling cpu"
+"Running Make libs in microblaze_0/libsrc/gpio_v4_4/src"
+make -C microblaze_0/libsrc/gpio_v4_4/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling gpio"
+"Running Make libs in microblaze_0/libsrc/iic_v3_5/src"
+make -C microblaze_0/libsrc/iic_v3_5/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling iic"
+"Running Make libs in microblaze_0/libsrc/intc_v3_9/src"
+make -C microblaze_0/libsrc/intc_v3_9/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling intc"
+"Running Make libs in microblaze_0/libsrc/logicDMF_v1_0/src"
+make -C microblaze_0/libsrc/logicDMF_v1_0/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling logicDMF..."
+logicDMF_selftest.c: In function 'LOGICDMF_Reg_SelfTest':
+logicDMF_selftest.c:52:57: warning: comparison of integer expressions of different signedness: 'u32' {aka 'long unsigned int'} and 'int' [-Wsign-compare]
+    if ( LOGICDMF_mReadReg (baseaddr, read_loop_index*4) != (read_loop_index+1)*READ_WRITE_MUL_FACTOR){
+                                                         ^~
+logicDMF_selftest.c:36:6: warning: unused variable 'Index' [-Wunused-variable]
+  int Index;
+      ^~~~~
+"Running Make libs in microblaze_0/libsrc/standalone_v7_0/src"
+make -C microblaze_0/libsrc/standalone_v7_0/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling standalone";
+microblaze_sleep.c:77:9: note: #pragma message: For the sleep routines, assembly instructions are used
+ #pragma message ("For the sleep routines, assembly instructions are used")
+         ^~~~~~~
+"Running Make libs in microblaze_0/libsrc/uartlite_v3_2/src"
+make -C microblaze_0/libsrc/uartlite_v3_2/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling uartlite"
+'Finished building libraries'
+14:57:13 **** Build of configuration Debug for project commSoftware ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../commSoftware_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+'Finished building: ../src/helloworld.c'
+' '
+'Building file: ../src/platform.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/platform.o" -I../../commSoftware_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/platform.d" -MT"src/platform.o" -o "src/platform.o" "../src/platform.c"
+'Finished building: ../src/platform.c'
+' '
+'Building target: commSoftware.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../commSoftware_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "commSoftware.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: commSoftware.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size commSoftware.elf  |tee "commSoftware.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   3124	    320	   3108	   6552	   1998	commSoftware.elf
+'Finished building: commSoftware.elf.size'
+' '
+14:57:15 **** Auto Build of configuration Debug for project commSoftware ****
+make all 
+make: Nothing to be done for 'all'.
+14:58:30 **** Incremental Build of configuration Debug for project commSoftware ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../commSoftware_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: commSoftware.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../commSoftware_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "commSoftware.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: commSoftware.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size commSoftware.elf  |tee "commSoftware.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   8200	    684	   3108	  11992	   2ed8	commSoftware.elf
+'Finished building: commSoftware.elf.size'
+' '
+14:58:54 **** Incremental Build of configuration Debug for project commSoftware ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../commSoftware_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: commSoftware.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../commSoftware_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "commSoftware.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: commSoftware.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size commSoftware.elf  |tee "commSoftware.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   8224	    684	   3108	  12016	   2ef0	commSoftware.elf
+'Finished building: commSoftware.elf.size'
+' '
+16:29:16 **** Auto Build of configuration Debug for project commSoftware ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../commSoftware_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:33:2: error: unknown type name 'AddressType'
+  AddressType Address = EEPROM_TEST_START_ADDRESS;
+  ^~~~~~~~~~~
+../src/helloworld.c:33:24: error: 'EEPROM_TEST_START_ADDRESS' undeclared (first use in this function)
+  AddressType Address = EEPROM_TEST_START_ADDRESS;
+                        ^~~~~~~~~~~~~~~~~~~~~~~~~
+../src/helloworld.c:33:24: note: each undeclared identifier is reported only once for each function it appears in
+../src/helloworld.c:34:2: error: 'EepromIicAddr' undeclared (first use in this function)
+  EepromIicAddr = EEPROM_ADDRESS;
+  ^~~~~~~~~~~~~
+../src/helloworld.c:34:18: error: 'EEPROM_ADDRESS' undeclared (first use in this function)
+  EepromIicAddr = EEPROM_ADDRESS;
+                  ^~~~~~~~~~~~~~
+../src/helloworld.c:33:14: warning: unused variable 'Address' [-Wunused-variable]
+  AddressType Address = EEPROM_TEST_START_ADDRESS;
+              ^~~~~~~
+../src/helloworld.c:32:15: warning: unused variable 'ConfigPtr' [-Wunused-variable]
+  XIic_Config *ConfigPtr; /* Pointer to configuration data */
+               ^~~~~~~~~
+../src/helloworld.c:31:6: warning: unused variable 'Status' [-Wunused-variable]
+  int Status;
+      ^~~~~~
+../src/helloworld.c:30:6: warning: unused variable 'Index' [-Wunused-variable]
+  u32 Index;
+      ^~~~~
+../src/helloworld.c:19:9: warning: unused variable 'i' [-Wunused-variable]
+     int i;
+         ^
+make: *** [src/subdir.mk:26: src/helloworld.o] Error 1
+16:59:28 **** Auto Build of configuration Debug for project commSoftware ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../commSoftware_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'IicEepromExample':
+../src/helloworld.c:114:2: error: unknown type name 'AddressType'
+  AddressType Address = EEPROM_TEST_START_ADDRESS;
+  ^~~~~~~~~~~
+../src/helloworld.c:114:24: error: 'EEPROM_TEST_START_ADDRESS' undeclared (first use in this function); did you mean 'EEPROM_ADDRESS'?
+  AddressType Address = EEPROM_TEST_START_ADDRESS;
+                        ^~~~~~~~~~~~~~~~~~~~~~~~~
+                        EEPROM_ADDRESS
+../src/helloworld.c:114:24: note: each undeclared identifier is reported only once for each function it appears in
+../src/helloworld.c:115:2: error: 'EepromIicAddr' undeclared (first use in this function)
+  EepromIicAddr = EEPROM_ADDRESS;
+  ^~~~~~~~~~~~~
+../src/helloworld.c:134:11: warning: implicit declaration of function 'SetupInterruptSystem'; did you mean 'XIntc_InterruptHandler'? [-Wimplicit-function-declaration]
+  Status = SetupInterruptSystem(&IicInstance);
+           ^~~~~~~~~~~~~~~~~~~~
+           XIntc_InterruptHandler
+../src/helloworld.c:143:20: error: 'SendHandler' undeclared (first use in this function); did you mean 'XIic_Handler'?
+     (XIic_Handler) SendHandler);
+                    ^~~~~~~~~~~
+                    XIic_Handler
+../src/helloworld.c:145:20: error: 'ReceiveHandler' undeclared (first use in this function); did you mean 'XIic_Handler'?
+     (XIic_Handler) ReceiveHandler);
+                    ^~~~~~~~~~~~~~
+                    XIic_Handler
+../src/helloworld.c:147:28: error: 'StatusHandler' undeclared (first use in this function); did you mean 'XIic_StatusHandler'?
+       (XIic_StatusHandler) StatusHandler);
+                            ^~~~~~~~~~~~~
+                            XIic_StatusHandler
+../src/helloworld.c:166:3: error: 'WriteBuffer' undeclared (first use in this function); did you mean 'setbuffer'?
+   WriteBuffer[0] = (u8) (EEPROM_TEST_START_ADDRESS);
+   ^~~~~~~~~~~
+   setbuffer
+../src/helloworld.c:171:3: error: 'ReadBuffer' undeclared (first use in this function); did you mean 'setbuffer'?
+   ReadBuffer[Index] = 0;
+   ^~~~~~~~~~
+   setbuffer
+../src/helloworld.c:174:26: error: 'PAGE_SIZE' undeclared (first use in this function); did you mean 'FD_SETSIZE'?
+  for (Index = 0; Index < PAGE_SIZE; Index++) {
+                          ^~~~~~~~~
+                          FD_SETSIZE
+../src/helloworld.c:192:11: warning: implicit declaration of function 'EepromWriteData' [-Wimplicit-function-declaration]
+  Status = EepromWriteData(sizeof(Address) + PAGE_SIZE);
+           ^~~~~~~~~~~~~~~
+../src/helloworld.c:200:11: warning: implicit declaration of function 'EepromReadData' [-Wimplicit-function-declaration]
+  Status = EepromReadData(ReadBuffer, PAGE_SIZE);
+           ^~~~~~~~~~~~~~
+make: *** [src/subdir.mk:26: src/helloworld.o] Error 1
+17:01:48 **** Auto Build of configuration Debug for project commSoftware ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../commSoftware_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'IicEepromExample':
+../src/helloworld.c:55:24: error: 'EEPROM_TEST_START_ADDRESS' undeclared (first use in this function); did you mean 'EEPROM_ADDRESS'?
+  AddressType Address = EEPROM_TEST_START_ADDRESS;
+                        ^~~~~~~~~~~~~~~~~~~~~~~~~
+                        EEPROM_ADDRESS
+../src/helloworld.c:55:24: note: each undeclared identifier is reported only once for each function it appears in
+../src/helloworld.c:56:2: error: 'EepromIicAddr' undeclared (first use in this function)
+  EepromIicAddr = EEPROM_ADDRESS;
+  ^~~~~~~~~~~~~
+../src/helloworld.c:75:11: warning: implicit declaration of function 'SetupInterruptSystem'; did you mean 'XIntc_InterruptHandler'? [-Wimplicit-function-declaration]
+  Status = SetupInterruptSystem(&IicInstance);
+           ^~~~~~~~~~~~~~~~~~~~
+           XIntc_InterruptHandler
+../src/helloworld.c:84:20: error: 'SendHandler' undeclared (first use in this function); did you mean 'XIic_Handler'?
+     (XIic_Handler) SendHandler);
+                    ^~~~~~~~~~~
+                    XIic_Handler
+../src/helloworld.c:86:20: error: 'ReceiveHandler' undeclared (first use in this function); did you mean 'XIic_Handler'?
+     (XIic_Handler) ReceiveHandler);
+                    ^~~~~~~~~~~~~~
+                    XIic_Handler
+../src/helloworld.c:88:28: error: 'StatusHandler' undeclared (first use in this function); did you mean 'XIic_StatusHandler'?
+       (XIic_StatusHandler) StatusHandler);
+                            ^~~~~~~~~~~~~
+                            XIic_StatusHandler
+../src/helloworld.c:107:3: error: 'WriteBuffer' undeclared (first use in this function); did you mean 'setbuffer'?
+   WriteBuffer[0] = (u8) (EEPROM_TEST_START_ADDRESS);
+   ^~~~~~~~~~~
+   setbuffer
+../src/helloworld.c:112:3: error: 'ReadBuffer' undeclared (first use in this function); did you mean 'setbuffer'?
+   ReadBuffer[Index] = 0;
+   ^~~~~~~~~~
+   setbuffer
+../src/helloworld.c:115:26: error: 'PAGE_SIZE' undeclared (first use in this function); did you mean 'FD_SETSIZE'?
+  for (Index = 0; Index < PAGE_SIZE; Index++) {
+                          ^~~~~~~~~
+                          FD_SETSIZE
+../src/helloworld.c:133:11: warning: implicit declaration of function 'EepromWriteData' [-Wimplicit-function-declaration]
+  Status = EepromWriteData(sizeof(Address) + PAGE_SIZE);
+           ^~~~~~~~~~~~~~~
+../src/helloworld.c:141:11: warning: implicit declaration of function 'EepromReadData' [-Wimplicit-function-declaration]
+  Status = EepromReadData(ReadBuffer, PAGE_SIZE);
+           ^~~~~~~~~~~~~~
+make: *** [src/subdir.mk:26: src/helloworld.o] Error 1
+17:03:03 **** Auto Build of configuration Debug for project commSoftware ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../commSoftware_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'IicEepromExample':
+../src/helloworld.c:64:2: error: 'EepromIicAddr' undeclared (first use in this function)
+  EepromIicAddr = EEPROM_ADDRESS;
+  ^~~~~~~~~~~~~
+../src/helloworld.c:64:2: note: each undeclared identifier is reported only once for each function it appears in
+../src/helloworld.c:83:11: warning: implicit declaration of function 'SetupInterruptSystem'; did you mean 'XIntc_InterruptHandler'? [-Wimplicit-function-declaration]
+  Status = SetupInterruptSystem(&IicInstance);
+           ^~~~~~~~~~~~~~~~~~~~
+           XIntc_InterruptHandler
+../src/helloworld.c:92:20: error: 'SendHandler' undeclared (first use in this function); did you mean 'XIic_Handler'?
+     (XIic_Handler) SendHandler);
+                    ^~~~~~~~~~~
+                    XIic_Handler
+../src/helloworld.c:94:20: error: 'ReceiveHandler' undeclared (first use in this function); did you mean 'XIic_Handler'?
+     (XIic_Handler) ReceiveHandler);
+                    ^~~~~~~~~~~~~~
+                    XIic_Handler
+../src/helloworld.c:96:28: error: 'StatusHandler' undeclared (first use in this function); did you mean 'XIic_StatusHandler'?
+       (XIic_StatusHandler) StatusHandler);
+                            ^~~~~~~~~~~~~
+                            XIic_StatusHandler
+../src/helloworld.c:115:3: error: 'WriteBuffer' undeclared (first use in this function); did you mean 'setbuffer'?
+   WriteBuffer[0] = (u8) (EEPROM_TEST_START_ADDRESS);
+   ^~~~~~~~~~~
+   setbuffer
+../src/helloworld.c:120:3: error: 'ReadBuffer' undeclared (first use in this function); did you mean 'setbuffer'?
+   ReadBuffer[Index] = 0;
+   ^~~~~~~~~~
+   setbuffer
+make: *** [src/subdir.mk:26: src/helloworld.o] Error 1
+17:12:48 **** Auto Build of configuration Debug for project commSoftware ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../commSoftware_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'IicEepromExample':
+../src/helloworld.c:96:6: error: 'EepromIicAddr' undeclared (first use in this function)
+      EepromIicAddr);
+      ^~~~~~~~~~~~~
+../src/helloworld.c:96:6: note: each undeclared identifier is reported only once for each function it appears in
+../src/helloworld.c:105:34: error: 'Address' undeclared (first use in this function); did you mean 'AddressType'?
+  Status = EepromWriteData(sizeof(Address) + PAGE_SIZE);
+                                  ^~~~~~~
+                                  AddressType
+../src/helloworld.c:113:26: error: 'ReadBuffer' undeclared (first use in this function); did you mean 'setbuffer'?
+  Status = EepromReadData(ReadBuffer, PAGE_SIZE);
+                          ^~~~~~~~~~
+                          setbuffer
+../src/helloworld.c:122:28: error: 'WriteBuffer' undeclared (first use in this function); did you mean 'setbuffer'?
+   if (ReadBuffer[Index] != WriteBuffer[Index + sizeof(Address)]) {
+                            ^~~~~~~~~~~
+                            setbuffer
+make: *** [src/subdir.mk:26: src/helloworld.o] Error 1
+17:14:41 **** Auto Build of configuration Debug for project commSoftware ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../commSoftware_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'IicEepromExample':
+../src/helloworld.c:109:34: error: 'Address' undeclared (first use in this function); did you mean 'AddressType'?
+  Status = EepromWriteData(sizeof(Address) + PAGE_SIZE);
+                                  ^~~~~~~
+                                  AddressType
+../src/helloworld.c:109:34: note: each undeclared identifier is reported only once for each function it appears in
+../src/helloworld.c:117:26: error: 'ReadBuffer' undeclared (first use in this function); did you mean 'setbuffer'?
+  Status = EepromReadData(ReadBuffer, PAGE_SIZE);
+                          ^~~~~~~~~~
+                          setbuffer
+../src/helloworld.c:126:28: error: 'WriteBuffer' undeclared (first use in this function); did you mean 'setbuffer'?
+   if (ReadBuffer[Index] != WriteBuffer[Index + sizeof(Address)]) {
+                            ^~~~~~~~~~~
+                            setbuffer
+make: *** [src/subdir.mk:26: src/helloworld.o] Error 1
+17:17:58 **** Auto Build of configuration Debug for project commSoftware ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../commSoftware_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'IicEepromExample':
+../src/helloworld.c:110:2: error: expected expression before 'if'
+  if (Status != XST_SUCCESS) {
+  ^~
+../src/helloworld.c:152:1: error: expected declaration or statement at end of input
+ }
+ ^
+../src/helloworld.c:62:6: warning: unused variable 'Index' [-Wunused-variable]
+  u32 Index;
+      ^~~~~
+../src/helloworld.c:152:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+make: *** [src/subdir.mk:26: src/helloworld.o] Error 1
+17:18:12 **** Auto Build of configuration Debug for project commSoftware ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../commSoftware_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'IicEepromExample':
+../src/helloworld.c:117:26: warning: passing argument 1 of 'EepromReadData' makes pointer from integer without a cast [-Wint-conversion]
+  Status = EepromReadData(2);
+                          ^
+../src/helloworld.c:36:24: note: expected 'u8 *' {aka 'unsigned char *'} but argument is of type 'int'
+ int EepromReadData(u8 *BufferPtr, u16 ByteCount);
+                    ~~~~^~~~~~~~~
+../src/helloworld.c:117:11: error: too few arguments to function 'EepromReadData'
+  Status = EepromReadData(2);
+           ^~~~~~~~~~~~~~
+../src/helloworld.c:36:5: note: declared here
+ int EepromReadData(u8 *BufferPtr, u16 ByteCount);
+     ^~~~~~~~~~~~~~
+../src/helloworld.c:126:7: error: 'ReadBuffer' undeclared (first use in this function); did you mean 'setbuffer'?
+   if (ReadBuffer[Index] != WriteBuffer[Index + sizeof(Address)]) {
+       ^~~~~~~~~~
+       setbuffer
+../src/helloworld.c:126:7: note: each undeclared identifier is reported only once for each function it appears in
+../src/helloworld.c:126:28: error: 'WriteBuffer' undeclared (first use in this function); did you mean 'setbuffer'?
+   if (ReadBuffer[Index] != WriteBuffer[Index + sizeof(Address)]) {
+                            ^~~~~~~~~~~
+                            setbuffer
+../src/helloworld.c:126:55: error: 'Address' undeclared (first use in this function); did you mean 'AddressType'?
+   if (ReadBuffer[Index] != WriteBuffer[Index + sizeof(Address)]) {
+                                                       ^~~~~~~
+                                                       AddressType
+make: *** [src/subdir.mk:26: src/helloworld.o] Error 1
+17:19:18 **** Auto Build of configuration Debug for project commSoftware ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../commSoftware_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'IicEepromExample':
+../src/helloworld.c:117:26: error: expected expression before '[' token
+  Status = EepromReadData([0,1,2], 2);
+                          ^
+../src/helloworld.c:117:28: warning: left-hand operand of comma expression has no effect [-Wunused-value]
+  Status = EepromReadData([0,1,2], 2);
+                            ^
+../src/helloworld.c:117:30: warning: left-hand operand of comma expression has no effect [-Wunused-value]
+  Status = EepromReadData([0,1,2], 2);
+                              ^
+../src/helloworld.c:62:6: warning: unused variable 'Index' [-Wunused-variable]
+  u32 Index;
+      ^~~~~
+make: *** [src/subdir.mk:26: src/helloworld.o] Error 1
+17:19:34 **** Auto Build of configuration Debug for project commSoftware ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../commSoftware_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'IicEepromExample':
+../src/helloworld.c:117:26: error: expected expression before '[' token
+  Status = EepromReadData([0;1;2], 2);
+                          ^
+../src/helloworld.c:62:6: warning: unused variable 'Index' [-Wunused-variable]
+  u32 Index;
+      ^~~~~
+make: *** [src/subdir.mk:26: src/helloworld.o] Error 1
+17:20:48 **** Auto Build of configuration Debug for project commSoftware ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../commSoftware_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'IicEepromExample':
+../src/helloworld.c:117:11: error: too few arguments to function 'EepromReadData'
+  Status = EepromReadData();
+           ^~~~~~~~~~~~~~
+../src/helloworld.c:36:5: note: declared here
+ int EepromReadData(u8 *BufferPtr, u16 ByteCount);
+     ^~~~~~~~~~~~~~
+../src/helloworld.c:62:6: warning: unused variable 'Index' [-Wunused-variable]
+  u32 Index;
+      ^~~~~
+../src/helloworld.c: In function 'EepromWriteData':
+../src/helloworld.c:132:2: error: 'TransmitComplete' undeclared (first use in this function)
+  TransmitComplete = 1;
+  ^~~~~~~~~~~~~~~~
+../src/helloworld.c:132:2: note: each undeclared identifier is reported only once for each function it appears in
+../src/helloworld.c:146:41: error: 'WriteBuffer' undeclared (first use in this function); did you mean 'setbuffer'?
+  Status = XIic_MasterSend(&IicInstance, WriteBuffer, ByteCount);
+                                         ^~~~~~~~~~~
+                                         setbuffer
+make: *** [src/subdir.mk:26: src/helloworld.o] Error 1
+17:21:44 **** Clean-only build of configuration Debug for project commSoftware ****
+make clean 
+rm -rf  ./src/helloworld.o ./src/platform.o  ./src/helloworld.d ./src/platform.d  commSoftware.elf.size  commSoftware.elf
+' '
+17:21:44 **** Auto Build of configuration Debug for project commSoftware ****
+make all 
+'Building file: ../src/communicate.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/communicate.o" -I../../commSoftware_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/communicate.d" -MT"src/communicate.o" -o "src/communicate.o" "../src/communicate.c"
+../src/communicate.c: In function 'IicEepromExample':
+../src/communicate.c:117:11: error: too few arguments to function 'EepromReadData'
+  Status = EepromReadData();
+           ^~~~~~~~~~~~~~
+../src/communicate.c:36:5: note: declared here
+ int EepromReadData(u8 *BufferPtr, u16 ByteCount);
+     ^~~~~~~~~~~~~~
+../src/communicate.c:62:6: warning: unused variable 'Index' [-Wunused-variable]
+  u32 Index;
+      ^~~~~
+../src/communicate.c: In function 'EepromWriteData':
+../src/communicate.c:132:2: error: 'TransmitComplete' undeclared (first use in this function)
+  TransmitComplete = 1;
+  ^~~~~~~~~~~~~~~~
+../src/communicate.c:132:2: note: each undeclared identifier is reported only once for each function it appears in
+../src/communicate.c:146:41: error: 'WriteBuffer' undeclared (first use in this function); did you mean 'setbuffer'?
+  Status = XIic_MasterSend(&IicInstance, WriteBuffer, ByteCount);
+                                         ^~~~~~~~~~~
+                                         setbuffer
+make: *** [src/subdir.mk:26: src/communicate.o] Error 1
+17:23:22 **** Auto Build of configuration Debug for project commSoftware ****
+make all 
+'Building file: ../src/communicate.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/communicate.o" -I../../commSoftware_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/communicate.d" -MT"src/communicate.o" -o "src/communicate.o" "../src/communicate.c"
+../src/communicate.c: In function 'IicEepromExample':
+../src/communicate.c:120:11: error: too few arguments to function 'EepromReadData'
+  Status = EepromReadData();
+           ^~~~~~~~~~~~~~
+../src/communicate.c:39:5: note: declared here
+ int EepromReadData(u8 *BufferPtr, u16 ByteCount);
+     ^~~~~~~~~~~~~~
+../src/communicate.c:65:6: warning: unused variable 'Index' [-Wunused-variable]
+  u32 Index;
+      ^~~~~
+../src/communicate.c: In function 'EepromWriteData':
+../src/communicate.c:149:41: error: 'WriteBuffer' undeclared (first use in this function); did you mean 'setbuffer'?
+  Status = XIic_MasterSend(&IicInstance, WriteBuffer, ByteCount);
+                                         ^~~~~~~~~~~
+                                         setbuffer
+../src/communicate.c:149:41: note: each undeclared identifier is reported only once for each function it appears in
+make: *** [src/subdir.mk:26: src/communicate.o] Error 1
+17:34:48 **** Auto Build of configuration Debug for project commSoftware ****
+make all 
+'Building file: ../src/communicate.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/communicate.o" -I../../commSoftware_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/communicate.d" -MT"src/communicate.o" -o "src/communicate.o" "../src/communicate.c"
+../src/communicate.c: In function 'IicEepromExample':
+../src/communicate.c:122:11: error: too few arguments to function 'EepromReadData'
+  Status = EepromReadData();
+           ^~~~~~~~~~~~~~
+../src/communicate.c:41:5: note: declared here
+ int EepromReadData(u8 *BufferPtr, u16 ByteCount);
+     ^~~~~~~~~~~~~~
+../src/communicate.c:67:6: warning: unused variable 'Index' [-Wunused-variable]
+  u32 Index;
+      ^~~~~
+../src/communicate.c: In function 'EepromWriteData':
+../src/communicate.c:153:41: warning: passing argument 2 of 'XIic_MasterSend' makes pointer from integer without a cast [-Wint-conversion]
+  Status = XIic_MasterSend(&IicInstance, dataToSend, ByteCount);
+                                         ^~~~~~~~~~
+In file included from ../src/communicate.c:6:
+../../commSoftware_bsp/microblaze_0/include/xiic.h:559:44: note: expected 'u8 *' {aka 'unsigned char *'} but argument is of type 'u8' {aka 'unsigned char'}
+ int XIic_MasterSend(XIic *InstancePtr, u8 *TxMsgPtr, int ByteCount);
+                                        ~~~~^~~~~~~~
+../src/communicate.c:188:9: error: 'WriteBuffer' undeclared (first use in this function); did you mean 'setbuffer'?
+         WriteBuffer,
+         ^~~~~~~~~~~
+         setbuffer
+../src/communicate.c:188:9: note: each undeclared identifier is reported only once for each function it appears in
+make: *** [src/subdir.mk:26: src/communicate.o] Error 1
+17:35:01 **** Auto Build of configuration Debug for project commSoftware ****
+make all 
+'Building file: ../src/communicate.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/communicate.o" -I../../commSoftware_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/communicate.d" -MT"src/communicate.o" -o "src/communicate.o" "../src/communicate.c"
+../src/communicate.c: In function 'IicEepromExample':
+../src/communicate.c:122:11: error: too few arguments to function 'EepromReadData'
+  Status = EepromReadData();
+           ^~~~~~~~~~~~~~
+../src/communicate.c:41:5: note: declared here
+ int EepromReadData(u8 *BufferPtr, u16 ByteCount);
+     ^~~~~~~~~~~~~~
+../src/communicate.c:67:6: warning: unused variable 'Index' [-Wunused-variable]
+  u32 Index;
+      ^~~~~
+../src/communicate.c: In function 'EepromWriteData':
+../src/communicate.c:153:41: error: invalid type argument of unary '*' (have 'int')
+  Status = XIic_MasterSend(&IicInstance, *dataToSend, ByteCount);
+                                         ^~~~~~~~~~~
+../src/communicate.c:188:9: error: 'WriteBuffer' undeclared (first use in this function); did you mean 'setbuffer'?
+         WriteBuffer,
+         ^~~~~~~~~~~
+         setbuffer
+../src/communicate.c:188:9: note: each undeclared identifier is reported only once for each function it appears in
+make: *** [src/subdir.mk:26: src/communicate.o] Error 1
+17:35:24 **** Auto Build of configuration Debug for project commSoftware ****
+make all 
+'Building file: ../src/communicate.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/communicate.o" -I../../commSoftware_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/communicate.d" -MT"src/communicate.o" -o "src/communicate.o" "../src/communicate.c"
+../src/communicate.c: In function 'IicEepromExample':
+../src/communicate.c:122:11: error: too few arguments to function 'EepromReadData'
+  Status = EepromReadData();
+           ^~~~~~~~~~~~~~
+../src/communicate.c:41:5: note: declared here
+ int EepromReadData(u8 *BufferPtr, u16 ByteCount);
+     ^~~~~~~~~~~~~~
+../src/communicate.c:67:6: warning: unused variable 'Index' [-Wunused-variable]
+  u32 Index;
+      ^~~~~
+../src/communicate.c: In function 'EepromWriteData':
+../src/communicate.c:153:41: error: invalid type argument of unary '*' (have 'int')
+  Status = XIic_MasterSend(&IicInstance, *dataToSend, ByteCount);
+                                         ^~~~~~~~~~~
+../src/communicate.c:188:9: error: 'WriteBuffer' undeclared (first use in this function); did you mean 'setbuffer'?
+         WriteBuffer,
+         ^~~~~~~~~~~
+         setbuffer
+../src/communicate.c:188:9: note: each undeclared identifier is reported only once for each function it appears in
+make: *** [src/subdir.mk:26: src/communicate.o] Error 1
+17:35:40 **** Auto Build of configuration Debug for project commSoftware ****
+make all 
+'Building file: ../src/communicate.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/communicate.o" -I../../commSoftware_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/communicate.d" -MT"src/communicate.o" -o "src/communicate.o" "../src/communicate.c"
+../src/communicate.c: In function 'IicEepromExample':
+../src/communicate.c:122:11: error: too few arguments to function 'EepromReadData'
+  Status = EepromReadData();
+           ^~~~~~~~~~~~~~
+../src/communicate.c:41:5: note: declared here
+ int EepromReadData(u8 *BufferPtr, u16 ByteCount);
+     ^~~~~~~~~~~~~~
+../src/communicate.c:67:6: warning: unused variable 'Index' [-Wunused-variable]
+  u32 Index;
+      ^~~~~
+../src/communicate.c: In function 'EepromWriteData':
+../src/communicate.c:153:46: error: invalid type argument of unary '*' (have 'int')
+  Status = XIic_MasterSend(&IicInstance, (int)*dataToSend, ByteCount);
+                                              ^~~~~~~~~~~
+../src/communicate.c:188:9: error: 'WriteBuffer' undeclared (first use in this function); did you mean 'setbuffer'?
+         WriteBuffer,
+         ^~~~~~~~~~~
+         setbuffer
+../src/communicate.c:188:9: note: each undeclared identifier is reported only once for each function it appears in
+make: *** [src/subdir.mk:26: src/communicate.o] Error 1
+17:35:44 **** Auto Build of configuration Debug for project commSoftware ****
+make all 
+'Building file: ../src/communicate.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/communicate.o" -I../../commSoftware_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/communicate.d" -MT"src/communicate.o" -o "src/communicate.o" "../src/communicate.c"
+../src/communicate.c: In function 'IicEepromExample':
+../src/communicate.c:122:11: error: too few arguments to function 'EepromReadData'
+  Status = EepromReadData();
+           ^~~~~~~~~~~~~~
+../src/communicate.c:41:5: note: declared here
+ int EepromReadData(u8 *BufferPtr, u16 ByteCount);
+     ^~~~~~~~~~~~~~
+../src/communicate.c:67:6: warning: unused variable 'Index' [-Wunused-variable]
+  u32 Index;
+      ^~~~~
+../src/communicate.c: In function 'EepromWriteData':
+../src/communicate.c:153:41: error: invalid type argument of unary '*' (have 'int')
+  Status = XIic_MasterSend(&IicInstance, *(int)dataToSend, ByteCount);
+                                         ^~~~~~~~~~~~~~~~
+../src/communicate.c:188:9: error: 'WriteBuffer' undeclared (first use in this function); did you mean 'setbuffer'?
+         WriteBuffer,
+         ^~~~~~~~~~~
+         setbuffer
+../src/communicate.c:188:9: note: each undeclared identifier is reported only once for each function it appears in
+make: *** [src/subdir.mk:26: src/communicate.o] Error 1
+17:35:49 **** Auto Build of configuration Debug for project commSoftware ****
+make all 
+'Building file: ../src/communicate.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/communicate.o" -I../../commSoftware_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/communicate.d" -MT"src/communicate.o" -o "src/communicate.o" "../src/communicate.c"
+../src/communicate.c: In function 'IicEepromExample':
+../src/communicate.c:122:11: error: too few arguments to function 'EepromReadData'
+  Status = EepromReadData();
+           ^~~~~~~~~~~~~~
+../src/communicate.c:41:5: note: declared here
+ int EepromReadData(u8 *BufferPtr, u16 ByteCount);
+     ^~~~~~~~~~~~~~
+../src/communicate.c:67:6: warning: unused variable 'Index' [-Wunused-variable]
+  u32 Index;
+      ^~~~~
+../src/communicate.c: In function 'EepromWriteData':
+../src/communicate.c:153:41: warning: passing argument 2 of 'XIic_MasterSend' makes pointer from integer without a cast [-Wint-conversion]
+  Status = XIic_MasterSend(&IicInstance, dataToSend, ByteCount);
+                                         ^~~~~~~~~~
+In file included from ../src/communicate.c:6:
+../../commSoftware_bsp/microblaze_0/include/xiic.h:559:44: note: expected 'u8 *' {aka 'unsigned char *'} but argument is of type 'int'
+ int XIic_MasterSend(XIic *InstancePtr, u8 *TxMsgPtr, int ByteCount);
+                                        ~~~~^~~~~~~~
+../src/communicate.c:188:9: error: 'WriteBuffer' undeclared (first use in this function); did you mean 'setbuffer'?
+         WriteBuffer,
+         ^~~~~~~~~~~
+         setbuffer
+../src/communicate.c:188:9: note: each undeclared identifier is reported only once for each function it appears in
+make: *** [src/subdir.mk:26: src/communicate.o] Error 1
+17:36:00 **** Auto Build of configuration Debug for project commSoftware ****
+make all 
+'Building file: ../src/communicate.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/communicate.o" -I../../commSoftware_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/communicate.d" -MT"src/communicate.o" -o "src/communicate.o" "../src/communicate.c"
+../src/communicate.c: In function 'IicEepromExample':
+../src/communicate.c:122:11: error: too few arguments to function 'EepromReadData'
+  Status = EepromReadData();
+           ^~~~~~~~~~~~~~
+../src/communicate.c:41:5: note: declared here
+ int EepromReadData(u8 *BufferPtr, u16 ByteCount);
+     ^~~~~~~~~~~~~~
+../src/communicate.c:67:6: warning: unused variable 'Index' [-Wunused-variable]
+  u32 Index;
+      ^~~~~
+../src/communicate.c: In function 'EepromWriteData':
+../src/communicate.c:153:41: warning: passing argument 2 of 'XIic_MasterSend' from incompatible pointer type [-Wincompatible-pointer-types]
+  Status = XIic_MasterSend(&IicInstance, &dataToSend, ByteCount);
+                                         ^~~~~~~~~~~
+In file included from ../src/communicate.c:6:
+../../commSoftware_bsp/microblaze_0/include/xiic.h:559:44: note: expected 'u8 *' {aka 'unsigned char *'} but argument is of type 'int *'
+ int XIic_MasterSend(XIic *InstancePtr, u8 *TxMsgPtr, int ByteCount);
+                                        ~~~~^~~~~~~~
+../src/communicate.c:188:9: error: 'WriteBuffer' undeclared (first use in this function); did you mean 'setbuffer'?
+         WriteBuffer,
+         ^~~~~~~~~~~
+         setbuffer
+../src/communicate.c:188:9: note: each undeclared identifier is reported only once for each function it appears in
+make: *** [src/subdir.mk:26: src/communicate.o] Error 1
+17:36:13 **** Auto Build of configuration Debug for project commSoftware ****
+make all 
+'Building file: ../src/communicate.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/communicate.o" -I../../commSoftware_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/communicate.d" -MT"src/communicate.o" -o "src/communicate.o" "../src/communicate.c"
+../src/communicate.c: In function 'IicEepromExample':
+../src/communicate.c:122:11: error: too few arguments to function 'EepromReadData'
+  Status = EepromReadData();
+           ^~~~~~~~~~~~~~
+../src/communicate.c:41:5: note: declared here
+ int EepromReadData(u8 *BufferPtr, u16 ByteCount);
+     ^~~~~~~~~~~~~~
+../src/communicate.c:67:6: warning: unused variable 'Index' [-Wunused-variable]
+  u32 Index;
+      ^~~~~
+../src/communicate.c: In function 'EepromWriteData':
+../src/communicate.c:188:9: error: 'WriteBuffer' undeclared (first use in this function); did you mean 'setbuffer'?
+         WriteBuffer,
+         ^~~~~~~~~~~
+         setbuffer
+../src/communicate.c:188:9: note: each undeclared identifier is reported only once for each function it appears in
+make: *** [src/subdir.mk:26: src/communicate.o] Error 1
+17:53:12 **** Auto Build of configuration Debug for project commSoftware ****
+make all 
+'Building file: ../src/communicate.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/communicate.o" -I../../commSoftware_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/communicate.d" -MT"src/communicate.o" -o "src/communicate.o" "../src/communicate.c"
+../src/communicate.c:37:1: error: unknown type name 'u24'; did you mean 'u64'?
+ u24 dataBuffer = 0b1001000000000001;
+ ^~~
+ u64
+../src/communicate.c: In function 'IicEepromExample':
+../src/communicate.c:124:11: error: too few arguments to function 'EepromReadData'
+  Status = EepromReadData();
+           ^~~~~~~~~~~~~~
+../src/communicate.c:43:5: note: declared here
+ int EepromReadData(u8 *BufferPtr, u16 ByteCount);
+     ^~~~~~~~~~~~~~
+../src/communicate.c:69:6: warning: unused variable 'Index' [-Wunused-variable]
+  u32 Index;
+      ^~~~~
+../src/communicate.c: In function 'EepromWriteData':
+../src/communicate.c:190:9: error: 'WriteBuffer' undeclared (first use in this function); did you mean 'dataBuffer'?
+         WriteBuffer,
+         ^~~~~~~~~~~
+         dataBuffer
+../src/communicate.c:190:9: note: each undeclared identifier is reported only once for each function it appears in
+make: *** [src/subdir.mk:26: src/communicate.o] Error 1

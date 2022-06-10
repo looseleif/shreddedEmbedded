@@ -1,0 +1,17 @@
+#-----------------------------------------------------------
+# Vivado v2019.1 (64-bit)
+# SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+# IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+# Start of session at: Thu Aug 19 15:36:27 2021
+# Process ID: 6412
+# Current directory: C:/Users/FemtoFluidics/Desktop/glue/glue.runs/DMF_Translation_ilmb_v10_0_synth_1
+# Command line: vivado.exe -log DMF_Translation_ilmb_v10_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source DMF_Translation_ilmb_v10_0.tcl
+# Log file: C:/Users/FemtoFluidics/Desktop/glue/glue.runs/DMF_Translation_ilmb_v10_0_synth_1/DMF_Translation_ilmb_v10_0.vds
+# Journal file: C:/Users/FemtoFluidics/Desktop/glue/glue.runs/DMF_Translation_ilmb_v10_0_synth_1\vivado.jou
+#-----------------------------------------------------------
+source DMF_Translation_ilmb_v10_0.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/FemtoFluidics/Desktop/ip_repo/logicDMF_1.0'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2019.1/data/ip'.
+INFO: [IP_Flow 19-4838] Using cached IP synthesis design for IP DMF_Translation_ilmb_v10_0, cache-ID = 8fd169e25f153eb9.
+INFO: [Common 17-206] Exiting Vivado at Thu Aug 19 15:36:33 2021...

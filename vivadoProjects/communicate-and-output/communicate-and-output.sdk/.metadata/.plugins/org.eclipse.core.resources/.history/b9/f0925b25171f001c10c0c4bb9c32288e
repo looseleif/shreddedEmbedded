@@ -1,0 +1,173 @@
+#include "xparameters.h"
+#include "xil_printf.h"
+#include <stdio.h>
+#include "platform.h"
+#include "xil_io.h"
+#include "xiic.h"
+#include "xil_exception.h"
+
+#ifdef XPAR_INTC_0_DEVICE_ID
+ #include "xintc.h"
+#endif
+
+#define IIC_DEVICE_ID	XPAR_IIC_0_DEVICE_ID
+
+#ifdef XPAR_INTC_0_DEVICE_ID
+ #define INTC_DEVICE_ID	XPAR_INTC_0_DEVICE_ID
+ #define IIC_INTR_ID	XPAR_INTC_0_IIC_0_VEC_ID
+ #define INTC			XIntc
+ #define INTC_HANDLER	XIntc_InterruptHandler
+#endif
+
+#define EEPROM_ADDRESS 		0x04
+
+#define PAGE_SIZE   16
+
+#define EEPROM_TEST_START_ADDRESS   128
+
+typedef u8 AddressType;
+
+int IicEepromExample();
+
+int EepromWriteData(u16 ByteCount);
+
+int EepromReadData(u8 *BufferPtr, u16 ByteCount);
+
+XIic IicInstance;	/* The instance of the IIC device. */
+INTC Intc; 	/* The instance of the Interrupt Controller Driver */
+
+
+
+
+int main() {
+
+	int Status;
+
+	/*
+	 * Run the EEPROM example.
+	 */
+	Status = IicEepromExample();
+	if (Status != XST_SUCCESS) {
+		xil_printf("IIC eeprom Example Failed\r\n");
+		return XST_FAILURE;
+	}
+	xil_printf("Successfully ran IIC eeprom Example\r\n");
+	return XST_SUCCESS;
+}
+
+int IicEepromExample(void)
+{
+	u32 Index;
+	int Status;
+	XIic_Config *ConfigPtr;	/* Pointer to configuration data */
+
+	/*
+	 * Initialize the IIC driver so that it is ready to use.
+	 */
+
+	ConfigPtr = XIic_LookupConfig(IIC_DEVICE_ID);
+	if (ConfigPtr == NULL) {
+		return XST_FAILURE;
+	}
+
+	Status = XIic_CfgInitialize(&IicInstance, ConfigPtr,
+			ConfigPtr->BaseAddress);
+	if (Status != XST_SUCCESS) {
+		return XST_FAILURE;
+	}
+
+
+#ifdef IIC_MUX_ENABLE
+	/*
+	 * Initialize the IIC MUX on the boards on which the EEPROM
+	 * are connected through the MUX.
+	 */
+	Status =  MuxInit();
+	if (Status != XST_SUCCESS) {
+		return XST_FAILURE;
+	}
+
+#endif
+
+	/*
+	 * Set the Slave address.
+	 */
+	Status = XIic_SetAddress(&IicInstance, XII_ADDR_TO_SEND_TYPE,
+				 EepromIicAddr);
+	if (Status != XST_SUCCESS) {
+		return XST_FAILURE;
+	}
+
+
+	/*
+	 * Write to the EEPROM.
+	 */
+	Status = EepromWriteData(sizeof(Address) + PAGE_SIZE);
+	if (Status != XST_SUCCESS) {
+		return XST_FAILURE;
+	}
+
+	/*
+	 * Read from the EEPROM.
+	 */
+	Status = EepromReadData(ReadBuffer, PAGE_SIZE);
+	if (Status != XST_SUCCESS) {
+		return XST_FAILURE;
+	}
+
+	/*
+	 * Verify the data read against the data written.
+	 */
+	for (Index = 0; Index < PAGE_SIZE; Index++) {
+		if (ReadBuffer[Index] != WriteBuffer[Index + sizeof(Address)]) {
+			return XST_FAILURE;
+		}
+
+		ReadBuffer[Index] = 0;
+	}
+
+	/*
+	 * Initialize the data to write and the read buffer.
+	 */
+	if (sizeof(Address) == 1) {
+		WriteBuffer[0] = (u8) (EEPROM_TEST_START_ADDRESS);
+	} else {
+		WriteBuffer[0] = (u8) (EEPROM_TEST_START_ADDRESS >> 8);
+		WriteBuffer[1] = (u8) (EEPROM_TEST_START_ADDRESS);
+		ReadBuffer[Index] = 0;
+	}
+
+	for (Index = 0; Index < PAGE_SIZE; Index++) {
+		WriteBuffer[sizeof(Address) + Index] = Index;
+		ReadBuffer[Index] = 0;
+	}
+
+	/*
+	 * Write to the EEPROM.
+	 */
+	Status = EepromWriteData(sizeof(Address) + PAGE_SIZE);
+	if (Status != XST_SUCCESS) {
+		return XST_FAILURE;
+	}
+
+	/*
+	 * Read from the EEPROM.
+	 */
+	Status = EepromReadData(ReadBuffer, PAGE_SIZE);
+	if (Status != XST_SUCCESS) {
+		return XST_FAILURE;
+	}
+
+	/*
+	 * Verify the data read against the data written.
+	 */
+	for (Index = 0; Index < PAGE_SIZE; Index++) {
+		if (ReadBuffer[Index] != WriteBuffer[Index + sizeof(Address)]) {
+			return XST_FAILURE;
+		}
+
+		ReadBuffer[Index] = 0;
+	}
+
+	return XST_SUCCESS;
+}

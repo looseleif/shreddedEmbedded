@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<Runs Version="1" Minor="0">
+	<Run Id="uBlaze_microblaze_0_0_synth_1" LaunchDir="C:/Users/FemtoFluidics/Documents/GitHub/vivadoRepository1/communicate-and-output/communicate-and-output.runs/uBlaze_microblaze_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="uBlaze_dlmb_v10_0_synth_1" LaunchDir="C:/Users/FemtoFluidics/Documents/GitHub/vivadoRepository1/communicate-and-output/communicate-and-output.runs/uBlaze_dlmb_v10_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="uBlaze_dlmb_bram_if_cntlr_0_synth_1" LaunchDir="C:/Users/FemtoFluidics/Documents/GitHub/vivadoRepository1/communicate-and-output/communicate-and-output.runs/uBlaze_dlmb_bram_if_cntlr_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="uBlaze_ilmb_v10_0_synth_1" LaunchDir="C:/Users/FemtoFluidics/Documents/GitHub/vivadoRepository1/communicate-and-output/communicate-and-output.runs/uBlaze_ilmb_v10_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado" IsOrderedIPRun="true">
+		<Parent Id="uBlaze_dlmb_v10_0_synth_1"/>
+	</Run>
+	<Run Id="uBlaze_ilmb_bram_if_cntlr_0_synth_1" LaunchDir="C:/Users/FemtoFluidics/Documents/GitHub/vivadoRepository1/communicate-and-output/communicate-and-output.runs/uBlaze_ilmb_bram_if_cntlr_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="uBlaze_axi_iic_0_1_synth_1" LaunchDir="C:/Users/FemtoFluidics/Documents/GitHub/vivadoRepository1/communicate-and-output/communicate-and-output.runs/uBlaze_axi_iic_0_1_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="uBlaze_mdm_1_0_synth_1" LaunchDir="C:/Users/FemtoFluidics/Documents/GitHub/vivadoRepository1/communicate-and-output/communicate-and-output.runs/uBlaze_mdm_1_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="uBlaze_axi_uartlite_0_0_synth_1" LaunchDir="C:/Users/FemtoFluidics/Documents/GitHub/vivadoRepository1/communicate-and-output/communicate-and-output.runs/uBlaze_axi_uartlite_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="uBlaze_xbar_0_synth_1" LaunchDir="C:/Users/FemtoFluidics/Documents/GitHub/vivadoRepository1/communicate-and-output/communicate-and-output.runs/uBlaze_xbar_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="uBlaze_microblaze_0_axi_intc_0_synth_1" LaunchDir="C:/Users/FemtoFluidics/Documents/GitHub/vivadoRepository1/communicate-and-output/communicate-and-output.runs/uBlaze_microblaze_0_axi_intc_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="uBlaze_axi_gpio_0_0_synth_1" LaunchDir="C:/Users/FemtoFluidics/Documents/GitHub/vivadoRepository1/communicate-and-output/communicate-and-output.runs/uBlaze_axi_gpio_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="uBlaze_lmb_bram_0_synth_1" LaunchDir="C:/Users/FemtoFluidics/Documents/GitHub/vivadoRepository1/communicate-and-output/communicate-and-output.runs/uBlaze_lmb_bram_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="uBlaze_rst_sys_clock_100M_0_synth_1" LaunchDir="C:/Users/FemtoFluidics/Documents/GitHub/vivadoRepository1/communicate-and-output/communicate-and-output.runs/uBlaze_rst_sys_clock_100M_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="uBlaze_logicDMF_0_0_synth_1" LaunchDir="C:/Users/FemtoFluidics/Documents/GitHub/vivadoRepository1/communicate-and-output/communicate-and-output.runs/uBlaze_logicDMF_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="synth_1" LaunchDir="C:/Users/FemtoFluidics/Documents/GitHub/vivadoRepository1/communicate-and-output/communicate-and-output.runs/synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado">
+		<Parent Id="uBlaze_microblaze_0_0_synth_1"/>
+		<Parent Id="uBlaze_dlmb_v10_0_synth_1"/>
+		<Parent Id="uBlaze_dlmb_bram_if_cntlr_0_synth_1"/>
+		<Parent Id="uBlaze_ilmb_v10_0_synth_1"/>
+		<Parent Id="uBlaze_ilmb_bram_if_cntlr_0_synth_1"/>
+		<Parent Id="uBlaze_axi_iic_0_1_synth_1"/>
+		<Parent Id="uBlaze_mdm_1_0_synth_1"/>
+		<Parent Id="uBlaze_axi_uartlite_0_0_synth_1"/>
+		<Parent Id="uBlaze_xbar_0_synth_1"/>
+		<Parent Id="uBlaze_microblaze_0_axi_intc_0_synth_1"/>
+		<Parent Id="uBlaze_axi_gpio_0_0_synth_1"/>
+		<Parent Id="uBlaze_lmb_bram_0_synth_1"/>
+		<Parent Id="uBlaze_rst_sys_clock_100M_0_synth_1"/>
+		<Parent Id="uBlaze_logicDMF_0_0_synth_1"/>
+	</Run>
+	<Parameters>
+		<Parameter Name="runs.monitorLSFJobs" Val="true" Type="bool"/>
+	</Parameters>
+</Runs>
+

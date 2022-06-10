@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2019.1 (64-bit)
+# SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+# IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+# Start of session at: Sun Sep 26 13:50:54 2021
+# Process ID: 7072
+# Current directory: C:/Users/FemtoFluidics/Documents/GitHub/vivadoRepository1/glue/glue.runs/synth_1
+# Command line: vivado.exe -log DMF_Translation_wrapper.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source DMF_Translation_wrapper.tcl
+# Log file: C:/Users/FemtoFluidics/Documents/GitHub/vivadoRepository1/glue/glue.runs/synth_1/DMF_Translation_wrapper.vds
+# Journal file: C:/Users/FemtoFluidics/Documents/GitHub/vivadoRepository1/glue/glue.runs/synth_1\vivado.jou
+#-----------------------------------------------------------
+source DMF_Translation_wrapper.tcl -notrace

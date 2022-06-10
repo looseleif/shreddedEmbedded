@@ -1,0 +1,357 @@
+#-----------------------------------------------------------
+# Vivado v2019.1 (64-bit)
+# SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+# IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+# Start of session at: Sun Sep 26 13:30:48 2021
+# Process ID: 12404
+# Current directory: C:/Users/FemtoFluidics/Documents/GitHub/vivadoRepository1/glue
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent12860 C:\Users\FemtoFluidics\Documents\GitHub\vivadoRepository1\glue\glue.xpr
+# Log file: C:/Users/FemtoFluidics/Documents/GitHub/vivadoRepository1/glue/vivado.log
+# Journal file: C:/Users/FemtoFluidics/Documents/GitHub/vivadoRepository1/glue\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/FemtoFluidics/Documents/GitHub/vivadoRepository1/glue/glue.xpr
+Scanning sources...
+Finished scanning sources
+WARNING: [filemgmt 56-3] IP Repository Path: Could not find the directory 'C:/Users/FemtoFluidics/Documents/GitHub/vivadoRepository1/ip_repo/logicDMF_1.0'.
+WARNING: [filemgmt 56-3] IPUserFilesDir: Could not find the directory 'C:/Users/FemtoFluidics/Documents/GitHub/vivadoRepository1/glue/glue.ip_user_files'.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+WARNING: [IP_Flow 19-2248] Failed to load user IP repository 'c:/Users/FemtoFluidics/Documents/GitHub/vivadoRepository1/ip_repo/logicDMF_1.0'; Can't find the specified path.
+If this directory should no longer be in your list of user repositories, go to the IP Settings dialog and remove it.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2019.1/data/ip'.
+WARNING: [BD 41-1661] One or more IPs have been locked in the design 'DMF_Translation.bd'. Please run report_ip_status for more details and recommendations on how to fix this issue.
+List of locked IPs:
+DMF_Translation_logicDMF_0_0
+
+open_project: Time (s): cpu = 00:00:19 ; elapsed = 00:00:12 . Memory (MB): peak = 929.133 ; gain = 231.406
+update_compile_order -fileset sources_1
+export_ip_user_files -of_objects  [get_files C:/Users/FemtoFluidics/Documents/GitHub/vivadoRepository1/glue/glue.srcs/sources_1/ip/xadc_wiz_0/xadc_wiz_0.xci] -no_script -reset -force -quiet
+remove_files  C:/Users/FemtoFluidics/Documents/GitHub/vivadoRepository1/glue/glue.srcs/sources_1/ip/xadc_wiz_0/xadc_wiz_0.xci
+open_bd_design {C:/Users/FemtoFluidics/Documents/GitHub/vivadoRepository1/glue/glue.srcs/sources_1/bd/DMF_Translation/DMF_Translation.bd}
+Adding component instance block -- xilinx.com:ip:microblaze:11.0 - DMF_processor
+Adding component instance block -- xilinx.com:ip:lmb_v10:3.0 - dlmb_v10
+Adding component instance block -- xilinx.com:ip:lmb_v10:3.0 - ilmb_v10
+Adding component instance block -- xilinx.com:ip:lmb_bram_if_cntlr:4.0 - dlmb_bram_if_cntlr
+Adding component instance block -- xilinx.com:ip:lmb_bram_if_cntlr:4.0 - ilmb_bram_if_cntlr
+Adding component instance block -- xilinx.com:ip:blk_mem_gen:8.4 - lmb_bram
+Adding component instance block -- xilinx.com:ip:mdm:3.2 - mdm_1
+Adding component instance block -- xilinx.com:ip:clk_wiz:6.0 - clk_wiz_1
+Adding component instance block -- xilinx.com:ip:proc_sys_reset:5.0 - rst_clk_wiz_1_100M
+Adding component instance block -- xilinx.com:ip:axi_uartlite:2.0 - axi_uartlite_0
+Adding component instance block -- xilinx.com:ip:axi_ethernetlite:3.0 - axi_ethernetlite_0
+Adding component instance block -- xilinx.com:user:logicDMF:1.0 - logicDMF_0
+Adding component instance block -- xilinx.com:ip:axi_interconnect:2.1 - DMF_processor_axi_periph
+Adding component instance block -- xilinx.com:ip:axi_crossbar:2.1 - xbar
+Adding component instance block -- xilinx.com:ip:axi_dwidth_converter:2.1 - auto_us
+INFO: [BD 41-434] Could not find an IP with XCI file by name: DMF_Translation_auto_us_1 
+Adding component instance block -- xilinx.com:ip:axi_dwidth_converter:2.1 - auto_ds
+INFO: [BD 41-434] Could not find an IP with XCI file by name: DMF_Translation_auto_ds_0 
+Adding component instance block -- xilinx.com:ip:axi_dwidth_converter:2.1 - auto_ds
+INFO: [BD 41-434] Could not find an IP with XCI file by name: DMF_Translation_auto_ds_1 
+Adding component instance block -- xilinx.com:ip:axi_dwidth_converter:2.1 - auto_ds
+INFO: [BD 41-434] Could not find an IP with XCI file by name: DMF_Translation_auto_ds_2 
+Adding component instance block -- xilinx.com:ip:axi_dwidth_converter:2.1 - auto_ds
+INFO: [BD 41-434] Could not find an IP with XCI file by name: DMF_Translation_auto_ds_3 
+Adding component instance block -- xilinx.com:ip:axi_dwidth_converter:2.1 - auto_ds
+INFO: [BD 41-434] Could not find an IP with XCI file by name: DMF_Translation_auto_ds_4 
+Adding component instance block -- xilinx.com:ip:axi_protocol_converter:2.1 - auto_pc
+INFO: [BD 41-434] Could not find an IP with XCI file by name: DMF_Translation_auto_pc_0 
+Adding component instance block -- xilinx.com:ip:axi_dwidth_converter:2.1 - auto_us
+Adding component instance block -- xilinx.com:ip:axi_dwidth_converter:2.1 - auto_ds
+INFO: [BD 41-434] Could not find an IP with XCI file by name: DMF_Translation_auto_ds_5 
+Adding component instance block -- xilinx.com:ip:axi_intc:4.1 - axi_intc_0
+Adding component instance block -- xilinx.com:ip:mig_7series:4.2 - mig_7series_0
+Adding component instance block -- xilinx.com:ip:axi_timer:2.0 - axi_timer_0
+Adding component instance block -- xilinx.com:ip:xlconcat:2.1 - xlconcat_0
+Successfully read diagram <DMF_Translation> from BD file <C:/Users/FemtoFluidics/Documents/GitHub/vivadoRepository1/glue/glue.srcs/sources_1/bd/DMF_Translation/DMF_Translation.bd>
+INFO: [BD 41-433] 
+Design successfully migrated to use XCI files...
+Wrote  : <C:/Users/FemtoFluidics/Documents/GitHub/vivadoRepository1/glue/glue.srcs/sources_1/bd/DMF_Translation/ui/bd_50a1288f.ui> 
+open_bd_design: Time (s): cpu = 00:00:11 ; elapsed = 00:00:09 . Memory (MB): peak = 1452.078 ; gain = 77.801
+open_hw
+connect_hw_server
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+open_hw_target
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210319B0C55FA
+current_hw_device [get_hw_devices xc7a35t_0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+INFO: [Vivado 12-4158] Exported Hardware file is out of date. Exported hardware information may be inconsistent with respect to the current state of the design. It is recommended that you re-export the design and launch SDK otherwise SDK is launched with out of date hardware system file.
+launch_sdk -workspace C:/Users/FemtoFluidics/Documents/GitHub/vivadoRepository1/glue/glue.sdk -hwspec C:/Users/FemtoFluidics/Documents/GitHub/vivadoRepository1/glue/glue.sdk/DMF_Translation_wrapper.hdf
+INFO: [Vivado 12-393] Launching SDK...
+INFO: [Vivado 12-417] Running xsdk -workspace C:/Users/FemtoFluidics/Documents/GitHub/vivadoRepository1/glue/glue.sdk -hwspec C:/Users/FemtoFluidics/Documents/GitHub/vivadoRepository1/glue/glue.sdk/DMF_Translation_wrapper.hdf
+INFO: [Vivado 12-3157] SDK launch initiated. Please check console for any further messages.
+reset_run synth_1
+reset_run DMF_Translation_mig_7series_0_1_synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 6
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP DMF_Translation_mig_7series_0_1, cache-ID = d48f63d3e266498f; cache size = 27.831 MB.
+WARNING: [Vivado 12-4801] The synthesis checkpoint for IP 'C:/Users/FemtoFluidics/Documents/GitHub/vivadoRepository1/glue/glue.srcs/sources_1/bd/DMF_Translation/ip/DMF_Translation_mig_7series_0_1/DMF_Translation_mig_7series_0_1.xci' is available but stale and the IP is locked. An out-of-context (OOC) run will be created and/or launched, but synthesis may not be able to complete or could result in incorrect behavior.
+Please select 'Report IP Status' from the 'Tools/Report' menu or run Tcl command 'report_ip_status' for more information.
+WARNING: [Vivado 12-4802] The synthesis checkpoint for IP 'c:/Users/FemtoFluidics/Documents/GitHub/vivadoRepository1/glue/glue.srcs/sources_1/bd/DMF_Translation/ip/DMF_Translation_auto_us_0/DMF_Translation_auto_us_0.xci' is not generated and IP is locked. An out-of-context (OOC) run will be created and/or launched, but synthesis may not be able to complete or could result in incorrect behavior.
+Please select 'Report IP Status' from the 'Tools/Report' menu or run Tcl command 'report_ip_status' for more information.
+WARNING: [Vivado 12-4802] The synthesis checkpoint for IP 'c:/Users/FemtoFluidics/Documents/GitHub/vivadoRepository1/glue/glue.srcs/sources_1/bd/DMF_Translation/ip/DMF_Translation_auto_ds_0/DMF_Translation_auto_ds_0.xci' is not generated and IP is locked. An out-of-context (OOC) run will be created and/or launched, but synthesis may not be able to complete or could result in incorrect behavior.
+Please select 'Report IP Status' from the 'Tools/Report' menu or run Tcl command 'report_ip_status' for more information.
+WARNING: [Vivado 12-4802] The synthesis checkpoint for IP 'c:/Users/FemtoFluidics/Documents/GitHub/vivadoRepository1/glue/glue.srcs/sources_1/bd/DMF_Translation/ip/DMF_Translation_auto_ds_1/DMF_Translation_auto_ds_1.xci' is not generated and IP is locked. An out-of-context (OOC) run will be created and/or launched, but synthesis may not be able to complete or could result in incorrect behavior.
+Please select 'Report IP Status' from the 'Tools/Report' menu or run Tcl command 'report_ip_status' for more information.
+WARNING: [Vivado 12-4802] The synthesis checkpoint for IP 'c:/Users/FemtoFluidics/Documents/GitHub/vivadoRepository1/glue/glue.srcs/sources_1/bd/DMF_Translation/ip/DMF_Translation_auto_ds_2/DMF_Translation_auto_ds_2.xci' is not generated and IP is locked. An out-of-context (OOC) run will be created and/or launched, but synthesis may not be able to complete or could result in incorrect behavior.
+Please select 'Report IP Status' from the 'Tools/Report' menu or run Tcl command 'report_ip_status' for more information.
+WARNING: [Vivado 12-4802] The synthesis checkpoint for IP 'c:/Users/FemtoFluidics/Documents/GitHub/vivadoRepository1/glue/glue.srcs/sources_1/bd/DMF_Translation/ip/DMF_Translation_auto_ds_3/DMF_Translation_auto_ds_3.xci' is not generated and IP is locked. An out-of-context (OOC) run will be created and/or launched, but synthesis may not be able to complete or could result in incorrect behavior.
+Please select 'Report IP Status' from the 'Tools/Report' menu or run Tcl command 'report_ip_status' for more information.
+WARNING: [Vivado 12-4802] The synthesis checkpoint for IP 'c:/Users/FemtoFluidics/Documents/GitHub/vivadoRepository1/glue/glue.srcs/sources_1/bd/DMF_Translation/ip/DMF_Translation_auto_ds_4/DMF_Translation_auto_ds_4.xci' is not generated and IP is locked. An out-of-context (OOC) run will be created and/or launched, but synthesis may not be able to complete or could result in incorrect behavior.
+Please select 'Report IP Status' from the 'Tools/Report' menu or run Tcl command 'report_ip_status' for more information.
+WARNING: [Vivado 12-4802] The synthesis checkpoint for IP 'c:/Users/FemtoFluidics/Documents/GitHub/vivadoRepository1/glue/glue.srcs/sources_1/bd/DMF_Translation/ip/DMF_Translation_auto_pc_0/DMF_Translation_auto_pc_0.xci' is not generated and IP is locked. An out-of-context (OOC) run will be created and/or launched, but synthesis may not be able to complete or could result in incorrect behavior.
+Please select 'Report IP Status' from the 'Tools/Report' menu or run Tcl command 'report_ip_status' for more information.
+WARNING: [Vivado 12-4802] The synthesis checkpoint for IP 'c:/Users/FemtoFluidics/Documents/GitHub/vivadoRepository1/glue/glue.srcs/sources_1/bd/DMF_Translation/ip/DMF_Translation_auto_us_1/DMF_Translation_auto_us_1.xci' is not generated and IP is locked. An out-of-context (OOC) run will be created and/or launched, but synthesis may not be able to complete or could result in incorrect behavior.
+Please select 'Report IP Status' from the 'Tools/Report' menu or run Tcl command 'report_ip_status' for more information.
+WARNING: [Vivado 12-4802] The synthesis checkpoint for IP 'c:/Users/FemtoFluidics/Documents/GitHub/vivadoRepository1/glue/glue.srcs/sources_1/bd/DMF_Translation/ip/DMF_Translation_auto_ds_5/DMF_Translation_auto_ds_5.xci' is not generated and IP is locked. An out-of-context (OOC) run will be created and/or launched, but synthesis may not be able to complete or could result in incorrect behavior.
+Please select 'Report IP Status' from the 'Tools/Report' menu or run Tcl command 'report_ip_status' for more information.
+WARNING: [Runs 36-337] The following IPs are either missing output products or output products are not up-to-date for Synthesis target. Since these IPs are locked, no update to the output products can be done. 
+Please select 'Report IP Status' from the 'Tools/Report' menu or run Tcl command 'report_ip_status' for more information.
+C:/Users/FemtoFluidics/Documents/GitHub/vivadoRepository1/glue/glue.srcs/sources_1/bd/DMF_Translation/DMF_Translation.bd
+
+WARNING: [Runs 36-337] The following IPs are either missing output products or output products are not up-to-date for Implementation target. Since these IPs are locked, no update to the output products can be done. 
+Please select 'Report IP Status' from the 'Tools/Report' menu or run Tcl command 'report_ip_status' for more information.
+C:/Users/FemtoFluidics/Documents/GitHub/vivadoRepository1/glue/glue.srcs/sources_1/bd/DMF_Translation/DMF_Translation.bd
+
+[Sun Sep 26 13:39:37 2021] Launched DMF_Translation_mig_7series_0_1_synth_1, DMF_Translation_auto_ds_4_synth_1, DMF_Translation_auto_ds_3_synth_1, DMF_Translation_auto_us_1_synth_1, DMF_Translation_auto_pc_0_synth_1, DMF_Translation_auto_ds_1_synth_1, DMF_Translation_auto_ds_2_synth_1, DMF_Translation_auto_ds_0_synth_1, DMF_Translation_auto_us_0_synth_1, DMF_Translation_auto_ds_5_synth_1, synth_1...
+Run output will be captured here:
+DMF_Translation_mig_7series_0_1_synth_1: C:/Users/FemtoFluidics/Documents/GitHub/vivadoRepository1/glue/glue.runs/DMF_Translation_mig_7series_0_1_synth_1/runme.log
+DMF_Translation_auto_ds_4_synth_1: C:/Users/FemtoFluidics/Documents/GitHub/vivadoRepository1/glue/glue.runs/DMF_Translation_auto_ds_4_synth_1/runme.log
+DMF_Translation_auto_ds_3_synth_1: C:/Users/FemtoFluidics/Documents/GitHub/vivadoRepository1/glue/glue.runs/DMF_Translation_auto_ds_3_synth_1/runme.log
+DMF_Translation_auto_us_1_synth_1: C:/Users/FemtoFluidics/Documents/GitHub/vivadoRepository1/glue/glue.runs/DMF_Translation_auto_us_1_synth_1/runme.log
+DMF_Translation_auto_pc_0_synth_1: C:/Users/FemtoFluidics/Documents/GitHub/vivadoRepository1/glue/glue.runs/DMF_Translation_auto_pc_0_synth_1/runme.log
+DMF_Translation_auto_ds_1_synth_1: C:/Users/FemtoFluidics/Documents/GitHub/vivadoRepository1/glue/glue.runs/DMF_Translation_auto_ds_1_synth_1/runme.log
+DMF_Translation_auto_ds_2_synth_1: C:/Users/FemtoFluidics/Documents/GitHub/vivadoRepository1/glue/glue.runs/DMF_Translation_auto_ds_2_synth_1/runme.log
+DMF_Translation_auto_ds_0_synth_1: C:/Users/FemtoFluidics/Documents/GitHub/vivadoRepository1/glue/glue.runs/DMF_Translation_auto_ds_0_synth_1/runme.log
+DMF_Translation_auto_us_0_synth_1: C:/Users/FemtoFluidics/Documents/GitHub/vivadoRepository1/glue/glue.runs/DMF_Translation_auto_us_0_synth_1/runme.log
+DMF_Translation_auto_ds_5_synth_1: C:/Users/FemtoFluidics/Documents/GitHub/vivadoRepository1/glue/glue.runs/DMF_Translation_auto_ds_5_synth_1/runme.log
+synth_1: C:/Users/FemtoFluidics/Documents/GitHub/vivadoRepository1/glue/glue.runs/synth_1/runme.log
+[Sun Sep 26 13:39:37 2021] Launched impl_1...
+Run output will be captured here: C:/Users/FemtoFluidics/Documents/GitHub/vivadoRepository1/glue/glue.runs/impl_1/runme.log
+launch_runs: Time (s): cpu = 00:00:07 ; elapsed = 00:00:10 . Memory (MB): peak = 2395.086 ; gain = 38.875
+close_hw
+reset_run DMF_Translation_auto_ds_4_synth_1
+reset_run DMF_Translation_auto_ds_3_synth_1
+reset_run DMF_Translation_auto_us_1_synth_1
+reset_run DMF_Translation_auto_pc_0_synth_1
+reset_run DMF_Translation_auto_ds_1_synth_1
+reset_run DMF_Translation_auto_ds_2_synth_1
+reset_run DMF_Translation_auto_ds_0_synth_1
+reset_run DMF_Translation_auto_us_0_synth_1
+reset_run DMF_Translation_auto_ds_5_synth_1
+reset_run synth_1
+launch_runs synth_1 -jobs 6
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP DMF_Translation_mig_7series_0_1, cache-ID = d48f63d3e266498f; cache size = 27.831 MB.
+WARNING: [Vivado 12-4801] The synthesis checkpoint for IP 'C:/Users/FemtoFluidics/Documents/GitHub/vivadoRepository1/glue/glue.srcs/sources_1/bd/DMF_Translation/ip/DMF_Translation_mig_7series_0_1/DMF_Translation_mig_7series_0_1.xci' is available but stale and the IP is locked. An out-of-context (OOC) run will be created and/or launched, but synthesis may not be able to complete or could result in incorrect behavior.
+Please select 'Report IP Status' from the 'Tools/Report' menu or run Tcl command 'report_ip_status' for more information.
+WARNING: [Vivado 12-4802] The synthesis checkpoint for IP 'c:/Users/FemtoFluidics/Documents/GitHub/vivadoRepository1/glue/glue.srcs/sources_1/bd/DMF_Translation/ip/DMF_Translation_auto_us_0/DMF_Translation_auto_us_0.xci' is not generated and IP is locked. An out-of-context (OOC) run will be created and/or launched, but synthesis may not be able to complete or could result in incorrect behavior.
+Please select 'Report IP Status' from the 'Tools/Report' menu or run Tcl command 'report_ip_status' for more information.
+WARNING: [Vivado 12-4802] The synthesis checkpoint for IP 'c:/Users/FemtoFluidics/Documents/GitHub/vivadoRepository1/glue/glue.srcs/sources_1/bd/DMF_Translation/ip/DMF_Translation_auto_ds_0/DMF_Translation_auto_ds_0.xci' is not generated and IP is locked. An out-of-context (OOC) run will be created and/or launched, but synthesis may not be able to complete or could result in incorrect behavior.
+Please select 'Report IP Status' from the 'Tools/Report' menu or run Tcl command 'report_ip_status' for more information.
+WARNING: [Vivado 12-4802] The synthesis checkpoint for IP 'c:/Users/FemtoFluidics/Documents/GitHub/vivadoRepository1/glue/glue.srcs/sources_1/bd/DMF_Translation/ip/DMF_Translation_auto_ds_1/DMF_Translation_auto_ds_1.xci' is not generated and IP is locked. An out-of-context (OOC) run will be created and/or launched, but synthesis may not be able to complete or could result in incorrect behavior.
+Please select 'Report IP Status' from the 'Tools/Report' menu or run Tcl command 'report_ip_status' for more information.
+WARNING: [Vivado 12-4802] The synthesis checkpoint for IP 'c:/Users/FemtoFluidics/Documents/GitHub/vivadoRepository1/glue/glue.srcs/sources_1/bd/DMF_Translation/ip/DMF_Translation_auto_ds_2/DMF_Translation_auto_ds_2.xci' is not generated and IP is locked. An out-of-context (OOC) run will be created and/or launched, but synthesis may not be able to complete or could result in incorrect behavior.
+Please select 'Report IP Status' from the 'Tools/Report' menu or run Tcl command 'report_ip_status' for more information.
+WARNING: [Vivado 12-4802] The synthesis checkpoint for IP 'c:/Users/FemtoFluidics/Documents/GitHub/vivadoRepository1/glue/glue.srcs/sources_1/bd/DMF_Translation/ip/DMF_Translation_auto_ds_3/DMF_Translation_auto_ds_3.xci' is not generated and IP is locked. An out-of-context (OOC) run will be created and/or launched, but synthesis may not be able to complete or could result in incorrect behavior.
+Please select 'Report IP Status' from the 'Tools/Report' menu or run Tcl command 'report_ip_status' for more information.
+WARNING: [Vivado 12-4802] The synthesis checkpoint for IP 'c:/Users/FemtoFluidics/Documents/GitHub/vivadoRepository1/glue/glue.srcs/sources_1/bd/DMF_Translation/ip/DMF_Translation_auto_ds_4/DMF_Translation_auto_ds_4.xci' is not generated and IP is locked. An out-of-context (OOC) run will be created and/or launched, but synthesis may not be able to complete or could result in incorrect behavior.
+Please select 'Report IP Status' from the 'Tools/Report' menu or run Tcl command 'report_ip_status' for more information.
+WARNING: [Vivado 12-4802] The synthesis checkpoint for IP 'c:/Users/FemtoFluidics/Documents/GitHub/vivadoRepository1/glue/glue.srcs/sources_1/bd/DMF_Translation/ip/DMF_Translation_auto_pc_0/DMF_Translation_auto_pc_0.xci' is not generated and IP is locked. An out-of-context (OOC) run will be created and/or launched, but synthesis may not be able to complete or could result in incorrect behavior.
+Please select 'Report IP Status' from the 'Tools/Report' menu or run Tcl command 'report_ip_status' for more information.
+WARNING: [Vivado 12-4802] The synthesis checkpoint for IP 'c:/Users/FemtoFluidics/Documents/GitHub/vivadoRepository1/glue/glue.srcs/sources_1/bd/DMF_Translation/ip/DMF_Translation_auto_us_1/DMF_Translation_auto_us_1.xci' is not generated and IP is locked. An out-of-context (OOC) run will be created and/or launched, but synthesis may not be able to complete or could result in incorrect behavior.
+Please select 'Report IP Status' from the 'Tools/Report' menu or run Tcl command 'report_ip_status' for more information.
+WARNING: [Vivado 12-4802] The synthesis checkpoint for IP 'c:/Users/FemtoFluidics/Documents/GitHub/vivadoRepository1/glue/glue.srcs/sources_1/bd/DMF_Translation/ip/DMF_Translation_auto_ds_5/DMF_Translation_auto_ds_5.xci' is not generated and IP is locked. An out-of-context (OOC) run will be created and/or launched, but synthesis may not be able to complete or could result in incorrect behavior.
+Please select 'Report IP Status' from the 'Tools/Report' menu or run Tcl command 'report_ip_status' for more information.
+WARNING: [Runs 36-337] The following IPs are either missing output products or output products are not up-to-date for Synthesis target. Since these IPs are locked, no update to the output products can be done. 
+Please select 'Report IP Status' from the 'Tools/Report' menu or run Tcl command 'report_ip_status' for more information.
+C:/Users/FemtoFluidics/Documents/GitHub/vivadoRepository1/glue/glue.srcs/sources_1/bd/DMF_Translation/DMF_Translation.bd
+
+WARNING: [Runs 36-337] The following IPs are either missing output products or output products are not up-to-date for Implementation target. Since these IPs are locked, no update to the output products can be done. 
+Please select 'Report IP Status' from the 'Tools/Report' menu or run Tcl command 'report_ip_status' for more information.
+C:/Users/FemtoFluidics/Documents/GitHub/vivadoRepository1/glue/glue.srcs/sources_1/bd/DMF_Translation/DMF_Translation.bd
+
+[Sun Sep 26 13:40:41 2021] Launched DMF_Translation_auto_ds_4_synth_1, DMF_Translation_auto_ds_3_synth_1, DMF_Translation_auto_us_1_synth_1, DMF_Translation_auto_pc_0_synth_1, DMF_Translation_auto_ds_1_synth_1, DMF_Translation_auto_ds_2_synth_1, DMF_Translation_auto_ds_0_synth_1, DMF_Translation_auto_us_0_synth_1, DMF_Translation_auto_ds_5_synth_1...
+Run output will be captured here:
+DMF_Translation_auto_ds_4_synth_1: C:/Users/FemtoFluidics/Documents/GitHub/vivadoRepository1/glue/glue.runs/DMF_Translation_auto_ds_4_synth_1/runme.log
+DMF_Translation_auto_ds_3_synth_1: C:/Users/FemtoFluidics/Documents/GitHub/vivadoRepository1/glue/glue.runs/DMF_Translation_auto_ds_3_synth_1/runme.log
+DMF_Translation_auto_us_1_synth_1: C:/Users/FemtoFluidics/Documents/GitHub/vivadoRepository1/glue/glue.runs/DMF_Translation_auto_us_1_synth_1/runme.log
+DMF_Translation_auto_pc_0_synth_1: C:/Users/FemtoFluidics/Documents/GitHub/vivadoRepository1/glue/glue.runs/DMF_Translation_auto_pc_0_synth_1/runme.log
+DMF_Translation_auto_ds_1_synth_1: C:/Users/FemtoFluidics/Documents/GitHub/vivadoRepository1/glue/glue.runs/DMF_Translation_auto_ds_1_synth_1/runme.log
+DMF_Translation_auto_ds_2_synth_1: C:/Users/FemtoFluidics/Documents/GitHub/vivadoRepository1/glue/glue.runs/DMF_Translation_auto_ds_2_synth_1/runme.log
+DMF_Translation_auto_ds_0_synth_1: C:/Users/FemtoFluidics/Documents/GitHub/vivadoRepository1/glue/glue.runs/DMF_Translation_auto_ds_0_synth_1/runme.log
+DMF_Translation_auto_us_0_synth_1: C:/Users/FemtoFluidics/Documents/GitHub/vivadoRepository1/glue/glue.runs/DMF_Translation_auto_us_0_synth_1/runme.log
+DMF_Translation_auto_ds_5_synth_1: C:/Users/FemtoFluidics/Documents/GitHub/vivadoRepository1/glue/glue.runs/DMF_Translation_auto_ds_5_synth_1/runme.log
+[Sun Sep 26 13:40:42 2021] Launched synth_1...
+Run output will be captured here: C:/Users/FemtoFluidics/Documents/GitHub/vivadoRepository1/glue/glue.runs/synth_1/runme.log
+reset_run DMF_Translation_auto_ds_4_synth_1
+reset_run DMF_Translation_auto_ds_3_synth_1
+reset_run DMF_Translation_auto_us_1_synth_1
+reset_run DMF_Translation_auto_pc_0_synth_1
+reset_run DMF_Translation_auto_ds_1_synth_1
+reset_run DMF_Translation_auto_ds_2_synth_1
+reset_run DMF_Translation_auto_ds_0_synth_1
+reset_run DMF_Translation_auto_us_0_synth_1
+reset_run DMF_Translation_auto_ds_5_synth_1
+reset_run DMF_Translation_mig_7series_0_1_synth_1
+reset_run synth_1
+launch_runs synth_1 -jobs 6
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP DMF_Translation_mig_7series_0_1, cache-ID = d48f63d3e266498f; cache size = 27.831 MB.
+WARNING: [Vivado 12-4801] The synthesis checkpoint for IP 'C:/Users/FemtoFluidics/Documents/GitHub/vivadoRepository1/glue/glue.srcs/sources_1/bd/DMF_Translation/ip/DMF_Translation_mig_7series_0_1/DMF_Translation_mig_7series_0_1.xci' is available but stale and the IP is locked. An out-of-context (OOC) run will be created and/or launched, but synthesis may not be able to complete or could result in incorrect behavior.
+Please select 'Report IP Status' from the 'Tools/Report' menu or run Tcl command 'report_ip_status' for more information.
+WARNING: [Vivado 12-4802] The synthesis checkpoint for IP 'c:/Users/FemtoFluidics/Documents/GitHub/vivadoRepository1/glue/glue.srcs/sources_1/bd/DMF_Translation/ip/DMF_Translation_auto_us_0/DMF_Translation_auto_us_0.xci' is not generated and IP is locked. An out-of-context (OOC) run will be created and/or launched, but synthesis may not be able to complete or could result in incorrect behavior.
+Please select 'Report IP Status' from the 'Tools/Report' menu or run Tcl command 'report_ip_status' for more information.
+WARNING: [Vivado 12-4802] The synthesis checkpoint for IP 'c:/Users/FemtoFluidics/Documents/GitHub/vivadoRepository1/glue/glue.srcs/sources_1/bd/DMF_Translation/ip/DMF_Translation_auto_ds_0/DMF_Translation_auto_ds_0.xci' is not generated and IP is locked. An out-of-context (OOC) run will be created and/or launched, but synthesis may not be able to complete or could result in incorrect behavior.
+Please select 'Report IP Status' from the 'Tools/Report' menu or run Tcl command 'report_ip_status' for more information.
+WARNING: [Vivado 12-4802] The synthesis checkpoint for IP 'c:/Users/FemtoFluidics/Documents/GitHub/vivadoRepository1/glue/glue.srcs/sources_1/bd/DMF_Translation/ip/DMF_Translation_auto_ds_1/DMF_Translation_auto_ds_1.xci' is not generated and IP is locked. An out-of-context (OOC) run will be created and/or launched, but synthesis may not be able to complete or could result in incorrect behavior.
+Please select 'Report IP Status' from the 'Tools/Report' menu or run Tcl command 'report_ip_status' for more information.
+WARNING: [Vivado 12-4802] The synthesis checkpoint for IP 'c:/Users/FemtoFluidics/Documents/GitHub/vivadoRepository1/glue/glue.srcs/sources_1/bd/DMF_Translation/ip/DMF_Translation_auto_ds_2/DMF_Translation_auto_ds_2.xci' is not generated and IP is locked. An out-of-context (OOC) run will be created and/or launched, but synthesis may not be able to complete or could result in incorrect behavior.
+Please select 'Report IP Status' from the 'Tools/Report' menu or run Tcl command 'report_ip_status' for more information.
+WARNING: [Vivado 12-4802] The synthesis checkpoint for IP 'c:/Users/FemtoFluidics/Documents/GitHub/vivadoRepository1/glue/glue.srcs/sources_1/bd/DMF_Translation/ip/DMF_Translation_auto_ds_3/DMF_Translation_auto_ds_3.xci' is not generated and IP is locked. An out-of-context (OOC) run will be created and/or launched, but synthesis may not be able to complete or could result in incorrect behavior.
+Please select 'Report IP Status' from the 'Tools/Report' menu or run Tcl command 'report_ip_status' for more information.
+WARNING: [Vivado 12-4802] The synthesis checkpoint for IP 'c:/Users/FemtoFluidics/Documents/GitHub/vivadoRepository1/glue/glue.srcs/sources_1/bd/DMF_Translation/ip/DMF_Translation_auto_ds_4/DMF_Translation_auto_ds_4.xci' is not generated and IP is locked. An out-of-context (OOC) run will be created and/or launched, but synthesis may not be able to complete or could result in incorrect behavior.
+Please select 'Report IP Status' from the 'Tools/Report' menu or run Tcl command 'report_ip_status' for more information.
+WARNING: [Vivado 12-4802] The synthesis checkpoint for IP 'c:/Users/FemtoFluidics/Documents/GitHub/vivadoRepository1/glue/glue.srcs/sources_1/bd/DMF_Translation/ip/DMF_Translation_auto_pc_0/DMF_Translation_auto_pc_0.xci' is not generated and IP is locked. An out-of-context (OOC) run will be created and/or launched, but synthesis may not be able to complete or could result in incorrect behavior.
+Please select 'Report IP Status' from the 'Tools/Report' menu or run Tcl command 'report_ip_status' for more information.
+WARNING: [Vivado 12-4802] The synthesis checkpoint for IP 'c:/Users/FemtoFluidics/Documents/GitHub/vivadoRepository1/glue/glue.srcs/sources_1/bd/DMF_Translation/ip/DMF_Translation_auto_us_1/DMF_Translation_auto_us_1.xci' is not generated and IP is locked. An out-of-context (OOC) run will be created and/or launched, but synthesis may not be able to complete or could result in incorrect behavior.
+Please select 'Report IP Status' from the 'Tools/Report' menu or run Tcl command 'report_ip_status' for more information.
+WARNING: [Vivado 12-4802] The synthesis checkpoint for IP 'c:/Users/FemtoFluidics/Documents/GitHub/vivadoRepository1/glue/glue.srcs/sources_1/bd/DMF_Translation/ip/DMF_Translation_auto_ds_5/DMF_Translation_auto_ds_5.xci' is not generated and IP is locked. An out-of-context (OOC) run will be created and/or launched, but synthesis may not be able to complete or could result in incorrect behavior.
+Please select 'Report IP Status' from the 'Tools/Report' menu or run Tcl command 'report_ip_status' for more information.
+WARNING: [Runs 36-337] The following IPs are either missing output products or output products are not up-to-date for Synthesis target. Since these IPs are locked, no update to the output products can be done. 
+Please select 'Report IP Status' from the 'Tools/Report' menu or run Tcl command 'report_ip_status' for more information.
+C:/Users/FemtoFluidics/Documents/GitHub/vivadoRepository1/glue/glue.srcs/sources_1/bd/DMF_Translation/DMF_Translation.bd
+
+WARNING: [Runs 36-337] The following IPs are either missing output products or output products are not up-to-date for Implementation target. Since these IPs are locked, no update to the output products can be done. 
+Please select 'Report IP Status' from the 'Tools/Report' menu or run Tcl command 'report_ip_status' for more information.
+C:/Users/FemtoFluidics/Documents/GitHub/vivadoRepository1/glue/glue.srcs/sources_1/bd/DMF_Translation/DMF_Translation.bd
+
+[Sun Sep 26 13:43:47 2021] Launched DMF_Translation_mig_7series_0_1_synth_1, DMF_Translation_auto_ds_4_synth_1, DMF_Translation_auto_ds_3_synth_1, DMF_Translation_auto_us_1_synth_1, DMF_Translation_auto_pc_0_synth_1, DMF_Translation_auto_ds_1_synth_1, DMF_Translation_auto_ds_2_synth_1, DMF_Translation_auto_ds_0_synth_1, DMF_Translation_auto_us_0_synth_1, DMF_Translation_auto_ds_5_synth_1...
+Run output will be captured here:
+DMF_Translation_mig_7series_0_1_synth_1: C:/Users/FemtoFluidics/Documents/GitHub/vivadoRepository1/glue/glue.runs/DMF_Translation_mig_7series_0_1_synth_1/runme.log
+DMF_Translation_auto_ds_4_synth_1: C:/Users/FemtoFluidics/Documents/GitHub/vivadoRepository1/glue/glue.runs/DMF_Translation_auto_ds_4_synth_1/runme.log
+DMF_Translation_auto_ds_3_synth_1: C:/Users/FemtoFluidics/Documents/GitHub/vivadoRepository1/glue/glue.runs/DMF_Translation_auto_ds_3_synth_1/runme.log
+DMF_Translation_auto_us_1_synth_1: C:/Users/FemtoFluidics/Documents/GitHub/vivadoRepository1/glue/glue.runs/DMF_Translation_auto_us_1_synth_1/runme.log
+DMF_Translation_auto_pc_0_synth_1: C:/Users/FemtoFluidics/Documents/GitHub/vivadoRepository1/glue/glue.runs/DMF_Translation_auto_pc_0_synth_1/runme.log
+DMF_Translation_auto_ds_1_synth_1: C:/Users/FemtoFluidics/Documents/GitHub/vivadoRepository1/glue/glue.runs/DMF_Translation_auto_ds_1_synth_1/runme.log
+DMF_Translation_auto_ds_2_synth_1: C:/Users/FemtoFluidics/Documents/GitHub/vivadoRepository1/glue/glue.runs/DMF_Translation_auto_ds_2_synth_1/runme.log
+DMF_Translation_auto_ds_0_synth_1: C:/Users/FemtoFluidics/Documents/GitHub/vivadoRepository1/glue/glue.runs/DMF_Translation_auto_ds_0_synth_1/runme.log
+DMF_Translation_auto_us_0_synth_1: C:/Users/FemtoFluidics/Documents/GitHub/vivadoRepository1/glue/glue.runs/DMF_Translation_auto_us_0_synth_1/runme.log
+DMF_Translation_auto_ds_5_synth_1: C:/Users/FemtoFluidics/Documents/GitHub/vivadoRepository1/glue/glue.runs/DMF_Translation_auto_ds_5_synth_1/runme.log
+[Sun Sep 26 13:43:48 2021] Launched synth_1...
+Run output will be captured here: C:/Users/FemtoFluidics/Documents/GitHub/vivadoRepository1/glue/glue.runs/synth_1/runme.log
+open_bd_design {C:/Users/FemtoFluidics/Documents/GitHub/vivadoRepository1/glue/glue.srcs/sources_1/bd/DMF_Translation/DMF_Translation.bd}
+update_ip_catalog -rebuild
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+WARNING: [IP_Flow 19-2248] Failed to load user IP repository 'c:/Users/FemtoFluidics/Documents/GitHub/vivadoRepository1/ip_repo/logicDMF_1.0'; Can't find the specified path.
+If this directory should no longer be in your list of user repositories, go to the IP Settings dialog and remove it.
+set_property  ip_repo_paths  {} [current_project]
+update_ip_catalog
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+set_property  ip_repo_paths  C:/Users/FemtoFluidics/Documents/GitHub/vivadoRepository1/ip_repo_git [current_project]
+update_ip_catalog
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/FemtoFluidics/Documents/GitHub/vivadoRepository1/ip_repo_git'.
+reset_run DMF_Translation_auto_ds_4_synth_1
+reset_run DMF_Translation_auto_ds_3_synth_1
+reset_run DMF_Translation_auto_us_1_synth_1
+reset_run DMF_Translation_auto_pc_0_synth_1
+reset_run DMF_Translation_auto_ds_1_synth_1
+reset_run DMF_Translation_auto_ds_2_synth_1
+reset_run DMF_Translation_auto_ds_0_synth_1
+reset_run DMF_Translation_auto_us_0_synth_1
+reset_run DMF_Translation_auto_ds_5_synth_1
+reset_run DMF_Translation_mig_7series_0_1_synth_1
+reset_run synth_1
+launch_runs synth_1 -jobs 6
+Wrote  : <C:\Users\FemtoFluidics\Documents\GitHub\vivadoRepository1\glue\glue.srcs\sources_1\bd\DMF_Translation\DMF_Translation.bd> 
+VHDL Output written to : C:/Users/FemtoFluidics/Documents/GitHub/vivadoRepository1/glue/glue.srcs/sources_1/bd/DMF_Translation/synth/DMF_Translation.v
+VHDL Output written to : C:/Users/FemtoFluidics/Documents/GitHub/vivadoRepository1/glue/glue.srcs/sources_1/bd/DMF_Translation/sim/DMF_Translation.v
+VHDL Output written to : C:/Users/FemtoFluidics/Documents/GitHub/vivadoRepository1/glue/glue.srcs/sources_1/bd/DMF_Translation/hdl/DMF_Translation_wrapper.v
+INFO: [BD 41-1029] Generation completed for the IP Integrator block DMF_processor .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block microblaze_0_local_memory/dlmb_v10 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block microblaze_0_local_memory/ilmb_v10 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block microblaze_0_local_memory/dlmb_bram_if_cntlr .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block microblaze_0_local_memory/ilmb_bram_if_cntlr .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block microblaze_0_local_memory/lmb_bram .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block mdm_1 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block clk_wiz_1 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block rst_clk_wiz_1_100M .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_uartlite_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_ethernetlite_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block logicDMF_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block DMF_processor_axi_periph/xbar .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_intc_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block mig_7series_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_timer_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block xlconcat_0 .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file 'c:/Users/FemtoFluidics/Documents/GitHub/vivadoRepository1/glue/glue.srcs/sources_1/bd/DMF_Translation/ip/DMF_Translation_auto_us_1/DMF_Translation_auto_us_1_ooc.xdc'
+INFO: [BD 41-1029] Generation completed for the IP Integrator block DMF_processor_axi_periph/s00_couplers/auto_us .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file 'c:/Users/FemtoFluidics/Documents/GitHub/vivadoRepository1/glue/glue.srcs/sources_1/bd/DMF_Translation/ip/DMF_Translation_auto_ds_0/DMF_Translation_auto_ds_0_ooc.xdc'
+INFO: [BD 41-1029] Generation completed for the IP Integrator block DMF_processor_axi_periph/m00_couplers/auto_ds .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file 'c:/Users/FemtoFluidics/Documents/GitHub/vivadoRepository1/glue/glue.srcs/sources_1/bd/DMF_Translation/ip/DMF_Translation_auto_ds_1/DMF_Translation_auto_ds_1_ooc.xdc'
+INFO: [BD 41-1029] Generation completed for the IP Integrator block DMF_processor_axi_periph/m01_couplers/auto_ds .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file 'c:/Users/FemtoFluidics/Documents/GitHub/vivadoRepository1/glue/glue.srcs/sources_1/bd/DMF_Translation/ip/DMF_Translation_auto_ds_2/DMF_Translation_auto_ds_2_ooc.xdc'
+INFO: [BD 41-1029] Generation completed for the IP Integrator block DMF_processor_axi_periph/m02_couplers/auto_ds .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file 'c:/Users/FemtoFluidics/Documents/GitHub/vivadoRepository1/glue/glue.srcs/sources_1/bd/DMF_Translation/ip/DMF_Translation_auto_ds_3/DMF_Translation_auto_ds_3_ooc.xdc'
+INFO: [BD 41-1029] Generation completed for the IP Integrator block DMF_processor_axi_periph/m03_couplers/auto_ds .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file 'c:/Users/FemtoFluidics/Documents/GitHub/vivadoRepository1/glue/glue.srcs/sources_1/bd/DMF_Translation/ip/DMF_Translation_auto_ds_4/DMF_Translation_auto_ds_4_ooc.xdc'
+INFO: [BD 41-1029] Generation completed for the IP Integrator block DMF_processor_axi_periph/m04_couplers/auto_ds .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file 'c:/Users/FemtoFluidics/Documents/GitHub/vivadoRepository1/glue/glue.srcs/sources_1/bd/DMF_Translation/ip/DMF_Translation_auto_pc_0/DMF_Translation_auto_pc_0_ooc.xdc'
+INFO: [BD 41-1029] Generation completed for the IP Integrator block DMF_processor_axi_periph/m05_couplers/auto_pc .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file 'c:/Users/FemtoFluidics/Documents/GitHub/vivadoRepository1/glue/glue.srcs/sources_1/bd/DMF_Translation/ip/DMF_Translation_auto_us_0/DMF_Translation_auto_us_0_ooc.xdc'
+INFO: [BD 41-1029] Generation completed for the IP Integrator block DMF_processor_axi_periph/m05_couplers/auto_us .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file 'c:/Users/FemtoFluidics/Documents/GitHub/vivadoRepository1/glue/glue.srcs/sources_1/bd/DMF_Translation/ip/DMF_Translation_auto_ds_5/DMF_Translation_auto_ds_5_ooc.xdc'
+INFO: [BD 41-1029] Generation completed for the IP Integrator block DMF_processor_axi_periph/m06_couplers/auto_ds .
+Exporting to file C:/Users/FemtoFluidics/Documents/GitHub/vivadoRepository1/glue/glue.srcs/sources_1/bd/DMF_Translation/hw_handoff/DMF_Translation.hwh
+Generated Block Design Tcl file C:/Users/FemtoFluidics/Documents/GitHub/vivadoRepository1/glue/glue.srcs/sources_1/bd/DMF_Translation/hw_handoff/DMF_Translation_bd.tcl
+Generated Hardware Definition File C:/Users/FemtoFluidics/Documents/GitHub/vivadoRepository1/glue/glue.srcs/sources_1/bd/DMF_Translation/synth/DMF_Translation.hwdef
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP DMF_Translation_auto_ds_0, cache-ID = 79bc95b5ac1fe2e2; cache size = 27.831 MB.
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP DMF_Translation_auto_ds_1, cache-ID = 6ebc9a7483271c60; cache size = 27.831 MB.
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP DMF_Translation_auto_ds_2, cache-ID = 79bc95b5ac1fe2e2; cache size = 27.831 MB.
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP DMF_Translation_auto_ds_3, cache-ID = 79bc95b5ac1fe2e2; cache size = 27.831 MB.
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP DMF_Translation_auto_ds_4, cache-ID = 79bc95b5ac1fe2e2; cache size = 27.831 MB.
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP DMF_Translation_auto_ds_5, cache-ID = 79bc95b5ac1fe2e2; cache size = 27.831 MB.
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP DMF_Translation_auto_pc_0, cache-ID = f5769301316a6c40; cache size = 27.831 MB.
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP DMF_Translation_auto_us_0, cache-ID = 1d40f157b5e3dc13; cache size = 27.831 MB.
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP DMF_Translation_auto_us_1, cache-ID = e436e8c4a0f9b665; cache size = 27.831 MB.
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP DMF_Translation_mig_7series_0_1, cache-ID = d48f63d3e266498f; cache size = 27.831 MB.
+[Sun Sep 26 13:50:53 2021] Launched synth_1...
+Run output will be captured here: C:/Users/FemtoFluidics/Documents/GitHub/vivadoRepository1/glue/glue.runs/synth_1/runme.log
+launch_runs: Time (s): cpu = 00:00:36 ; elapsed = 00:00:39 . Memory (MB): peak = 3480.383 ; gain = 116.012
+launch_runs impl_1 -jobs 6
+[Sun Sep 26 13:51:35 2021] Launched impl_1...
+Run output will be captured here: C:/Users/FemtoFluidics/Documents/GitHub/vivadoRepository1/glue/glue.runs/impl_1/runme.log
+ipx::edit_ip_in_project -upgrade true -name logicDMF_v1_0_project -directory C:/Users/FemtoFluidics/Documents/GitHub/vivadoRepository1/glue/glue.tmp/logicDMF_v1_0_project c:/Users/FemtoFluidics/Documents/GitHub/vivadoRepository1/ip_repo_git/logicDMF_1.0/component.xml
+INFO: [ProjectBase 1-489] The host OS only allows 260 characters in a normal path. The project is stored in a path with more than 80 characters. If you experience issues with IP, Block Designs, or files not being found, please consider moving the project to a location with a shorter path. Alternately consider using the OS subst command to map part of the path to a drive letter.
+Current project path is 'c:/users/femtofluidics/documents/github/vivadorepository1/glue/glue.tmp/logicdmf_v1_0_project'
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2019.1/data/ip'.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/FemtoFluidics/Documents/GitHub/vivadoRepository1/ip_repo_git'.
+INFO: [IP_Flow 19-795] Syncing license key meta-data
+WARNING: [filemgmt 56-99] Vivado Synthesis ignores library specification for Verilog or SystemVerilog files. [c:/Users/FemtoFluidics/Documents/GitHub/vivadoRepository1/ip_repo_git/logicDMF_1.0/hdl/logicDMF_v1_0_Data_Slave.v:]
+WARNING: [filemgmt 56-99] Vivado Synthesis ignores library specification for Verilog or SystemVerilog files. [c:/Users/FemtoFluidics/Documents/GitHub/vivadoRepository1/ip_repo_git/logicDMF_1.0/hdl/logicDMF_v1_0_Hypervisor_Slave.v:]
+WARNING: [filemgmt 56-99] Vivado Synthesis ignores library specification for Verilog or SystemVerilog files. [c:/Users/FemtoFluidics/Documents/GitHub/vivadoRepository1/ip_repo_git/logicDMF_1.0/hdl/logicDMF_v1_0.v:]
+update_compile_order -fileset sources_1
+current_project glue
+launch_runs impl_1 -to_step write_bitstream -jobs 6
+[Sun Sep 26 13:55:13 2021] Launched impl_1...
+Run output will be captured here: C:/Users/FemtoFluidics/Documents/GitHub/vivadoRepository1/glue/glue.runs/impl_1/runme.log
+file copy -force C:/Users/FemtoFluidics/Documents/GitHub/vivadoRepository1/glue/glue.runs/impl_1/DMF_Translation_wrapper.sysdef C:/Users/FemtoFluidics/Documents/GitHub/vivadoRepository1/glue/glue.sdk/DMF_Translation_wrapper.hdf
+
+launch_sdk -workspace C:/Users/FemtoFluidics/Documents/GitHub/vivadoRepository1/glue/glue.sdk -hwspec C:/Users/FemtoFluidics/Documents/GitHub/vivadoRepository1/glue/glue.sdk/DMF_Translation_wrapper.hdf
+INFO: [Vivado 12-393] Launching SDK...
+INFO: [Vivado 12-417] Running xsdk -workspace C:/Users/FemtoFluidics/Documents/GitHub/vivadoRepository1/glue/glue.sdk -hwspec C:/Users/FemtoFluidics/Documents/GitHub/vivadoRepository1/glue/glue.sdk/DMF_Translation_wrapper.hdf
+INFO: [Vivado 12-3157] SDK launch initiated. Please check console for any further messages.
+launch_sdk -workspace C:/Users/FemtoFluidics/Documents/GitHub/vivadoRepository1/glue/glue.sdk -hwspec C:/Users/FemtoFluidics/Documents/GitHub/vivadoRepository1/glue/glue.sdk/DMF_Translation_wrapper.hdf
+INFO: [Vivado 12-393] Launching SDK...
+INFO: [Vivado 12-417] Running xsdk -workspace C:/Users/FemtoFluidics/Documents/GitHub/vivadoRepository1/glue/glue.sdk -hwspec C:/Users/FemtoFluidics/Documents/GitHub/vivadoRepository1/glue/glue.sdk/DMF_Translation_wrapper.hdf
+INFO: [Vivado 12-3157] SDK launch initiated. Please check console for any further messages.
+launch_sdk -workspace C:/Users/FemtoFluidics/Documents/GitHub/vivadoRepository1/glue/glue.sdk -hwspec C:/Users/FemtoFluidics/Documents/GitHub/vivadoRepository1/glue/glue.sdk/DMF_Translation_wrapper.hdf
+INFO: [Vivado 12-393] Launching SDK...
+INFO: [Vivado 12-417] Running xsdk -workspace C:/Users/FemtoFluidics/Documents/GitHub/vivadoRepository1/glue/glue.sdk -hwspec C:/Users/FemtoFluidics/Documents/GitHub/vivadoRepository1/glue/glue.sdk/DMF_Translation_wrapper.hdf
+INFO: [Vivado 12-3157] SDK launch initiated. Please check console for any further messages.
+close_project
+exit
+INFO: [Common 17-206] Exiting Vivado at Sun Sep 26 17:53:46 2021...
