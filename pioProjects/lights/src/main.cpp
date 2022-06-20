@@ -72,7 +72,7 @@ void setup() {
 
   // +++ LIGHT STRIP SETUP +++
 
-  FastLED.addLeds<WS2812,pin,RGB>(leds,NUM_LEDS);
+  FastLED.addLeds<WS2812,pin,GRB>(leds,NUM_LEDS);
   
   // --- LIGHT STRIP SETUP ---
 
@@ -87,9 +87,15 @@ void loop() {
     display.display();
     //delay(1000);
     
-    //FastLED.showColor(CHSV(i%255, 255, 255));
-    leds[i%63] = CRGB::White; FastLED.show(); delay(30);
-    leds[i%63] = CRGB::Black; FastLED.show(); delay(30);
+    // //FastLED.showColor(CHSV(i%255, 255, 255));
+    // leds[(i+100)%63] = CRGB::Red; //FastLED.show(); delay(30);
+    // leds[(i+100)%62] = CRGB::Red; //FastLED.show(); delay(30);
+    // leds[(i+100)%61] = CRGB::Red; FastLED.show(); delay(30);
+    // leds[(i+100)%63] = CRGB::Black; //FastLED.show(); delay(30);
+    // leds[(i+100)%62] = CRGB::Black; //FastLED.show(); delay(30);
+    // leds[(i+100)%61] = CRGB::Black; FastLED.show(); delay(30);
+
+    leds[(30)] = CRGB::Red; //FastLED.show(); delay(30);
 
     display.clearDisplay();
 
