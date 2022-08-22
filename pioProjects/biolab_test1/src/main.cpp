@@ -3,8 +3,8 @@
 #include <avr/io.h>
 #include <avr/interrupt.h>
 
-const int light1 = PA0;
-const int button1 = PA1;
+const int light1 = PB1;
+const int button1 = PB0;
 
 bool update = false;
 
@@ -16,9 +16,9 @@ void setup() {
 
 void loop() {
   // put your main code here, to run repeatedly:
-  delay(1000);
+  delay(100);
   digitalWrite(light1, HIGH);
-  delay(1000);
+  delay(100);
   digitalWrite(light1, LOW);
 
 }
