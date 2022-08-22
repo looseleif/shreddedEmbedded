@@ -1,0 +1,7 @@
+make.exe --dry-run --keep-going --print-directory
+make.exe: Entering directory `c:/Users/Chase/Documents/personal/shreddedEmbedded/pioProjects/biolab_test1'
+ 
+make.exe: *** No targets specified and no makefile found.  Stop.
+
+make.exe: Leaving directory `c:/Users/Chase/Documents/personal/shreddedEmbedded/pioProjects/biolab_test1'
+ 

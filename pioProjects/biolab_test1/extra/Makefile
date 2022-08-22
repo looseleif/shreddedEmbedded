@@ -16,7 +16,7 @@ DEVICE     = atmega644p
 CLOCK      = 8000000
 PROGRAMMER = -c arduino -P COM3 -b 19200 
 OBJECTS    = main.o
-FUSES      = -U lfuse:w:0x62:m -U hfuse:w:0xd9:m -U efuse:w:0xff:m
+FUSES      = -U lfuse:w:0xc1:m -U hfuse:w:0xd9:m -U efuse:w:0xff:m
 
 
 ######################################################################
