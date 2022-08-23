@@ -3,23 +3,39 @@
 #include <avr/io.h>
 #include <avr/interrupt.h>
 
-const int light1 = PB1;
-const int button1 = PB0;
+#include <test.h>
+
+int led = PA1;
+int brightness = 255;
+int fadeAmount = 30;
 
 bool update = false;
 
 void setup() {
   // put your setup code here, to run once:
-  pinMode(light1, OUTPUT);
-  pinMode(button1, INPUT_PULLUP);
+  pinMode(led, OUTPUT);
+
+  pinMode(PA0, OUTPUT);
+  pinMode(11, OUTPUT);
+  TCCR2A = _BV(COM2A1) | _BV(COM2B1) | _BV(WGM20);
+  TCCR2B = _BV(CS22);
+  OCR2A = 180;
+  OCR2B = 50;
 }
 
 void loop() {
   // put your main code here, to run repeatedly:
-  delay(100);
-  digitalWrite(light1, HIGH);
-  delay(100);
-  digitalWrite(light1, LOW);
+  analogWrite(led, brightness);
+
+  // change the brightness for next time through the loop:
+  brightness = brightness + fadeAmount;
+
+  // reverse the direction of the fading at the ends of the fade:
+  if (brightness <= 0 || brightness >= 255) {
+    fadeAmount = -fadeAmount;
+  }
+  // wait for 30 milliseconds to see the dimming effect
+  delay(1);
 
 }
 
