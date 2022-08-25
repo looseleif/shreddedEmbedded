@@ -1,125 +1,99 @@
-#include <Arduino.h>
+/*********************************************************************
+This is a library for our Monochrome OLEDs based on SSD1325 drivers
 
-#include <avr/io.h>
-#include <avr/interrupt.h>
+  Pick one up today in the adafruit shop!
+  ------> http://www.adafruit.com/category/63_98
 
-#include <test.h>
+These displays use SPI to communicate, 4 or 5 pins are required to  
+interface
 
-int led = PA1;
-int brightness = 255;
-int fadeAmount = 30;
+Adafruit invests time and resources providing this open source code, 
+please support Adafruit and open-source hardware by purchasing 
+products from Adafruit!
 
-bool update = false;
+Written by Limor Fried/Ladyada  for Adafruit Industries.  
+BSD license, check license.txt for more information
+All text above, and the splash screen below must be included in any redistribution
+*********************************************************************/
 
-void setup() {
-  // put your setup code here, to run once:
-  pinMode(led, OUTPUT);
+#include <SPI.h>
+#include <Adafruit_GFX.h>
+#include <Adafruit_SSD1325.h>
 
-  pinMode(PA0, OUTPUT);
-  pinMode(11, OUTPUT);
-  TCCR2A = _BV(COM2A1) | _BV(COM2B1) | _BV(WGM20);
-  TCCR2B = _BV(CS22);
-  OCR2A = 180;
-  OCR2B = 50;
+// If using software SPI, define CLK and MOSI
+#define OLED_CLK PB7
+#define OLED_MOSI PB5
+
+// These are neede for both hardware & softare SPI
+#define OLED_CS PB4
+#define OLED_RESET PB0
+#define OLED_DC PC2
+
+// this is software SPI, slower but any pins
+//Adafruit_SSD1325 display(OLED_MOSI, OLED_CLK, OLED_DC, OLED_RESET, OLED_CS);
+
+// this is for hardware SPI, fast! but fixed oubs
+Adafruit_SSD1325 display(OLED_DC, OLED_RESET, OLED_CS);
+
+/* settings for our little animation later */
+#define NUMFLAKES 10
+#define XPOS 0
+#define YPOS 1
+#define DELTAY 2
+
+#define LOGO16_GLCD_HEIGHT 16 
+#define LOGO16_GLCD_WIDTH  16 
+static const unsigned char PROGMEM logo16_glcd_bmp[] =
+{ B00000000, B11000000,
+  B00000001, B11000000,
+  B00000001, B11000000,
+  B00000011, B11100000,
+  B11110011, B11100000,
+  B11111110, B11111000,
+  B01111110, B11111111,
+  B00110011, B10011111,
+  B00011111, B11111100,
+  B00001101, B01110000,
+  B00011011, B10100000,
+  B00111111, B11100000,
+  B00111111, B11110000,
+  B01111100, B11110000,
+  B01110000, B01110000,
+  B00000000, B00110000 };
+
+void testdrawcircle(void) {
+  for (uint8_t i=0; i<display.height(); i+=2) {
+    display.drawCircle(display.width()/2, display.height()/2, i, WHITE);
+    display.display();
+  }
 }
+
+void setup()   {                
+  // by default, we'll generate the high voltage from the 3.3v line internally! (neat!)
+  display.begin();
+  // init done
+
+  display.display(); // show splashscreen
+
+  display.clearDisplay();   // clears the screen and buffer  
+
+  // draw a single pixel
+  display.drawPixel(10, 10, WHITE);
+  display.display();
+  delay(1000);
+  display.clearDisplay();
+
+  // draw mulitple circles
+  testdrawcircle();
+  display.display();
+  delay(2000);
+  display.clearDisplay();
+
+  }
+
 
 void loop() {
-  // put your main code here, to run repeatedly:
-  analogWrite(led, brightness);
-
-  // change the brightness for next time through the loop:
-  brightness = brightness + fadeAmount;
-
-  // reverse the direction of the fading at the ends of the fade:
-  if (brightness <= 0 || brightness >= 255) {
-    fadeAmount = -fadeAmount;
-  }
-  // wait for 30 milliseconds to see the dimming effect
-  delay(1);
 
 }
 
-// ISR(PCINT0_vect) {
-// 	if (PINA & _BV(PA0)) update = true;
-// 	_delay_ms(500); // Giant friggin' debounce delay
-// }
 
-// int main(void){
-
-//   DDRA = 0x01; // Use PA0 as output, PA1 as input
-// 	PORTA = 0x00;
-
-//   PCICR |= _BV(PCIE0);
-// 	PCMSK0 |= _BV(PCINT0);
-
-//   sei();
-
-// }
-
-// --------
-
-// #include <avr/io.h>
-// #include <avr/interrupt.h>
-// #include <util/atomic.h>
-// #include <util/delay.h>
-// #include <stdbool.h>
-
-// /*
-//  * A global flag used to communicate between the Interrupt Service Routine
-//  * and the main program.  It has to be declared volatile or the compiler
-//  *  might optimize it out.
-//  */
-// volatile bool update = false;
-
-// /**
-//  * set update on a high edge
-//  */
-// ISR(PCINT0_vect) {
-// 	if (PINB & _BV(PB0)) update = true;
-// 	_delay_ms(500); // Giant friggin' debounce delay
-// }
-
-// int main(void) {
-
-// 	/**
-// 	 * Using PB1 as LED output
-// 	 */
-// 	DDRB = 0x02;
-// 	PORTB = 0x00;
-
-// 	/**
-// 	 * Pin Change Interrupt enable on PCINT0 (PB0)
-// 	 */
-// 	PCICR |= _BV(PCIE0);
-// 	PCMSK0 |= _BV(PCINT0);
-
-// 	// Turn interrupts on.
-// 	sei();
-
-// 	while(1) {
-
-// 		// This turns interrupts off for the code inside it.  Probably
-// 		// not needed here but it's good to know about.
-// 		ATOMIC_BLOCK(ATOMIC_FORCEON) {
-
-// 			// If the ISR has indicated we need to update the state
-// 			// then run this block.
-// 			if (update) {
-
-// 				// Toggle the pins on PORTB on/off.
-// 				PORTB ^= 0x02;
-
-// 				/*
-// 				 * We reset the update flag to false to indicate that
-// 				 * we are done.  This ensures that this block will not
-// 				 * be executed until update is set to true again, which
-// 				 * is only done by the interrupt service routine.
-// 				 */
-// 				update = false;
-// 			}
-
-// 		}
-
-// 	}
-
-// }
