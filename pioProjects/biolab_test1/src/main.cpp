@@ -69,6 +69,11 @@ void testdrawcircle(void) {
 }
 
 void setup()   {                
+  
+  DDRD = (1 << PORTD6);
+
+  PORTD = 0;
+  
   // by default, we'll generate the high voltage from the 3.3v line internally! (neat!)
   display.begin();
   // init done
@@ -83,16 +88,29 @@ void setup()   {
   delay(1000);
   display.clearDisplay();
 
+  PORTD = (1 << PORTD6);
+  asm("nop");
+    
+
   // draw mulitple circles
   testdrawcircle();
   display.display();
-  delay(2000);
+  delay(1);
   display.clearDisplay();
 
   }
 
 
 void loop() {
+
+  PORTD = 0;
+  // asm("nop");
+  // PORTD = (1 << PORTD6);
+  // asm("nop");
+  // PORTD = 0;
+  // asm("nop");
+  // PORTD = (1 << PORTD6);
+  // asm("nop");
 
 }
 
