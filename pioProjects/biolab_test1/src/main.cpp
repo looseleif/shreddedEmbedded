@@ -262,9 +262,11 @@ void testdrawline() {
 }
 
 void setup()   {                
-  Serial.begin(9600);
-  Serial.println("SSD1325 OLED test");
- 
+
+  DDRD = (1 << PORTD6);
+
+  PORTD = 0;
+  
   // by default, we'll generate the high voltage from the 3.3v line internally! (neat!)
   display.begin();
   // init done
@@ -310,10 +312,11 @@ void setup()   {
   delay(2000);
   display.clearDisplay();
 
+
   // draw mulitple circles
   testdrawcircle();
   display.display();
-  delay(2000);
+  delay(1);
   display.clearDisplay();
 
   // draw a white circle, 10 pixel radius
