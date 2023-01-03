@@ -4,10 +4,10 @@
 #include <FastLED.h>
 
 #define OLED_CS PB4
-#define OLED_RESET PC3
+#define OLED_RESET PB1
 #define OLED_DC PB0
 
-#define NUM_LEDS 3
+#define NUM_LEDS 20
 #define DATA_PIN 23
 CRGB leds[NUM_LEDS];
 
@@ -191,12 +191,8 @@ void testdrawline() {
 
 void setup()   {                
   
-  leds[0] = CRGB::Red;
-  leds[1] = CRGB::Green;
-  leds[2] = CRGB::Blue;
-  FastLED.addLeds<SK6812, DATA_PIN, GRB>(leds, NUM_LEDS);
+  FastLED.addLeds<WS2812B, DATA_PIN, GRB>(leds, NUM_LEDS);
 
-  FastLED.show();
   // by default, we'll generate the high voltage from the 3.3v line internally! (neat!)
   display.begin();
   // init done
@@ -234,6 +230,35 @@ display.setRotation(0);
 
 void loop(){
 
+  for(int j = 0; j<10; j++){
+  
+  for(int i = 0; i<NUM_LEDS; i++){
+
+    leds[i] = CRGB(100+(50*i),0,255-(50*i));
+    FastLED.show();
+    delay(30);
+
+  }
+
+  for(int i = 0; i<NUM_LEDS; i++){
+
+    leds[i] = CRGB(0,100+(50*i),255-(50*i));
+    FastLED.show();
+    delay(30);
+
+  }
+
+  }
+
+  FastLED.setBrightness(0);
   FastLED.show();
+  delay(1000);
+
+  FastLED.setBrightness(100);
+  FastLED.show();
+
+  delay(1000);
+
+
 
 }
