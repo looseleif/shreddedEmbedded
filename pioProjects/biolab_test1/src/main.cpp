@@ -318,7 +318,7 @@ void boot(){
   clearAll();
   }
 
-  display.drawBitmap(-15,0, hearty100_bmp, 100, 100, WHITE);
+  display.drawBitmap(-20,0, hearty100_bmp, 100, 100, WHITE);
   
   for(int i = 0; i<NUM_LEDS; i++){
 
@@ -330,7 +330,6 @@ void boot(){
 
   display.display();
   delay(1000);
-  clearAll();
 
   for(int i = 100; i>0; i--){
 
@@ -341,6 +340,8 @@ void boot(){
   }
 
   delay(100);
+
+  clearAll();
 
   rebootingPrint();
   delay(100);
