@@ -7,7 +7,8 @@
 #define OLED_CS PB4
 #define OLED_RESET PB1
 #define OLED_DC PB0
-#define NUM_LEDS 15
+
+#define NUM_LEDS 30
 #define DATA_PIN 23
 CRGB leds[NUM_LEDS];
 
@@ -320,11 +321,63 @@ void boot(){
   
   delay(500);
 
-  for(int i=0;i<5;i++){
+  for(int i=0;i<2;i++){
   pleaseWaitPrint();
   delay(500);
   clearAll();
   }
+
+  for(int i = 0; i<NUM_LEDS; i++){
+
+    leds[i] = CRGB(100+(50*i),0,0);
+    delay(15);
+
+  }
+
+  FastLED.setBrightness(0);
+  FastLED.show();
+  delay(50);
+
+  FastLED.setBrightness(25);
+  FastLED.show();
+  delay(200);
+
+  FastLED.setBrightness(0);
+  FastLED.show();
+  delay(50);
+
+  FastLED.setBrightness(50);
+  FastLED.show();
+  delay(200);
+
+  FastLED.setBrightness(0);
+  FastLED.show();
+  delay(250);
+
+  FastLED.setBrightness(75);
+  FastLED.show();
+  delay(200);
+
+  FastLED.setBrightness(0);
+  FastLED.show();
+  delay(50);
+
+  FastLED.setBrightness(100);
+  FastLED.show();
+  delay(200);
+  
+  FastLED.setBrightness(0);
+  FastLED.show();
+  delay(50);
+
+  for(int i = 0; i<NUM_LEDS; i++){
+
+    leds[i] = CRGB(0,0,0);
+    delay(15);
+
+  }
+
+  FastLED.setBrightness(100);
 
   display.drawBitmap(-20,0, hearty100_bmp, 100, 100, WHITE);
   
