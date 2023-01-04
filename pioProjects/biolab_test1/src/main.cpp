@@ -2,12 +2,12 @@
 #include <Adafruit_GFX.h>
 #include <Adafruit_SSD1325.h>
 #include <FastLED.h>
-
+#include <Arduino.h>
 #define OLED_CS PB4
 #define OLED_RESET PB1
 #define OLED_DC PB0
 
-#define NUM_LEDS 20
+#define NUM_LEDS 15
 #define DATA_PIN 23
 CRGB leds[NUM_LEDS];
 
@@ -116,21 +116,22 @@ void testdrawbitmap(const uint8_t *bitmap, uint8_t w, uint8_t h) {
 
 void testdrawchar(void) {
   display.setTextSize(1);
-  display.setTextWrap(false);
+  display.setTextWrap(true);
   display.setTextColor(WHITE);
   display.setCursor(0,0);
 
-  for (int16_t i=0; i < 168; i++) {
-    if (i == '\n') continue;
-    display.write(i);
-    if ((i > 0) && (i % 21 == 0))
-      display.println();
-  }    
-  display.display();
+  String myString = "booting\nhomeostasis\ndevice";
+
+  for(uint8_t i = 0U; i<myString.length(); i++){
+
+    display.write(myString[i]);
+    delay(10);
+  }
+
 }
 
 void testdrawcircle(void) {
-  for (uint8_t i=0; i<display.height(); i+=2) {
+  for (uint8_t i=0; i<display.height()/2; i+=2) {
     display.drawCircle(display.width()/2, display.height()/2, i, WHITE);
     display.display();
   }
@@ -197,68 +198,85 @@ void setup()   {
   display.begin();
   // init done
 
-  display.display(); // show splashscreen
-  delay(50);
+  //display.display(); // show splashscreen
+  //delay(50);
   display.clearDisplay();   // clears the screen and buffer
 
 
-display.setRotation(0);
+  display.setRotation(0);
 
-  // miniature bitmap display
-  display.clearDisplay();
-  display.drawBitmap(30, 16,  hearty5050_bmp1, 50, 50, 1);
-  display.display();
-
-  display.clearDisplay();
-
-  display.clearDisplay();
-  display.drawBitmap(30, 16,  hearty5050_bmp1, 50, 50, 1);
-  display.display();
-
-  display.clearDisplay();
-  display.drawBitmap(30, 16,  hearty5050_bmp1, 50, 50, 1);
-  display.display();
-
-
-  // invert the display
-  display.invertDisplay(true);
-  delay(1000); 
-  display.invertDisplay(false);
-  delay(1000); 
+  delay(15);
 
 }
 
-void loop(){
+int main(){
 
-  for(int j = 0; j<10; j++){
+  init();
+  setup();
+
+  while(1){
   
+  for(int i = 0; i<NUM_LEDS; i++){
+
+    leds[i] = CRGB(50,0,0);
+
+  }
+
+  FastLED.show();
+
+  display.clearDisplay();
+  FastLED.setBrightness(100);
+
+
   for(int i = 0; i<NUM_LEDS; i++){
 
     leds[i] = CRGB(100+(50*i),0,255-(50*i));
     FastLED.show();
-    delay(30);
+    delay(15);
 
   }
+
+  for(int i=0;i<10;i++){
+  testdrawchar();
+  delay(500);
+  display.endWrite();
+  }
+  
 
   for(int i = 0; i<NUM_LEDS; i++){
 
-    leds[i] = CRGB(0,100+(50*i),255-(50*i));
+    leds[i] = CRGB(100+(50*i),0,0);
     FastLED.show();
-    delay(30);
+    delay(15);
 
   }
 
+  testdrawcircle();
+  display.clearDisplay();
+
+
+  for(int i = 0; i<NUM_LEDS; i++){
+
+    leds[i] = CRGB(0,0,155-(50*i));
+    FastLED.show();
+    delay(15);
+
   }
 
-  FastLED.setBrightness(0);
-  FastLED.show();
-  delay(1000);
+  testdrawrect();
+  display.clearDisplay();
 
-  FastLED.setBrightness(100);
-  FastLED.show();
+  for(int i = 0; i<100; i++){
 
-  delay(1000);
+    FastLED.setBrightness(i);
+    FastLED.show();
 
+  }
 
+  delay(100);
+
+  }
+
+  return 0;
 
 }
