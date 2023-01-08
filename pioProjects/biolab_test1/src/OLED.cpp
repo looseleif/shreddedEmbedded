@@ -1,7 +1,4 @@
-#ifndef OLED_CPP
-#define OLED_CPP
-
-#include <OLED.h>
+#include <oled.h>
 
 OLED::OLED(Adafruit_SSD1325 *screen) {
 

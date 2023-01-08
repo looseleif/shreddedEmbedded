@@ -1,12 +1,16 @@
-// #ifndef OLED_H
-// #define OLED_H
+#ifndef OLED_H
+#define OLED_H
 
 #include <SPI.h>
 #include <Adafruit_GFX.h>
 #include <Adafruit_SSD1325.h>
 #include <stdint.h>
-#include <Arduino.h>
 #include <string.h>
+#include <modules.h>
+
+#define OLED_CS 4 //PB4
+#define OLED_RESET 1 //PB1
+#define OLED_DC 0 //PB0
 
 static const unsigned char PROGMEM hearty100_bmp[] = {  
 
@@ -113,7 +117,8 @@ static const unsigned char PROGMEM hearty100_bmp[] = {
   
 };
 
-class OLED {
+class OLED: public _device 
+{
 
     private:
 
@@ -136,5 +141,4 @@ class OLED {
 
 };
 
-
-// #endif
+#endif

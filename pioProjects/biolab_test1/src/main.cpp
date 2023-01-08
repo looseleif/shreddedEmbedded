@@ -1,18 +1,85 @@
 #include <Arduino.h>
-#include <OLED.h>
+#include <oled.h>
 #include <FastLED.h>
 
-#define OLED_CS PB4
-#define OLED_RESET PB1
-#define OLED_DC PB0
-
+#define DATA_PIN 23 //PC7
 #define NUM_LEDS 30
-#define DATA_PIN 23
 
-CRGB leds[NUM_LEDS];
+ //device types for readability
+#define INDICATORSTRIP_TYPE 1
+#define LCD_TYPE 2
+#define MENU_TYPE 3
+#define HANDGRIP_TYPE 4
+#define HANDCRANK_TYPE 5
+
+#define HANDGRIPDEVNUM 0 //device number for handgrip
+#define CRANKDEVNUM 1
+
+//port number defines for readability 
+#define DCON1_PORTNUM 0
+#define ACON1_PORTNUM 1
+#define DACON1_PORTNUM 2
+#define DCON2_PORTNUM 3
+#define ACON2_PORTNUM 4
+#define DACON2_PORTNUM 5
+#define INDICATORSTRIP_PORTNUM 6
+#define HARDCODED_PORTNUM 7 //used when the port is hardcoded in the library (lcd)
+
+//pin defines
+#define ACON1_PINA1 A0
+#define ACON1_PINA2 A1
+#define DCON1_PIND1 3
+#define DCON1_PIND2 5
+#define DACON1_PIND1 4
+#define DACON1_PINA1 ACON1_PINA1 //DACON channels share analog channels the ACON ports
+
+#define ACON2_PINA1 A2
+#define ACON2_PINA2 A3
+#define DCON2_PIND1 9
+#define DCON2_PIND2 10
+#define DACON2_PIND1 11
+#define DACON2_PINA1 ACON2_PINA2 //DACON channels share analog channels the ACON ports
+
+enum GAMESTATUS : uint8_t {
+  notstarted,
+  started,
+  lost
+};
+
+enum SYSTEMMODE : uint8_t {
+  calibrate,
+  running,
+  config,
+  boot
+};
+
+extern enum GAMESTATUS gameStatus;
+extern enum SYSTEMMODE systemMode;
+
+  _device *DCON1_ptr;
+  _device *ACON1_ptr;
+  _device *DACON1_ptr;
+  _device *DCON2_ptr;
+  _device *ACON2_ptr;
+  _device *DACON2_ptr;
+  _device *main_ptr = new _device;
+
+  strip *strip_ptr;
+  OLED *OLED_ptr;
 
 Adafruit_SSD1325 display(OLED_DC, OLED_RESET, OLED_CS);
 OLED newScreen(&display);
+CRGB leds[NUM_LEDS];
+
+void createObject(int objtype, int portnum)
+{
+
+}
+
+void deleteObject(int objtype, int portnum)
+{
+
+}
 
 void setup()   {
 
@@ -24,10 +91,6 @@ void setup()   {
   TIMSK0 |= _BV(OCIE0A);  //enable the output compare interrupt on timer0
 
   for(int i = 0; i<32; i++){pinMode(i, INPUT_PULLUP);}
-
-}
-
-void boot(){
 
   for(int i = 0; i<NUM_LEDS; i++){
 
@@ -43,11 +106,6 @@ void boot(){
   delay(500);
   newScreen.clearAll();
 
-  newScreen.testdrawrect();
-  delay(500);
-  newScreen.clearAll();
-
-
   delay(500);
 
   for(int i=0;i<2;i++){
@@ -55,6 +113,7 @@ void boot(){
   delay(500);
   newScreen.clearAll();
   }
+ 
 
   for(int i = 0; i<NUM_LEDS; i++){
 
@@ -144,7 +203,6 @@ int main(){
 
   init();
   setup();
-  boot();
 
   while(1){
 
