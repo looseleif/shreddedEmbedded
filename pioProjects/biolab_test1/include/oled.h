@@ -12,6 +12,8 @@
 #define OLED_RESET 1 //PB1
 #define OLED_DC 0 //PB0
 
+inline Adafruit_SSD1325 screen(OLED_DC, OLED_RESET, OLED_CS);
+
 static const unsigned char PROGMEM hearty100_bmp[] = {  
 
     0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00
@@ -122,12 +124,12 @@ class OLED: public _device
 
     private:
 
-        Adafruit_SSD1325 *_screen;
-
     public:
         
-        OLED(Adafruit_SSD1325 *screen);
-        Adafruit_SSD1325* get(void);
+        Adafruit_SSD1325* _screen;
+
+        OLED();
+        
         void initOLED(void);
         void sendBitmap(const uint8_t *bitmap, uint8_t w, uint8_t h);
         void sendString(String toSend);

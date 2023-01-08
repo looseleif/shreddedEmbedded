@@ -1,14 +1,8 @@
 #include <oled.h>
 
-OLED::OLED(Adafruit_SSD1325 *screen) {
+OLED::OLED(){
 
-    _screen = screen;
-
-}
-
-Adafruit_SSD1325* OLED::get(){
-
-    return (this->_screen);
+    _screen = &screen;
 
 }
 
@@ -187,5 +181,3 @@ _screen->clearDisplay();
 _screen->display();
 
 }
-
-#endif
