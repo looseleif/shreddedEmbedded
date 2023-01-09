@@ -13,6 +13,8 @@ class strip: public _device
 
     private:
 
+        menu *_strip_menu_ptr;
+
     public:
         
         CRGB leds[NUM_LEDS];

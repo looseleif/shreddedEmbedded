@@ -98,20 +98,24 @@ for(uint8_t i = 0; i<myString.length(); i++){
 
 void OLED::pleaseWaitPrint(void) {
 
-    _screen->setTextSize(1);
-    _screen->setTextWrap(true);
-    _screen->setTextColor(WHITE);
-    _screen->setCursor(0,0);
+    for(int i=0;i<2;i++){
+    
+        _screen->setTextSize(1);
+        _screen->setTextWrap(true);
+        _screen->setTextColor(WHITE);
+        _screen->setCursor(0,0);
 
-    String myString = "please\nwait";
+        String myString = "please\nwait";
 
-    for(uint8_t i = 0; i<myString.length(); i++){
-        _screen->write(myString[i]);
+        for(uint8_t i = 0; i<myString.length(); i++){
+            _screen->write(myString[i]);
+        }
+
+        _screen->display();
+        delay(500);
+        this->clearAll();
+
     }
-
-    _screen->display();
-    delay(500);
-    this->clearAll();
 
 }
 

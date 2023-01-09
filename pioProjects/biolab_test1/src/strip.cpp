@@ -2,6 +2,7 @@
 
 strip::strip(menu *ptr) {
 
+    _strip_menu_ptr = ptr;
     FastLED.addLeds<WS2812B, DATA_PIN, GRB>(leds, NUM_LEDS);
 
 }
