@@ -47,14 +47,10 @@ void setup()   {
   createObject(OLED_TYPE,1);
   createObject(strip_TYPE,1);
 
-  strip_ptr = new strip;
-  OLED_ptr = new OLED;
+  // strip_ptr = new strip;
+  // OLED_ptr = new OLED;
 
-  for(int i = 0; i<NUM_LEDS; i++){
-
-    strip_ptr->leds[i] = CRGB(0,0,0);
-
-  }
+  strip_ptr->setColor(0,0,0);
 
   strip_ptr->setIntensity(0);
 
@@ -63,13 +59,11 @@ void setup()   {
   delay(500);
   OLED_ptr->clearAll();
 
+  strip_ptr->lubDub();
+
   delay(500);
 
-  for(int i=0;i<2;i++){
-  OLED_ptr->pleaseWaitPrint();
-  delay(500);
-  OLED_ptr->clearAll();
-  }
+  strip_ptr->sweepColor(255,0,0,10);
 
   OLED_ptr->_screen->drawBitmap(-20,0, hearty100_bmp, 100, 100, WHITE);
 
@@ -77,19 +71,18 @@ void setup()   {
 
   delay(1000);
 
-  for(int i = 100; i>0; i--){
-
-    FastLED.setBrightness(i);
-    FastLED.show();
-    delay(50);
-
-  }
+  strip_ptr->setColor(0,0,0);
 
   delay(100);
 
   OLED_ptr->clearAll();
 
-  OLED_ptr->rebootingPrint();
+  for(int i=0;i<2;i++){
+  OLED_ptr->pleaseWaitPrint();
+  delay(500);
+  OLED_ptr->clearAll();
+  }
+
   delay(100);
   OLED_ptr->clearAll();
   delay(1000);

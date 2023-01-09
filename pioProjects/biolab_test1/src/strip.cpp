@@ -9,7 +9,6 @@ strip::strip() {
 void strip::setIntensity(int val){
 
     FastLED.setBrightness(val);
-    FastLED.show();
     return;
 
 }
@@ -18,9 +17,19 @@ void strip::setColor(int r, int g, int b){
 
   for(int i = 0; i<NUM_LEDS; i++){
 
-    this->leds[i] = CRGB(100+(50*i),0,0);
+    this->leds[i] = CRGB(r,g,b);
+
+  }
+
+}
+
+void strip::sweepColor(int r, int g, int b, int rate){
+
+  for(int i = 0; i<NUM_LEDS; i++){
+
+    this->leds[i] = CRGB(100+(50),0,0);
     FastLED.show();
-    delay(15);
+    delay(rate);
 
   }
 

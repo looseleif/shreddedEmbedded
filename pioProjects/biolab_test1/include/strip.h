@@ -19,6 +19,7 @@ class strip: public _device
 
         void setIntensity(int val);
         void setColor(int r, int g, int b);
+        void sweepColor(int r, int g, int b, int rate);
         void lubDub(void);
 
 };
