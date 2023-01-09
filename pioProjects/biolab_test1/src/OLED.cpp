@@ -3,14 +3,9 @@
 OLED::OLED(){
 
     _screen = &screen;
-
-}
-
-void OLED::initOLED(){
-
-  _screen->begin();
-  _screen->clearDisplay();
-  _screen->setRotation(1);
+    _screen->begin();
+    _screen->clearDisplay();
+    _screen->setRotation(1);
 
 }
 

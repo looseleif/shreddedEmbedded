@@ -129,8 +129,7 @@ class OLED: public _device
         Adafruit_SSD1325* _screen;
 
         OLED();
-        
-        void initOLED(void);
+
         void sendBitmap(const uint8_t *bitmap, uint8_t w, uint8_t h);
         void sendString(String toSend);
         void bootingPrint(void);

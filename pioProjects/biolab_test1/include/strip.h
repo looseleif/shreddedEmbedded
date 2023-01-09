@@ -14,7 +14,12 @@ class strip: public _device
     public:
         
         CRGB leds[NUM_LEDS];
+        
         strip(void);
+
+        void setIntensity(int val);
+        void setColor(int r, int g, int b);
+        void lubDub(void);
 
 };
 
