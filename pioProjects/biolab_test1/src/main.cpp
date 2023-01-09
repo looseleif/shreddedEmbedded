@@ -38,32 +38,32 @@
 // #define DACON2_PIND1 11
 // #define DACON2_PINA1 ACON2_PINA2 //DACON channels share analog channels the ACON ports
 
-enum GAMESTATUS : uint8_t {
-  notstarted,
-  started,
-  lost
-};
+// enum GAMESTATUS : uint8_t {
+//   notstarted,
+//   started,
+//   lost
+// };
 
-enum SYSTEMMODE : uint8_t {
-  calibrate,
-  running,
-  config,
-  boot
-};
+// enum SYSTEMMODE : uint8_t {
+//   calibrate,
+//   running,
+//   config,
+//   boot
+// };
 
-extern enum GAMESTATUS gameStatus;
-extern enum SYSTEMMODE systemMode;
+// extern enum GAMESTATUS gameStatus;
+// extern enum SYSTEMMODE systemMode;
 
-  _device *DCON1_ptr;
-  _device *ACON1_ptr;
-  _device *DACON1_ptr;
-  _device *DCON2_ptr;
-  _device *ACON2_ptr;
-  _device *DACON2_ptr;
-  _device *main_ptr = new _device;
+// _device *DCON1_ptr;
+// _device *ACON1_ptr;
+// _device *DACON1_ptr;
+// _device *DCON2_ptr;
+// _device *ACON2_ptr;
+// _device *DACON2_ptr;
+//_device *main_ptr = new _device;
 
-  OLED *OLED_ptr;
-  strip *strip_ptr;
+OLED *OLED_ptr;
+strip *strip_ptr;
   
 
 void createObject(int objtype, int portnum)
@@ -73,6 +73,11 @@ void createObject(int objtype, int portnum)
   {
   case 1:
     OLED_ptr = new OLED;
+    break;
+  case 2:
+    //FastLED.addLeds<WS2812B, DATA_PIN, GRB>(leds, NUM_LEDS);
+
+    strip_ptr = new strip;
     break;
   
   default:
@@ -88,16 +93,24 @@ void deleteObject(int objtype, int portnum)
 
 void setup()   {
 
-  createObject(1,1);
+  //DDRA |= 0b00000000;
 
-  OCR0A = 0xFA;           // TIMER0_COMPA_vect every millisecond
-  TIMSK0 |= _BV(OCIE0A);  //enable the output compare interrupt on timer0
+  //createObject(1,1);
+  //createObject(2,1);
 
-  for(int i = 0; i<32; i++){pinMode(i, INPUT_PULLUP);}
+  strip_ptr = new strip;
+  OLED_ptr = new OLED;
+
+  OLED_ptr->initOLED();
+
+  // OCR0A = 0xFA;           // TIMER0_COMPA_vect every millisecond
+  // TIMSK0 |= _BV(OCIE0A);  //enable the output compare interrupt on timer0
+
+  //for(int i = 0; i<32; i++){pinMode(i, INPUT_PULLUP);}
 
   for(int i = 0; i<NUM_LEDS; i++){
 
-    //strip_ptr->leds[i] = CRGB(0,0,0);
+    strip_ptr->leds[i] = CRGB(0,0,0);
 
   }
 
@@ -120,7 +133,7 @@ void setup()   {
 
   for(int i = 0; i<NUM_LEDS; i++){
 
-    //leds[i] = CRGB(100+(50*i),0,0);
+    strip_ptr->leds[i] = CRGB(100+(50*i),0,0);
     delay(15);
 
   }
@@ -163,24 +176,24 @@ void setup()   {
 
   for(int i = 0; i<NUM_LEDS; i++){
 
-    //leds[i] = CRGB(0,0,0);
+    strip_ptr->leds[i] = CRGB(0,0,0);
     delay(15);
 
   }
 
   FastLED.setBrightness(100);
 
-  //display.drawBitmap(-20,0, hearty100_bmp, 100, 100, WHITE);
+  OLED_ptr->_screen->drawBitmap(-20,0, hearty100_bmp, 100, 100, WHITE);
 
   for(int i = 0; i<NUM_LEDS; i++){
 
-    //leds[i] = CRGB(100+(50*i),0,0);
+    strip_ptr->leds[i] = CRGB(100+(50*i),0,0);
     FastLED.show();
     delay(15);
 
   }
 
-  //display.display();
+  OLED_ptr->_screen->display();
   delay(1000);
 
   for(int i = 100; i>0; i--){

@@ -4,7 +4,7 @@
 #include <modules.h>
 #include <FastLED.h>
 
-#define DATA_PIN 31 //PC7
+#define DATA_PIN 23 //PC7
 #define NUM_LEDS 30
 class strip: public _device 
 {
