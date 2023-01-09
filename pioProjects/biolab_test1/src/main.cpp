@@ -40,7 +40,7 @@ void deleteObject(int objtype, int portnum)
 
 }
 
-//INTERRUPT SERVICE ROUTINES
+// INTERRUPT SERVICE ROUTINES
   
 //Interrupt service routine for a timer that exectures every millisecond. DO NOT call functions/methods from within
 //an ISR. Set flags that are checked for within the main loop. You want to spend as little time inside of an ISR as
@@ -120,11 +120,7 @@ int main(){
   init();
   setup();
 
-  while(1){
-
-
-
-  }
+  while(1){}
 
   return 0;
 
