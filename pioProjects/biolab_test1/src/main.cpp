@@ -1,5 +1,6 @@
 #include <Arduino.h>
 #include <modules.h>
+#include <menu.h>
 #include <oled.h>
 #include <strip.h>
 
@@ -11,19 +12,24 @@ _device *ACON2_ptr;
 _device *DACON2_ptr;
 _device *main_ptr = new _device;
 
+menu *menu_ptr;
 OLED *OLED_ptr;
 strip *strip_ptr;
+
 
 void createObject(int objtype, int portnum)
 {
 
   switch (objtype)
   {
+  case menu_TYPE:
+    menu_ptr = new menu();
+    break; 
   case OLED_TYPE:
-    OLED_ptr = new OLED;
+    OLED_ptr = new OLED(menu_ptr);
     break;
   case strip_TYPE:
-    strip_ptr = new strip;
+    strip_ptr = new strip(menu_ptr);
     break;
   }
 
@@ -47,40 +53,29 @@ void setup()   {
   createObject(OLED_TYPE,1);
   createObject(strip_TYPE,1);
 
-  // strip_ptr = new strip;
-  // OLED_ptr = new OLED;
-
   strip_ptr->setColor(0,0,0);
-
   strip_ptr->setIntensity(0);
 
   OLED_ptr->clearAll();
   OLED_ptr->bootingPrint();
+
   delay(500);
+  
   OLED_ptr->clearAll();
 
   strip_ptr->lubDub();
-
   delay(500);
-
   strip_ptr->sweepColor(255,0,0,10);
 
   OLED_ptr->_screen->drawBitmap(-20,0, hearty100_bmp, 100, 100, WHITE);
-
   OLED_ptr->_screen->display();
-
-  delay(1000);
-
+  delay(750);
   strip_ptr->setColor(0,0,0);
-
-  delay(100);
 
   OLED_ptr->clearAll();
 
   for(int i=0;i<2;i++){
   OLED_ptr->pleaseWaitPrint();
-  delay(500);
-  OLED_ptr->clearAll();
   }
 
   delay(100);

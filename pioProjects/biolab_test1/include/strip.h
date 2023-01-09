@@ -2,7 +2,9 @@
 #define STRIP_H
 
 #include <modules.h>
+#include <menu.h>
 #include <FastLED.h>
+
 
 #define DATA_PIN 23 //PC7
 #define NUM_LEDS 30
@@ -14,8 +16,8 @@ class strip: public _device
     public:
         
         CRGB leds[NUM_LEDS];
-        
-        strip(void);
+
+        strip(menu *_menu_ptr);
 
         void setIntensity(int val);
         void setColor(int r, int g, int b);

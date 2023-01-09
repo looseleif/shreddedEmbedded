@@ -1,12 +1,16 @@
 #ifndef OLED_H
 #define OLED_H
 
+#include <modules.h>
+#include <menu.h>
+
 #include <SPI.h>
 #include <Adafruit_GFX.h>
 #include <Adafruit_SSD1325.h>
 #include <stdint.h>
 #include <string.h>
-#include <modules.h>
+
+
 
 #define OLED_CS 4 //PB4
 #define OLED_RESET 1 //PB1
@@ -122,13 +126,15 @@ static const unsigned char PROGMEM hearty100_bmp[] = {
 class OLED: public _device 
 {
 
-    private:
+    private: 
+
+        menu *_OLED_menu_ptr;
 
     public:
-        
+
         Adafruit_SSD1325* _screen;
 
-        OLED();
+        OLED(menu *ptr);
 
         void sendBitmap(const uint8_t *bitmap, uint8_t w, uint8_t h);
         void sendString(String toSend);

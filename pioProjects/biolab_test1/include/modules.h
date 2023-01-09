@@ -4,12 +4,12 @@
 #include <stdint.h>
 
 //device types
+#define menu_TYPE 0
 #define OLED_TYPE 1
 #define strip_TYPE 2
-#define MENU_TYPE 3
+
 #define HANDGRIP_TYPE 4
 #define HANDCRANK_TYPE 5
-
 #define HANDGRIPDEVNUM 0 //device number for handgrip
 #define CRANKDEVNUM 1
 

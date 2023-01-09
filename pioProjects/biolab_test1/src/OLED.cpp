@@ -1,7 +1,8 @@
 #include <oled.h>
 
-OLED::OLED(){
+OLED::OLED(menu *ptr){
 
+    _OLED_menu_ptr = ptr;
     _screen = &screen;
     _screen->begin();
     _screen->clearDisplay();
@@ -96,18 +97,21 @@ for(uint8_t i = 0; i<myString.length(); i++){
 }
 
 void OLED::pleaseWaitPrint(void) {
-_screen->setTextSize(1);
-_screen->setTextWrap(true);
-_screen->setTextColor(WHITE);
-_screen->setCursor(0,0);
 
-String myString = "please\nwait";
+    _screen->setTextSize(1);
+    _screen->setTextWrap(true);
+    _screen->setTextColor(WHITE);
+    _screen->setCursor(0,0);
 
-for(uint8_t i = 0; i<myString.length(); i++){
-    _screen->write(myString[i]);
-}
+    String myString = "please\nwait";
 
-_screen->display();
+    for(uint8_t i = 0; i<myString.length(); i++){
+        _screen->write(myString[i]);
+    }
+
+    _screen->display();
+    delay(500);
+    this->clearAll();
 
 }
 
@@ -172,7 +176,7 @@ delay(250);
 
 void OLED::clearAll(){
 
-_screen->clearDisplay();
-_screen->display();
+    _screen->clearDisplay();
+    _screen->display();
 
 }

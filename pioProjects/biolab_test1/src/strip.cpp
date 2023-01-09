@@ -1,6 +1,6 @@
 #include <strip.h>
 
-strip::strip() {
+strip::strip(menu *ptr) {
 
     FastLED.addLeds<WS2812B, DATA_PIN, GRB>(leds, NUM_LEDS);
 
