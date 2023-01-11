@@ -4,18 +4,18 @@
 #include <oled.h>
 #include <strip.h>
 
-_device *DCON1_ptr;
-_device *ACON1_ptr;
-_device *DACON1_ptr;
-_device *DCON2_ptr;
-_device *ACON2_ptr;
-_device *DACON2_ptr;
 _device *main_ptr = new _device;
 
 menu *menu_ptr;
 OLED *OLED_ptr;
 strip *strip_ptr;
 
+_device *D1_ptr;
+_device *D2_ptr;
+_device *D3_ptr;
+_device *A1_ptr;
+_device *A2_ptr;
+_device *A3_ptr;
 
 void createObject(int objtype, int portnum)
 {
@@ -81,20 +81,24 @@ void setup()   {
 
   // PORT DATA DIRECTION
   
-  //DDRA |= 0b00000000;
-  //DDRB |= 0b00000000;
-  //DDRC |= 0b00000000;
-  //DDRD |= 0b00000000;
+  DDRA |= 0b00000000;
+  DDRB |= 0b00000000;
+  DDRC |= 0b00000000;
+  DDRD |= 0b00000000;
 
-  // TIMER0 EVERY MILLISECOND
+  // TIMER0 ISR EVERY MILLISECOND
 
-  // OCR0A = 0xFA;           
-  // TIMSK0 |= _BV(OCIE0A);  
+  OCR0A = 0xFA;           
+  TIMSK0 |= _BV(OCIE0A);  
+
+  // CREATE RELEVANT OBJECTS
+
+  createObject(menu_TYPE,0);
+  createObject(OLED_TYPE,0);
+  createObject(strip_TYPE,0);
 
   // INTRO BOOT SEQUENCE
 
-  createObject(OLED_TYPE,1);
-  createObject(strip_TYPE,1);
   strip_ptr->setColor(0,0,0);
   strip_ptr->setIntensity(0);
   OLED_ptr->clearAll();
@@ -112,6 +116,8 @@ void setup()   {
   OLED_ptr->pleaseWaitPrint();
   delay(100);
   OLED_ptr->clearAll();
+
+  return;
 
 }
 

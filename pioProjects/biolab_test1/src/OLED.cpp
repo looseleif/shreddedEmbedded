@@ -184,3 +184,60 @@ void OLED::clearAll(){
     _screen->display();
 
 }
+
+void OLED::printSimulationMenu(){
+
+    for(int i=0;i<2;i++){
+
+    _screen->setTextSize(1);
+    _screen->setTextWrap(true);
+    _screen->setTextColor(WHITE);
+    _screen->setCursor(0,0);
+    
+    }
+
+    String myString = "select device:\n[ ] Digital 1\n[ ] Digital 2\n[ ] Digital 3\n[ ] Analog 1\n[ ] Analog 2\n[ ] Analog 3";
+
+    for(uint8_t i = 0; i<myString.length(); i++){
+        _screen->write(myString[i]);
+    }
+
+}
+
+void OLED::printDeviceMenu(){
+
+    for(int i=0;i<2;i++){
+
+    _screen->setTextSize(1);
+    _screen->setTextWrap(true);
+    _screen->setTextColor(WHITE);
+    _screen->setCursor(0,0);
+    
+    }
+
+    String myString = "select device:\n[ ] Digital 1\n[ ] Digital 2\n[ ] Digital 3\n[ ] Analog 1\n[ ] Analog 2\n[ ] Analog 3";
+
+    for(uint8_t i = 0; i<myString.length(); i++){
+        _screen->write(myString[i]);
+    }
+
+}
+
+void OLED::printEffectorMenu(){
+
+    for(int i=0;i<2;i++){
+
+    _screen->setTextSize(1);
+    _screen->setTextWrap(true);
+    _screen->setTextColor(WHITE);
+    _screen->setCursor(0,0);
+    
+    }
+
+    String myString = "select device:\n[ ] Digital 1\n[ ] Digital 2\n[ ] Digital 3\n[ ] Analog 1\n[ ] Analog 2\n[ ] Analog 3";
+
+    for(uint8_t i = 0; i<myString.length(); i++){
+        _screen->write(myString[i]);
+    }
+
+}

@@ -146,6 +146,10 @@ class OLED: public _device
         void testdrawline(void);
         void clearAll(void);
 
+        void printSimulationMenu(void);
+        void printDeviceMenu(void);
+        void printEffectorMenu(void);
+
 };
 
 #endif
