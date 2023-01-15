@@ -48,33 +48,21 @@ void deleteObject(int objtype, int portnum)
 
 ISR(TIMER0_COMPA_vect)
 {
-  // stripDelayCounter++;
-  // crankRateCalcDelayCounter++;
-  // gripRateCalcDelayCounter++;
-  // lcdRefreshCounter++;
-  // //set flags for strip
-  // if(stripDelayCounter >= STRIPREFRESHDELAY)
-  // { 
-  //   stripDelayCounter = 0; //reset the timer counter for the next run.
-  //   STRIPREFRESHFLAG = true;
-  //   //Set Rates based on affector positions (one for each affector)
-  // }
-  // //set flags to reset lost game
-  // if(gameStatus == lost)
-  // {
-  //   gameResetCounter++;
-  //   if(gameResetCounter >= GAMERESETDELAY)
-  //   {
-  //     gameResetCounter = 0;
-  //     RESETFLAG = true;
-  //   }
-  // }
-  // //set flags to refresh LCD
-  // if(lcdRefreshCounter >= LCDREFRESHDELAY)
-  // {
-  //   LCDREFRESHFLAG = true;  
-  //   lcdRefreshCounter = 0;  
-  // }
+
+
+
+}
+
+// Interrupt for home button to be used across all applications
+
+ISR(PCINT1_vect)
+{
+
+  menu_ptr->printed = false;
+  menu_ptr->system_state = welcome;
+  menu_ptr->demo_state = stopped;
+  menu_ptr->home_state = true;
+
 }
 
 void setup()   {
@@ -126,7 +114,44 @@ int main(){
   init();
   setup();
 
-  while(1){}
+  while(1){
+
+    if(menu_ptr->system_state==welcome){
+
+      if(!(menu_ptr->printed)){
+        
+        OLED_ptr->clearAll();
+        menu_ptr->system_state = demo;
+        OLED_ptr->printDemoMenu();
+        menu_ptr->printed = true;
+
+      }
+
+      if(!digitalRead(SELECT_PIN)){
+
+        menu_ptr->system_state = device;
+        menu_ptr->printed = false;
+
+      }
+
+    }
+
+    if(menu_ptr->system_state==device){
+
+      if(!(menu_ptr->printed)){
+        
+        OLED_ptr->clearAll();
+        menu_ptr->system_state = demo;
+        OLED_ptr->printDemoMenu();
+        menu_ptr->printed = true;
+
+      }
+
+    }
+
+
+
+  }
 
   return 0;
 

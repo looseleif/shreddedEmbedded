@@ -185,7 +185,7 @@ void OLED::clearAll(){
 
 }
 
-void OLED::printSimulationMenu(){
+void OLED::printDemoMenu(){
 
     for(int i=0;i<2;i++){
 
@@ -196,7 +196,7 @@ void OLED::printSimulationMenu(){
     
     }
 
-    String myString = "select device:\n[ ] Digital 1\n[ ] Digital 2\n[ ] Digital 3\n[ ] Analog 1\n[ ] Analog 2\n[ ] Analog 3";
+    String myString = "select demo:\n[ ] grip\n[ ] direct\n[ ] sense\n[ ] speak\n[ ] hold\n{ } debug";
 
     for(uint8_t i = 0; i<myString.length(); i++){
         _screen->write(myString[i]);
@@ -223,21 +223,26 @@ void OLED::printDeviceMenu(){
 
 }
 
-void OLED::printEffectorMenu(){
+void OLED::printSelector(int prev, int next){
 
-    for(int i=0;i<2;i++){
+    String myString = "\n";
 
-    _screen->setTextSize(1);
-    _screen->setTextWrap(true);
-    _screen->setTextColor(WHITE);
-    _screen->setCursor(0,0);
-    
+    for(int i = 0; i<prev; i++){
+
+        myString += "\n";
+
     }
 
-    String myString = "select device:\n[ ] Digital 1\n[ ] Digital 2\n[ ] Digital 3\n[ ] Analog 1\n[ ] Analog 2\n[ ] Analog 3";
+    _screen->write("[ ]");
 
-    for(uint8_t i = 0; i<myString.length(); i++){
-        _screen->write(myString[i]);
+    myString = "\n";
+
+    for(int i = 0; i<next; i++){
+
+        myString += "\n";
+
     }
+
+    _screen->write("[x]");
 
 }
