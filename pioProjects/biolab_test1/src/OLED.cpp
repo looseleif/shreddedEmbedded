@@ -119,6 +119,29 @@ void OLED::pleaseWaitPrint(void) {
 
 }
 
+void OLED::printGrip(void) {
+
+    for(int i=0;i<2;i++){
+    
+        _screen->setTextSize(1);
+        _screen->setTextWrap(true);
+        _screen->setTextColor(WHITE);
+        _screen->setCursor(0,0);
+
+        String myString = "grip\ndemo\nselected";
+
+        for(uint8_t i = 0; i<myString.length(); i++){
+            _screen->write(myString[i]);
+        }
+
+        _screen->display();
+        delay(500);
+        this->clearAll();
+
+    }
+
+}
+
 void OLED::testdrawcircle(void) {
 for (uint8_t i=0; i<_screen->height()/2; i+=2) {
     _screen->drawCircle(_screen->width()/2, _screen->height()/2, i, WHITE);
@@ -196,7 +219,7 @@ void OLED::printDemoMenu(){
     
     }
 
-    String myString = "demo:\n\n[ ] grip\n[ ] direct\n[ ] sense\n[ ] speak\n[ ] hold\n\n{ } debug";
+    String myString = "demo:\n\n[ ] grip\n[ ] direct\n[ ] sense\n[ ] speak\n[ ] hold\n[ ] debug";
 
     for(uint8_t i = 0; i<myString.length(); i++){
         _screen->write(myString[i]);
@@ -217,7 +240,7 @@ void OLED::printDeviceMenu(){
     
     }
 
-    String myString = "device:\n\n[ ] Digital 1\n[ ] Digital 2\n[ ] Digital 3\n[ ] Analog 1\n[ ] Analog 2\n[ ] Analog 3";
+    String myString = "device:\n\n[ ] D1\n[ ] D2\n[ ] D3\n[ ] A1\n[ ] A2\n[ ] A3";
 
     for(uint8_t i = 0; i<myString.length(); i++){
         _screen->write(myString[i]);
@@ -227,9 +250,14 @@ void OLED::printDeviceMenu(){
 
 }
 
-void OLED::printSelector(int prev, int next){
+void OLED::printSelector(int prev, int next, bool clear){
 
-    String myString = "\n";
+    _screen->setTextSize(1);
+    _screen->setTextWrap(true);
+    _screen->setTextColor(BLACK);
+    _screen->setCursor(0,0);
+
+    String myString = "\n\n";
 
     for(int i = 0; i<prev; i++){
 
@@ -237,16 +265,40 @@ void OLED::printSelector(int prev, int next){
 
     }
 
-    _screen->write("[ ]");
+    myString+=" x ";
 
-    myString = "\n";
+    for(int i = 0; i<myString.length(); i++){
+
+        _screen->write(myString[i]);
+
+    }
+
+    _screen->display();
+
+    if(!clear){
+
+    _screen->setTextSize(1);
+    _screen->setTextWrap(true);
+    _screen->setTextColor(WHITE);
+    _screen->setCursor(0,0);
+
+    myString = "\n\n";
 
     for(int i = 0; i<next; i++){
 
         myString += "\n";
 
     }
+    myString+="[x]";
 
-    _screen->write("[x]");
+    for(int i = 0; i<myString.length(); i++){
+
+        _screen->write(myString[i]);
+
+    }
+
+    _screen->display();
+
+    }
 
 }

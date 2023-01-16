@@ -141,6 +141,7 @@ class OLED: public _device
         void bootingPrint(void);
         void rebootingPrint(void);
         void pleaseWaitPrint(void);
+        void printGrip(void);
         void testdrawcircle(void);
         void testdrawrect(void);
         void testdrawline(void);
@@ -150,7 +151,7 @@ class OLED: public _device
         void printDeviceMenu(void);
 
 
-        void printSelector(int prev, int next);
+        void printSelector(int prev, int next, bool clear);
 
 };
 
