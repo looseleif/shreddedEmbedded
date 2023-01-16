@@ -5,8 +5,9 @@ menu::menu(void){
 
     cli();
 
-    PCICR |= 0b00000010; // enable pin change interrupt PORTD
-    PCMSK1 |= 0b10000000;
+    PCMSK1 |= _BV(PCIE1);
+    PCICR |= _BV(PCINT14); // enable pin change interrupt PORTD
+    
 
     sei();
 

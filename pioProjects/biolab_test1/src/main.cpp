@@ -49,7 +49,9 @@ void deleteObject(int objtype, int portnum)
 ISR(TIMER0_COMPA_vect)
 {
 
-
+    strip_ptr->setColor(0,100,0);
+    strip_ptr->setIntensity(50);
+    delay(50);
 
 }
 
@@ -57,6 +59,10 @@ ISR(TIMER0_COMPA_vect)
 
 ISR(PCINT1_vect)
 {
+
+  strip_ptr->setColor(0,100,0);
+  strip_ptr->setIntensity(50);
+  delay(300);
 
   menu_ptr->printed = false;
   menu_ptr->system_state = welcome;
@@ -69,17 +75,15 @@ void setup()   {
 
   // PORT DATA DIRECTION
   
-  DDRA |= 0b00000000;
-  DDRB |= 0b00000000;
-  DDRC |= 0b00000000;
-  DDRD |= 0b00000000;
+  DDRD &= ~_BV(DDD6);
+  PORTD |= _BV(PORTD6);
 
   // TIMER0 ISR EVERY MILLISECOND
 
-  // OCR0A = 0xFA;           
-  // TIMSK0 |= _BV(OCIE0A);  
+  OCR0A = 0xFA;           
+  TIMSK0 |= _BV(OCIE0A);  
 
-  // CREATE RELEVANT OBJECTS
+  // CREATE OBJECTS
 
   createObject(menu_TYPE,0);
   createObject(OLED_TYPE,0);
