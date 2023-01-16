@@ -10,6 +10,7 @@ strip::strip(menu *ptr) {
 void strip::setIntensity(int val){
 
     FastLED.setBrightness(val);
+    FastLED.show();
     return;
 
 }

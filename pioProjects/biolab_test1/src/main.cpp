@@ -76,8 +76,8 @@ void setup()   {
 
   // TIMER0 ISR EVERY MILLISECOND
 
-  OCR0A = 0xFA;           
-  TIMSK0 |= _BV(OCIE0A);  
+  // OCR0A = 0xFA;           
+  // TIMSK0 |= _BV(OCIE0A);  
 
   // CREATE RELEVANT OBJECTS
 
@@ -105,19 +105,25 @@ void setup()   {
   delay(100);
   OLED_ptr->clearAll();
 
-  return;
-
 }
 
 int main(){
 
+
   init();
   setup();
 
-  while(1){
+  while(true){
+
+
+    strip_ptr->setColor(0,100,0);
+    strip_ptr->setIntensity(50);
+    delay(50);
+    strip_ptr->setColor(0,0,100);
+    strip_ptr->setIntensity(50);
+    delay(50);
 
     if(menu_ptr->system_state==welcome){
-
       if(!(menu_ptr->printed)){
         
         OLED_ptr->clearAll();
@@ -126,6 +132,10 @@ int main(){
         menu_ptr->printed = true;
 
       }
+
+    }
+
+    if(menu_ptr->system_state==demo){
 
       if(!digitalRead(SELECT_PIN)){
 

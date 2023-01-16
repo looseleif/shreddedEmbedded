@@ -196,11 +196,13 @@ void OLED::printDemoMenu(){
     
     }
 
-    String myString = "select demo:\n[ ] grip\n[ ] direct\n[ ] sense\n[ ] speak\n[ ] hold\n{ } debug";
+    String myString = "demo:\n\n[ ] grip\n[ ] direct\n[ ] sense\n[ ] speak\n[ ] hold\n\n{ } debug";
 
     for(uint8_t i = 0; i<myString.length(); i++){
         _screen->write(myString[i]);
     }
+
+    _screen->display();
 
 }
 
@@ -215,11 +217,13 @@ void OLED::printDeviceMenu(){
     
     }
 
-    String myString = "select device:\n[ ] Digital 1\n[ ] Digital 2\n[ ] Digital 3\n[ ] Analog 1\n[ ] Analog 2\n[ ] Analog 3";
+    String myString = "device:\n\n[ ] Digital 1\n[ ] Digital 2\n[ ] Digital 3\n[ ] Analog 1\n[ ] Analog 2\n[ ] Analog 3";
 
     for(uint8_t i = 0; i<myString.length(); i++){
         _screen->write(myString[i]);
     }
+
+    _screen->display();
 
 }
 
