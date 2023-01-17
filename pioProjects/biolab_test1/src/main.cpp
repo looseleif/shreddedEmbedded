@@ -1,14 +1,17 @@
 #include <Arduino.h>
+
 #include <modules.h>
+
 #include <menu.h>
 #include <oled.h>
 #include <strip.h>
-#include <avr/interrupt.h>
+
+#include <sense.h>
 
 _device *main_ptr = new _device;
 
 menu *menu_ptr;
-OLED *OLED_ptr;
+oled *oled_ptr;
 strip *strip_ptr;
 
 _device *D1_ptr;
@@ -18,6 +21,12 @@ _device *A1_ptr;
 _device *A2_ptr;
 _device *A3_ptr;
 
+int8_t D_index = 0;
+int8_t A_index = 0;
+
+_device *D_set[3] = {D1_ptr,D2_ptr,D3_ptr};
+_device *A_set[3] = {A1_ptr,A2_ptr,A3_ptr};
+
 void createObject(int objtype, int portnum)
 {
 
@@ -26,11 +35,30 @@ void createObject(int objtype, int portnum)
   case menu_TYPE:
     menu_ptr = new menu();
     break; 
-  case OLED_TYPE:
-    OLED_ptr = new OLED(menu_ptr);
+  case oled_TYPE:
+    oled_ptr = new oled(menu_ptr);
     break;
   case strip_TYPE:
     strip_ptr = new strip(menu_ptr);
+    break;
+  case grip_TYPE:
+    //strip_ptr = new strip(menu_ptr);
+    break;
+  case direct_TYPE:
+    //strip_ptr = new strip(menu_ptr);
+    break;
+  case sense_TYPE:
+    D_set[D_index] = new sense(D_index,main_ptr,strip_ptr,oled_ptr,menu_ptr);
+    D_index++;
+    break;
+  case speak_TYPE:
+    //strip_ptr = new strip(menu_ptr);
+    break;
+  case hold_TYPE:
+    //strip_ptr = new strip(menu_ptr);
+    break;
+  case debug_TYPE:
+    //strip_ptr = new strip(menu_ptr);
     break;
   }
 
@@ -38,6 +66,8 @@ void createObject(int objtype, int portnum)
 
 void deleteObject(int objtype, int portnum)
 {
+
+  // implement destruction
 
 }
 
@@ -52,28 +82,28 @@ void deleteObject(int objtype, int portnum)
 ISR (TIMER1_OVF_vect)    // Timer1 ISR
 {
   
-  menu_ptr->demo_prev = menu_ptr->demo_current;
+  menu_ptr->cursor_prev = menu_ptr->cursor_current;
 
   if(!digitalRead(DOWN_PIN)){
 
-    menu_ptr->demo_current++;
-    menu_ptr->demo_current%=6;
-    OLED_ptr->printSelector(menu_ptr->demo_prev,menu_ptr->demo_current, false);
+    menu_ptr->cursor_current++;
+    menu_ptr->cursor_current%=6;
+    oled_ptr->printSelector(menu_ptr->cursor_prev,menu_ptr->cursor_current, false);
 
   } else if(!digitalRead(UP_PIN)){
 
-    if(menu_ptr->demo_current==0){
+    if(menu_ptr->cursor_current==0){
 
-      menu_ptr->demo_current = 5;
+      menu_ptr->cursor_current = 5;
 
     } else {
-    menu_ptr->demo_current--;
+    menu_ptr->cursor_current--;
     }
-    OLED_ptr->printSelector(menu_ptr->demo_prev,menu_ptr->demo_current, false);
+    oled_ptr->printSelector(menu_ptr->cursor_prev,menu_ptr->cursor_current, false);
 
   } else if(!digitalRead(HOME_PIN)){
 
-    OLED_ptr->printSelector(menu_ptr->demo_prev,menu_ptr->demo_current, true);
+    oled_ptr->printSelector(menu_ptr->cursor_prev,menu_ptr->cursor_current, true);
 
     menu_ptr->printed = false;
     menu_ptr->system_state = welcome;
@@ -84,9 +114,9 @@ ISR (TIMER1_OVF_vect)    // Timer1 ISR
 
 	TCNT1 = 65500;   // build period of ~1ms
 
-
 }
 
+// START-UP
 
 void setup()   {
 
@@ -109,44 +139,33 @@ void setup()   {
   TCCR1A = 0x00;
 	TCCR1B = (1 << CS10) | (1 << CS12); // Timer mode with 8 prescler
 	TIMSK1 = (1 << TOIE1) ;   // Enable timer1 overflow interrupt(TOIE1)
-	sei();        // Enable global interrupts by setting global interrupt enable bit in SREG
+	sei();  // Enable global interrupts by setting global interrupt enable bit in SREG
 	
-
   // CREATE OBJECTS
 
   createObject(menu_TYPE,0);
-  createObject(OLED_TYPE,0);
+  createObject(oled_TYPE,0);
   createObject(strip_TYPE,0);
 
   // INTRO BOOT SEQUENCE
 
   strip_ptr->setColor(0,0,0);
   strip_ptr->setIntensity(0);
-  OLED_ptr->clearAll();
-  OLED_ptr->bootingPrint();
-  delay(500);
-  OLED_ptr->clearAll();
-  strip_ptr->lubDub();
-  delay(500);
-  strip_ptr->sweepColor(255,0,0,10);
-  OLED_ptr->_screen->drawBitmap(-20,0, heart_bmp, 100, 100, WHITE);
-  OLED_ptr->_screen->display();
-  delay(750);
-  
-  
-  OLED_ptr->_screen->drawBitmap(-20,0, grip_bmp, 100, 100, WHITE);
-  OLED_ptr->_screen->display();
-  delay(750);
-  OLED_ptr->_screen->drawBitmap(-20,0, sense_bmp, 100, 100, WHITE);
-  OLED_ptr->_screen->display();
-  delay(750);
-
-
-  strip_ptr->setColor(0,0,0);
-  OLED_ptr->clearAll();
-  OLED_ptr->pleaseWaitPrint();
+  oled_ptr->clearAll();
+  oled_ptr->bootingPrint();
   delay(100);
-  OLED_ptr->clearAll();
+  oled_ptr->clearAll();
+  strip_ptr->lubDub();
+  delay(100);
+  strip_ptr->sweepColor(255,0,0,10);
+  oled_ptr->_screen->drawBitmap(-20,0, heart_bmp, 100, 100, WHITE);
+  oled_ptr->_screen->display();
+  delay(100);
+  strip_ptr->setColor(0,0,0);
+  oled_ptr->clearAll();
+  oled_ptr->pleaseWaitPrint();
+  delay(100);
+  oled_ptr->clearAll();
 
 }
 
@@ -158,20 +177,12 @@ int main(){
 
   while(true){
 
-
-    // strip_ptr->setColor(0,100,0);
-    // strip_ptr->setIntensity(50);
-    // delay(50);
-    // strip_ptr->setColor(0,0,100);
-    // strip_ptr->setIntensity(50);
-    // delay(50);
-
     if(menu_ptr->system_state==welcome){
       if(!(menu_ptr->printed)){
         
-        OLED_ptr->clearAll();
+        oled_ptr->clearAll();
         menu_ptr->system_state = demo;
-        OLED_ptr->printDemoMenu();
+        oled_ptr->printDemoMenu();
         menu_ptr->printed = true;
 
       }
@@ -182,16 +193,16 @@ int main(){
 
       if(!digitalRead(SELECT_PIN)){
 
+        menu_ptr->selected_demo = menu_ptr->cursor_current;
         menu_ptr->system_state = device;
         menu_ptr->printed = false;
-        OLED_ptr->clearAll();
-        OLED_ptr->pleaseWaitPrint();
+        oled_ptr->clearAll();
+        oled_ptr->pleaseWaitPrint();
         delay(100);
-        OLED_ptr->clearAll();
+        oled_ptr->clearAll();
         strip_ptr->setColor(100,0,0);
         strip_ptr->setIntensity(50);
         delay(50);
-        
 
       }
 
@@ -201,46 +212,39 @@ int main(){
 
       if(!(menu_ptr->printed)){
         
-        OLED_ptr->clearAll();
-        OLED_ptr->printDeviceMenu();
+        oled_ptr->clearAll();
+        oled_ptr->printDeviceMenu();
         menu_ptr->printed = true;
 
       }
 
       if(!digitalRead(SELECT_PIN)){
 
-        
-        if(menu_ptr->demo_current==0){
-
+          menu_ptr->selected_device = menu_ptr->cursor_current;
           menu_ptr->demo_state = started;
           menu_ptr->system_state = running;
           menu_ptr->printed = false;
-          OLED_ptr->clearAll();
-          OLED_ptr->printGrip();
-          delay(100);
-          OLED_ptr->clearAll();
-          OLED_ptr->printGrip();
-          delay(100);
-          OLED_ptr->clearAll();
-          OLED_ptr->printGrip();
-          delay(100);
-          OLED_ptr->clearAll();
+          createObject(menu_ptr->selected_demo, menu_ptr->selected_device);
+          oled_ptr->clearAll();
           strip_ptr->setColor(100,0,0);
           strip_ptr->setIntensity(50);
           delay(50);
 
-        }
-
-
       }
+
+    }
+      
+    if(menu_ptr->system_state==running){
+
+        
+
 
 
     }
 
 
-
   }
-
+    
   return 0;
 
 }

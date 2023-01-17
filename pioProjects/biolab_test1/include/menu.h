@@ -2,7 +2,7 @@
 #define MENU_H
 
 #include <modules.h>
-#include <menu.h>
+#include <Arduino.h>
 
 #define UP_PIN 10 //PD2
 #define DOWN_PIN 11 //PD3
@@ -52,9 +52,11 @@ class menu: public _device
         DEMO demo_state;
         bool home_state;
         bool printed;
-        int8_t demo_prev;
-        int8_t demo_current;
-        int8_t device_pos;
+        int8_t cursor_prev;
+        int8_t cursor_current;
+        int8_t selected_demo;
+        int8_t selected_device;
+
 
 
 };

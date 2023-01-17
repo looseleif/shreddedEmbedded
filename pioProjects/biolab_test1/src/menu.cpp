@@ -1,5 +1,4 @@
 #include <menu.h>
-#include <Arduino.h>
 
 menu::menu(void){
 
@@ -20,9 +19,7 @@ menu::menu(void){
     demo_state = stopped;
     home_state = false;
     printed = false;
-    demo_prev = 0;
-    demo_current = 1;
-    device_pos = 0;
-
+    cursor_prev = 5;
+    cursor_current = 0;
 
 }

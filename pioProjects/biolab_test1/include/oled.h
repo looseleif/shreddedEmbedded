@@ -3,20 +3,18 @@
 
 #include <modules.h>
 #include <menu.h>
+#include <strip.h>
+#include <oled.h>
 
 #include <SPI.h>
 #include <Adafruit_GFX.h>
 #include <Adafruit_SSD1325.h>
-#include <stdint.h>
-#include <string.h>
 
+#define oled_CS 4 //PB4
+#define oled_RESET 1 //PB1
+#define oled_DC 0 //PB0
 
-
-#define OLED_CS 4 //PB4
-#define OLED_RESET 1 //PB1
-#define OLED_DC 0 //PB0
-
-inline Adafruit_SSD1325 screen(OLED_DC, OLED_RESET, OLED_CS);
+inline Adafruit_SSD1325 screen(oled_DC, oled_RESET, oled_CS);
 
 static const unsigned char PROGMEM heart_bmp[] = {  
 
@@ -438,18 +436,18 @@ static const unsigned char PROGMEM speak_bmp[] = {
 
 };
 
-class OLED: public _device 
+class oled: public _device 
 {
 
     private: 
 
-        menu *_OLED_menu_ptr;
+        menu *_oled_menu_ptr;
 
     public:
 
         Adafruit_SSD1325* _screen;
 
-        OLED(menu *ptr);
+        oled(menu *ptr);
 
         void sendBitmap(const uint8_t *bitmap, uint8_t w, uint8_t h);
         void sendString(String toSend);
@@ -467,6 +465,7 @@ class OLED: public _device
 
 
         void printSelector(int prev, int next, bool clear);
+        void printDemo(int8_t demo_type, int8_t demo_val1, int8_t demo_val2);
 
 };
 

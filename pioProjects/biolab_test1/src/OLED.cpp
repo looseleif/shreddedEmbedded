@@ -1,8 +1,8 @@
 #include <oled.h>
 
-OLED::OLED(menu *ptr){
+oled::oled(menu *ptr){
 
-    _OLED_menu_ptr = ptr;
+    _oled_menu_ptr = ptr;
     _screen = &screen;
     _screen->begin();
     _screen->clearDisplay();
@@ -10,7 +10,7 @@ OLED::OLED(menu *ptr){
 
 }
 
-void OLED::sendBitmap(const uint8_t *bitmap, uint8_t w, uint8_t h) {
+void oled::sendBitmap(const uint8_t *bitmap, uint8_t w, uint8_t h) {
 
     uint8_t icons[10][3];
     randomSeed(666);
@@ -51,7 +51,7 @@ void OLED::sendBitmap(const uint8_t *bitmap, uint8_t w, uint8_t h) {
     }
 }
 
-void OLED::sendString(String toSend) {
+void oled::sendString(String toSend) {
     
     _screen->setTextSize(1);
     _screen->setTextWrap(true);
@@ -65,7 +65,7 @@ void OLED::sendString(String toSend) {
 
 }
 
-void OLED::bootingPrint(void) {
+void oled::bootingPrint(void) {
     
     _screen->setTextSize(1);
     _screen->setTextWrap(true);
@@ -81,7 +81,7 @@ void OLED::bootingPrint(void) {
 
 }
 
-void OLED::rebootingPrint(void) {
+void oled::rebootingPrint(void) {
 _screen->setTextSize(1);
 _screen->setTextWrap(true);
 _screen->setTextColor(WHITE);
@@ -96,7 +96,7 @@ for(uint8_t i = 0; i<myString.length(); i++){
 
 }
 
-void OLED::pleaseWaitPrint(void) {
+void oled::pleaseWaitPrint(void) {
 
     for(int i=0;i<2;i++){
     
@@ -119,7 +119,7 @@ void OLED::pleaseWaitPrint(void) {
 
 }
 
-void OLED::printGrip(void) {
+void oled::printGrip(void) {
 
     for(int i=0;i<2;i++){
     
@@ -142,21 +142,21 @@ void OLED::printGrip(void) {
 
 }
 
-void OLED::testdrawcircle(void) {
+void oled::testdrawcircle(void) {
 for (uint8_t i=0; i<_screen->height()/2; i+=2) {
     _screen->drawCircle(_screen->width()/2, _screen->height()/2, i, WHITE);
     _screen->display();
 }
 }
 
-void OLED::testdrawrect(void) {
+void oled::testdrawrect(void) {
 for (int16_t i=0; i<_screen->height()/2; i+=2) {
     _screen->drawRect(i, i, _screen->width()-2*i, _screen->height()-2*i, WHITE);
     _screen->display();
 }
 }
 
-void OLED::testdrawline() {  
+void oled::testdrawline() {  
 for (int16_t i=0; i<_screen->width(); i+=4) {
     _screen->drawLine(0, 0, i, _screen->height()-1, WHITE);
     _screen->display();
@@ -201,14 +201,14 @@ for (int16_t i=0; i<_screen->width(); i+=4) {
 delay(250);
 }
 
-void OLED::clearAll(){
+void oled::clearAll(){
 
     _screen->clearDisplay();
     _screen->display();
 
 }
 
-void OLED::printDemoMenu(){
+void oled::printDemoMenu(){
 
     for(int i=0;i<2;i++){
 
@@ -229,7 +229,7 @@ void OLED::printDemoMenu(){
 
 }
 
-void OLED::printDeviceMenu(){
+void oled::printDeviceMenu(){
 
     for(int i=0;i<2;i++){
 
@@ -250,7 +250,7 @@ void OLED::printDeviceMenu(){
 
 }
 
-void OLED::printSelector(int prev, int next, bool clear){
+void oled::printSelector(int prev, int next, bool clear){
 
     _screen->setTextSize(1);
     _screen->setTextWrap(true);
@@ -300,5 +300,12 @@ void OLED::printSelector(int prev, int next, bool clear){
     _screen->display();
 
     }
+
+}
+
+void oled::printDemo(int8_t demo_type, int8_t demo_val1, int8_t demo_val2){
+
+    _screen->drawBitmap(-20,0, sense_bmp, 100, 100, WHITE);
+    return;
 
 }

@@ -3,42 +3,31 @@
 
 #include <stdint.h>
 
+//pin association
+#define D1_pin1 3 //PB2
+#define D1_pin2 4 //PB3
+#define D2_pin1 8 //PD0
+#define D2_pin2 9 //PD1
+#define D3_pin1 22 //PC6
+#define D3_pin2 23 //PC7
+#define A1_pin1 24 //PA0
+#define A1_pin2 25 //PA1
+#define A2_pin1 26 //PA2
+#define A2_pin2 27 //PA3
+#define A3_pin1 28 //PA4
+#define A3_pin2 29 //PA5
+
 //device types
-#define menu_TYPE 0
-#define OLED_TYPE 1
-#define strip_TYPE 2
-#define distance_TYPE 3
+#define grip_TYPE 0
+#define direct_TYPE 1
+#define sense_TYPE 2
+#define speak_TYPE 3
+#define hold_TYPE 4
+#define menu_TYPE 5
+#define oled_TYPE 6
+#define strip_TYPE 7
+#define debug_TYPE 8
 
-
-#define HANDGRIP_TYPE 4
-#define HANDCRANK_TYPE 5
-#define HANDGRIPDEVNUM 0 //device number for handgrip
-#define CRANKDEVNUM 1
-
-//port number defines for readability 
-#define DCON1_PORTNUM 0
-#define ACON1_PORTNUM 1
-#define DACON1_PORTNUM 2
-#define DCON2_PORTNUM 3
-#define ACON2_PORTNUM 4
-#define DACON2_PORTNUM 5
-#define INDICATORSTRIP_PORTNUM 6
-#define HARDCODED_PORTNUM 7 //used when the port is hardcoded in the library (lcd)
-
-//pin defines
-#define ACON1_PINA1 A0
-#define ACON1_PINA2 A1
-#define DCON1_PIND1 3
-#define DCON1_PIND2 5
-#define DACON1_PIND1 4
-#define DACON1_PINA1 ACON1_PINA1 //DACON channels share analog channels the ACON ports
-
-#define ACON2_PINA1 A2
-#define ACON2_PINA2 A3
-#define DCON2_PIND1 9
-#define DCON2_PIND2 10
-#define DACON2_PIND1 11
-#define DACON2_PINA1 ACON2_PINA2 //DACON channels share analog channels the ACON ports
 
 class _device {
   

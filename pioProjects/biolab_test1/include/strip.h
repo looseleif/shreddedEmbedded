@@ -3,8 +3,9 @@
 
 #include <modules.h>
 #include <menu.h>
+#include <strip.h>
+#include <oled.h>
 #include <FastLED.h>
-
 
 #define DATA_PIN 23 //PC7
 #define NUM_LEDS 30
@@ -13,10 +14,9 @@ class strip: public _device
 
     private:
 
-        menu *_strip_menu_ptr;
-
     public:
         
+        menu *_strip_menu_ptr;
         CRGB leds[NUM_LEDS];
 
         strip(menu *_menu_ptr);
