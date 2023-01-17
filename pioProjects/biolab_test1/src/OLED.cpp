@@ -306,6 +306,7 @@ void oled::printSelector(int prev, int next, bool clear){
 void oled::printDemo(int8_t demo_type, int8_t demo_val1, int8_t demo_val2){
 
     _screen->drawBitmap(-20,0, sense_bmp, 100, 100, WHITE);
+    _screen->display();
     return;
 
 }

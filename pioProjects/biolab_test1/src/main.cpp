@@ -225,10 +225,10 @@ int main(){
           menu_ptr->system_state = running;
           menu_ptr->printed = false;
           createObject(menu_ptr->selected_demo, menu_ptr->selected_device);
-          oled_ptr->clearAll();
-          strip_ptr->setColor(100,0,0);
-          strip_ptr->setIntensity(50);
-          delay(50);
+          // oled_ptr->clearAll();
+          // strip_ptr->setColor(100,0,0);
+          // strip_ptr->setIntensity(50);
+          // delay(50);
 
       }
 
