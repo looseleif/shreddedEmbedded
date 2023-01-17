@@ -31,14 +31,14 @@ void OLED::sendBitmap(const uint8_t *bitmap, uint8_t w, uint8_t h) {
     while (1) {
         // draw each icon
         for (uint8_t f=0; f< 10; f++) {
-        _screen->drawBitmap(icons[f][0], icons[f][1], hearty100_bmp, w, h, WHITE);
+        _screen->drawBitmap(icons[f][0], icons[f][1], heart_bmp, w, h, WHITE);
         }
         _screen->display();
         delay(200);
         
         // then erase it + move it
         for (uint8_t f=0; f< 10; f++) {
-        _screen->drawBitmap(icons[f][0], icons[f][1],  hearty100_bmp, w, h, BLACK);
+        _screen->drawBitmap(icons[f][0], icons[f][1],  heart_bmp, w, h, BLACK);
         // move it
         icons[f][1] += icons[f][1];
         // if its gone, reinit

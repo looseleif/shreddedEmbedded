@@ -129,9 +129,19 @@ void setup()   {
   strip_ptr->lubDub();
   delay(500);
   strip_ptr->sweepColor(255,0,0,10);
-  OLED_ptr->_screen->drawBitmap(-20,0, hearty100_bmp, 100, 100, WHITE);
+  OLED_ptr->_screen->drawBitmap(-20,0, heart_bmp, 100, 100, WHITE);
   OLED_ptr->_screen->display();
   delay(750);
+  
+  
+  OLED_ptr->_screen->drawBitmap(-20,0, grip_bmp, 100, 100, WHITE);
+  OLED_ptr->_screen->display();
+  delay(750);
+  OLED_ptr->_screen->drawBitmap(-20,0, sense_bmp, 100, 100, WHITE);
+  OLED_ptr->_screen->display();
+  delay(750);
+
+
   strip_ptr->setColor(0,0,0);
   OLED_ptr->clearAll();
   OLED_ptr->pleaseWaitPrint();
