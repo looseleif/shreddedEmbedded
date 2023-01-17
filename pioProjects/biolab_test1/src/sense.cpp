@@ -1,47 +1,26 @@
 #include <sense.h>
 
-sense::sense(const uint8_t port, _device *mainptr, strip *stripptr, oled *oledptr, menu *menuptr){
+sense::sense(const uint8_t port, _device *mainptr, menu *menuptr, oled *oledptr, strip *stripptr){
 
-  oledptr->printDemo(0,0,0);
+  sense_main_ptr = mainptr;
+  sense_menu_ptr = menuptr;
+  sense_oled_ptr = oledptr;
+  sense_strip_ptr = stripptr;
+  portNum = port;
 
-//these pointers are stored in the object so that they can be used outside of the constructor
-      // main_ptr = mainptr; //pointer to the main _device object (used to store some globally needed variables)
-      // indicatorstrip_ptr = indptr; //pointer for the indicatorstrip object
-      // lcd_ptr = lcdptr;
-      // menu_ptr = menuptr;
+  // HARD CODED FOR NOW!!!
 
-      // portNum = port;
+  trigPin = 24;
+  echoPin = 25;
 
-      // switch(portNum)
-      // {
-      //   case DCON1_PORTNUM:
-      //     encoderPinA = DCON1_PIND1;
-      //     encoderPinB = DCON1_PIND2;
-      //     main_ptr->DCON1_mode = HANDCRANK_TYPE;
-      //     break;
-      //   case DCON2_PORTNUM:
-      //     encoderPinA = DCON2_PIND1;
-      //     encoderPinB = DCON2_PIND2;
-      //     main_ptr->DCON2_mode = HANDCRANK_TYPE;
+  sense_sensor = new NewPing(trigPin,echoPin,300);
 
-      //     break;      
-      // }
+}
 
-      // prevAVal = digitalRead(encoderPinA);
-      // prevBVal = digitalRead(encoderPinB);
+void sense::calculateRate(int8_t mod){
 
-      // // clear any outstanding pin change interrupt flags
-      // PCIFR  |= bit (digitalPinToPCICRbit(encoderPinA)); 
-      // PCIFR  |= bit (digitalPinToPCICRbit(encoderPinB));
-
-      // // enable interrupt for the GROUP (digital pins 1-7, digtial pins 8-13)
-      // PCICR  |= bit (digitalPinToPCICRbit(encoderPinA)); 
-      // PCICR  |= bit (digitalPinToPCICRbit(encoderPinB));
-
-      // // enable pin change interrupt for encoder pins
-      // *digitalPinToPCMSK(encoderPinA) |= bit(digitalPinToPCMSKbit(encoderPinA)); 
-      // *digitalPinToPCMSK(encoderPinB) |= bit(digitalPinToPCMSKbit(encoderPinB)); 
-      // menu_ptr->printMenu(lcd_ptr);
+  distance = sense_sensor->ping_median(10)/1000000*343/2;
+  sense_oled_ptr->sendString(String(distance));
 
 }
 

@@ -48,7 +48,7 @@ void createObject(int objtype, int portnum)
     //strip_ptr = new strip(menu_ptr);
     break;
   case sense_TYPE:
-    D_set[D_index] = new sense(D_index,main_ptr,strip_ptr,oled_ptr,menu_ptr);
+    D_set[D_index] = new sense(D_index,main_ptr,menu_ptr,oled_ptr,strip_ptr);
     D_index++;
     break;
   case speak_TYPE:
@@ -237,7 +237,7 @@ int main(){
     if(menu_ptr->system_state==running){
 
         
-
+      D1_ptr->calculateRate(0);
 
 
     }

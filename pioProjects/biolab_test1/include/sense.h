@@ -1,10 +1,15 @@
 #ifndef SENSE_H
 #define SENSE_H
 
+#include <string.h>
+
 #include <modules.h>
 #include <menu.h>
 #include <strip.h>
 #include <oled.h>
+
+
+#include <NewPing.h>
 
 class sense: public _affector
 {
@@ -13,22 +18,23 @@ class sense: public _affector
     
     public:
 
-        sense(const uint8_t port, _device *mainptr, strip *indptr, oled *lcdptr, menu *menuptr);
+        sense(const uint8_t port, _device *mainptr, menu *menuptr, oled *oledptr, strip *stripptr);
 
-        // _device *main_ptr;
-        // strip *indicatorstrip_ptr;
-        // oled *lcd_ptr;
-        // menu *menu_ptr;
+        void calculateRate(int8_t mod);
 
-        float overallRate = 0;
-        float movingAverage = 0; //holds the moving average for the production of the hand crank. 
-        //uint8_t movingAveragePeriod = 1000/STRIPREFRESHDELAY; 
-        uint8_t maxProductionRate = 60; //used in the rate calculation
-        uint8_t consumptionRate = 70; ///used in the rate calculation
+        _device *sense_main_ptr;
+        strip *sense_strip_ptr;
+        oled *sense_oled_ptr;
+        menu *sense_menu_ptr;
         int8_t portNum = -1; //used to save the port number that this object is instantiated on.
-        int8_t crankSum = 0; //sums the number of valid pulses from the encoder
-        int8_t encoderPinA = -1; //stores object pin configuration
-        int8_t encoderPinB = -1; //stores object pin configuration
+        
+        int8_t trigPin;
+        int8_t echoPin;
+
+        float distance;
+        
+        NewPing *sense_sensor;
+
         bool prevAVal;
         bool prevBVal;
         bool pinAVal;
