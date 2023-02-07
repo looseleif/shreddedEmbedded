@@ -1,12 +1,15 @@
+#define SKIP_B4RNEW
+
 #include <Arduino.h>
-
+#include <string.h>
 #include <modules.h>
-
 #include <menu.h>
 #include <oled.h>
 #include <strip.h>
-
 #include <sense.h>
+#include <stdlib.h>
+
+//#include <AH/STL/vector>
 
 _device *main_ptr = new _device;
 
@@ -14,18 +17,20 @@ menu *menu_ptr;
 oled *oled_ptr;
 strip *strip_ptr;
 
-_device *D1_ptr;
-_device *D2_ptr;
-_device *D3_ptr;
-_device *A1_ptr;
-_device *A2_ptr;
-_device *A3_ptr;
+_affector *D1_ptr;
+_affector *D2_ptr;
+_affector *D3_ptr;
+_affector *A1_ptr;
+_affector *A2_ptr;
+_affector *A3_ptr;
+
+//std::vector<_affector> s;
 
 int8_t D_index = 0;
 int8_t A_index = 0;
 
-_device *D_set[3] = {D1_ptr,D2_ptr,D3_ptr};
-_device *A_set[3] = {A1_ptr,A2_ptr,A3_ptr};
+_affector *D_set[3] = {D1_ptr,D2_ptr,D3_ptr};
+_affector *A_set[3] = {A1_ptr,A2_ptr,A3_ptr};
 
 void createObject(int objtype, int portnum)
 {
@@ -50,6 +55,7 @@ void createObject(int objtype, int portnum)
   case sense_TYPE:
     D_set[D_index] = new sense(D_index,main_ptr,menu_ptr,oled_ptr,strip_ptr);
     D_index++;
+    //D1_ptr = new sense(0,main_ptr,menu_ptr,oled_ptr,strip_ptr);
     break;
   case speak_TYPE:
     //strip_ptr = new strip(menu_ptr);
@@ -175,6 +181,8 @@ int main(){
   init();
   setup();
 
+  createObject(sense_TYPE,0);
+
   while(true){
 
     if(menu_ptr->system_state==welcome){
@@ -194,13 +202,24 @@ int main(){
       if(!digitalRead(SELECT_PIN)){
 
         menu_ptr->selected_demo = menu_ptr->cursor_current;
+        
+        if(menu_ptr->selected_demo == SENSE_DEMO){
+
+          createObject(sense_TYPE, 0);
+
+        } else if(menu_ptr->selected_demo == GRIP_DEMO){
+
+          createObject(grip_TYPE, 0);
+
+        }
+        
         menu_ptr->system_state = device;
         menu_ptr->printed = false;
         oled_ptr->clearAll();
         oled_ptr->pleaseWaitPrint();
         delay(100);
         oled_ptr->clearAll();
-        strip_ptr->setColor(100,0,0);
+        strip_ptr->setColor(0,100,0);
         strip_ptr->setIntensity(50);
         delay(50);
 
@@ -225,10 +244,10 @@ int main(){
           menu_ptr->system_state = running;
           menu_ptr->printed = false;
           createObject(menu_ptr->selected_demo, menu_ptr->selected_device);
-          // oled_ptr->clearAll();
-          // strip_ptr->setColor(100,0,0);
-          // strip_ptr->setIntensity(50);
-          // delay(50);
+          oled_ptr->clearAll();
+          strip_ptr->setColor(0,0,100);
+          strip_ptr->setIntensity(50);
+          delay(50);
 
       }
 
@@ -236,9 +255,16 @@ int main(){
       
     if(menu_ptr->system_state==running){
 
-        
-      D1_ptr->calculateRate(0);
+      if(menu_ptr->selected_demo == sense_TYPE){
+      
+        char dist_str[3];
+        int dist = D_set[0]->captureData();
+        snprintf(dist_str, sizeof(dist_str), "%d", dist);
+        oled_ptr->sendString("\nSENSE DEMO");
+        oled_ptr->sendString(dist_str);
+        oled_ptr->clearAll();
 
+      }
 
     }
 

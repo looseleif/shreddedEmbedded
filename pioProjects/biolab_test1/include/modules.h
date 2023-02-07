@@ -44,12 +44,9 @@ class _device {
     
     _device(){};
 
-    void createObject(int objtype, int portnum);
-    
-    virtual ~_device(){} // must have a virtualized destructor
+    virtual ~_device(){}; // must have a virtualized destructor
 
-    //these virtual functions will be overwritten by derived class objects. 
-    virtual void calculateRate(int8_t modifier){}
+    void createObject(int objtype, int portnum);
 
 };
 
@@ -57,6 +54,8 @@ class _affector: public _device
 {
   public: 
     virtual ~_affector(){} //must have a virtualized destructor
+    virtual int captureData(void);
+    virtual void updateGame(void);
 };
 
 

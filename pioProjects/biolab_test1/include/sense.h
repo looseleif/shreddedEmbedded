@@ -7,9 +7,11 @@
 #include <menu.h>
 #include <strip.h>
 #include <oled.h>
+#include <math.h>
 
 
 #include <NewPing.h>
+#include <HCSR04.h>
 
 class sense: public _affector
 {
@@ -20,7 +22,8 @@ class sense: public _affector
 
         sense(const uint8_t port, _device *mainptr, menu *menuptr, oled *oledptr, strip *stripptr);
 
-        void calculateRate(int8_t mod);
+        int sense::captureData(void) override;
+        void sense::updateGame(void) override;
 
         _device *sense_main_ptr;
         strip *sense_strip_ptr;
@@ -31,9 +34,10 @@ class sense: public _affector
         int8_t trigPin;
         int8_t echoPin;
 
-        float distance;
+        int distance;
         
-        NewPing *sense_sensor;
+        //NewPing *sense_sensor;
+        UltraSonicDistanceSensor *sense_ultra;
 
         bool prevAVal;
         bool prevBVal;
