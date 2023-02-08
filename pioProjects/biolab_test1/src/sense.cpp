@@ -19,15 +19,32 @@ sense::sense(const uint8_t port, _device *mainptr, menu *menuptr, oled *oledptr,
 
 }
 
-int sense::captureData(void)
+void sense::captureData(void)
 {
     distance = static_cast<int>(sense_ultra->measureDistanceCm());
-    return distance;
 }
 
 void sense::updateGame(void)
 {
 
+  for(int i = 0; i<distance%NUM_LEDS; i++){
 
+    sense_strip_ptr->leds[i] = CRGB(100,0,0);
+
+  }
+
+  for(int i = distance%NUM_LEDS; i<NUM_LEDS; i++){
+
+    sense_strip_ptr->leds[i] = CRGB(0,0,0);
+
+  }
+
+  FastLED.show();
   
+}
+
+int sense::returnVal(void){
+
+  return abs(distance);
+
 }

@@ -22,9 +22,9 @@ class sense: public _affector
 
         sense(const uint8_t port, _device *mainptr, menu *menuptr, oled *oledptr, strip *stripptr);
 
-        int sense::captureData(void) override;
+        void sense::captureData(void) override;
         void sense::updateGame(void) override;
-
+        int sense::returnVal(void) override;
         _device *sense_main_ptr;
         strip *sense_strip_ptr;
         oled *sense_oled_ptr;

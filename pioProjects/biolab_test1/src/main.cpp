@@ -118,7 +118,17 @@ ISR (TIMER1_OVF_vect)    // Timer1 ISR
 
   }
 
-	TCNT1 = 65500;   // build period of ~1ms
+  if(menu_ptr->selected_demo==sense_TYPE && menu_ptr->system_state==running){
+        
+        char dist_str[3];
+        snprintf(dist_str, sizeof(dist_str), "%d", D_set[0]->returnVal());
+        oled_ptr->clearAll();
+        oled_ptr->sendString(dist_str);
+        delay(10);
+        
+  }
+
+	TCNT1 = 62000;   // build period of ~1ms
 
 }
 
@@ -166,7 +176,7 @@ void setup()   {
   strip_ptr->sweepColor(255,0,0,10);
   oled_ptr->_screen->drawBitmap(-20,0, heart_bmp, 100, 100, WHITE);
   oled_ptr->_screen->display();
-  delay(100);
+  delay(500);
   strip_ptr->setColor(0,0,0);
   oled_ptr->clearAll();
   oled_ptr->pleaseWaitPrint();
@@ -240,14 +250,17 @@ int main(){
       if(!digitalRead(SELECT_PIN)){
 
           menu_ptr->selected_device = menu_ptr->cursor_current;
-          menu_ptr->demo_state = started;
-          menu_ptr->system_state = running;
           menu_ptr->printed = false;
           createObject(menu_ptr->selected_demo, menu_ptr->selected_device);
           oled_ptr->clearAll();
           strip_ptr->setColor(0,0,100);
           strip_ptr->setIntensity(50);
           delay(50);
+          oled_ptr->_screen->drawBitmap(-40,0, sense_bmp, 100, 100, WHITE);
+          delay(750);
+          oled_ptr->clearAll();
+          menu_ptr->demo_state = started;
+          menu_ptr->system_state = running;
 
       }
 
@@ -257,12 +270,9 @@ int main(){
 
       if(menu_ptr->selected_demo == sense_TYPE){
       
-        char dist_str[3];
-        int dist = D_set[0]->captureData();
-        snprintf(dist_str, sizeof(dist_str), "%d", dist);
-        oled_ptr->sendString("\nSENSE DEMO");
-        oled_ptr->sendString(dist_str);
-        oled_ptr->clearAll();
+        D_set[0]->captureData();
+        D_set[0]->updateGame();
+        delay(10);
 
       }
 
